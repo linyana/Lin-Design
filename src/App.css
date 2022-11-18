@@ -1,6 +1,26 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: "PuHuiTiBold", Helvetica, Arial, sans-serif;
+  color: #495057;
+}
+
+body {
+  background-color: rgb(241, 238, 238);
+}
+
+@font-face {
+  font-family: "PuHuiTiBold";
+  font-weight: 700;
+  src: url("//at.alicdn.com/wf/webfont/nHM1Jm5mEhGA/Yv_lG0CdWElHDaKWAl0KJ.woff2")
+      format("woff2"),
+    url("//at.alicdn.com/wf/webfont/nHM1Jm5mEhGA/iZLe7JxEGpCGmDeUIu2oo.woff")
+      format("woff");
+  font-display: swap;
+}
+
+a {
+  text-decoration: none;
 }
 
 .left_padding {
@@ -13,4 +33,19 @@
 
 .right_padding {
   padding: 0 30px;
+}
+
+.flex_between {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 10px 40px;
+  background-color: rgb(32, 105, 189);
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  color: white;
+  box-shadow: 0 0 5px rgba(32, 105, 189, 0.8);
 }

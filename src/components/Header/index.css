@@ -6,5 +6,43 @@
   height: 60px;
   display: flex;
   justify-content: space-between;
+  background-color: white;
+  border-bottom: 1px solid #e9ecef;
 }
 
+.logo {
+  vertical-align: middle;
+}
+
+.header_logo {
+  height: 34px;
+  margin-top: 13px;
+  vertical-align: middle;
+}
+
+.logo span {
+  font-size: 20px;
+  vertical-align: middle;
+  line-height: 60px;
+  margin-left: 20px;
+}
+
+.header_middle {
+  width: 100%;
+}
+
+ul.nav_ul li {
+  height: 100%;
+  list-style: none;
+}
+
+ul.nav_ul li a {
+  display: inline-block;
+  height: 100%;
+  padding: 0 30px;
+  line-height: 60px;
+}
+
+a.nav_on {
+  border-bottom: 4px solid rgb(32, 105, 189);
+}
