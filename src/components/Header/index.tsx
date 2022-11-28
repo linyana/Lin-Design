@@ -22,12 +22,12 @@ const Header = () => {
         <div className="nav">
           <ul className="nav_ul flex_between">
             <li>
-              <NavLink to={"/home"} className="nav_on">
+              <NavLink to={"/home"} className={({ isActive }) => "nav" + (isActive ? " nav_on" : "")}>
                 首页
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/components"}>组件</NavLink>
+              <NavLink to={"/components"} className={({ isActive }) => "nav" + (isActive ? " nav_on" : "")}> 组件</NavLink>
             </li>
           </ul>
         </div>
