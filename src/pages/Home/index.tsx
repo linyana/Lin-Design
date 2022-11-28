@@ -1,7 +1,7 @@
 import React from "react";
 
 import Header from "@/components/Header";
-import Middle from "@/components/Middle";
+import HomeMiddle from "@/components/HomeMiddle";
 
 import "./index.css";
 
@@ -10,7 +10,7 @@ const Home = () => {
     <>
       <Header></Header>
       <div className="home_content">
-        <Middle></Middle>
+        <HomeMiddle></HomeMiddle>
       </div>
     </>
   );

@@ -1,13 +1,16 @@
-import React from "react";
+import React, { Suspense } from "react";
+import { useRoutes } from "react-router-dom";
+import Routes from "@/router";
 
-import Home from "@/pages/Home";
+import Loading from "@/components/Loading";
 
 import "./App.css";
 
 const App = () => {
+  const route = useRoutes(Routes);
   return (
     <>
-      <Home />
+      <Suspense fallback={<Loading />}>{route}</Suspense>
     </>
   );
 };

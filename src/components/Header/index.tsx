@@ -1,9 +1,10 @@
 import React from "react";
-
-import "./index.css";
+import { NavLink } from "react-router-dom";
 
 import logo from "@/assets/svg/normal/logo.svg";
 import github from "@/assets/svg/normal/github.svg";
+
+import "./index.css";
 
 const Header = () => {
   return (
@@ -21,12 +22,12 @@ const Header = () => {
         <div className="nav">
           <ul className="nav_ul flex_between">
             <li>
-              <a href="#" className="nav_on">
+              <NavLink to={"/home"} className="nav_on">
                 首页
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="#">组件</a>
+              <NavLink to={"/components"}>组件</NavLink>
             </li>
           </ul>
         </div>

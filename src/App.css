@@ -41,11 +41,17 @@ a {
 }
 
 button {
+  cursor: pointer;
   padding: 10px 40px;
-  background-color: rgb(32, 105, 189);
+  background-color: rgb(47, 121, 206);
   border: none;
   outline: none;
   border-radius: 6px;
   color: white;
   box-shadow: 0 0 5px rgba(32, 105, 189, 0.8);
+  transition: all 0.8s;
+}
+
+button:hover {
+  background-color: rgb(56, 137, 230);
 }
