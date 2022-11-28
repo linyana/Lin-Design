@@ -1,0 +1,23 @@
+.left_menu {
+  border-right: 1px solid #e9ecef;
+  width: 300px;
+}
+
+.left_menu_line {
+  cursor: pointer;
+  font-size: 21px;
+  line-height: 65px;
+  height: 65px;
+  transition: all 0.8s;
+  overflow: hidden;
+}
+
+.left_menu_line:hover {
+  background-color: rgb(240, 239, 239);
+}
+
+.left_menu_line span {
+  color: rgb(151, 150, 150);
+  font-size: 15px;
+  margin-left: 10px;
+}

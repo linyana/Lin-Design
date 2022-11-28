@@ -1,0 +1,41 @@
+.component_big_title {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.component_big_title span {
+  font-size: 20px;
+  color: rgb(151, 150, 150);
+}
+
+.compontent_title {
+  font-size: 25px;
+  line-height: 80px;
+}
+
+.component_box {
+  border: 1px solid #ebebeb;
+}
+
+.compontent_box_content {
+  padding: 30px;
+}
+
+.compontent_box_menu {
+  cursor: pointer;
+  border-top: 1px solid #ebebeb;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  transition: all 0.8s;
+}
+
+.compontent_box_menu:hover {
+  background-color: rgb(240, 239, 239);
+}
+
+p.compontent_p {
+  margin: 30px 0;  
+  line-height: 26px;
+  
+}

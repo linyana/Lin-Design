@@ -5,10 +5,6 @@
   color: #495057;
 }
 
-body {
-  background-color: rgb(241, 238, 238);
-}
-
 @font-face {
   font-family: "PuHuiTiBold";
   font-weight: 700;
@@ -24,7 +20,8 @@ a {
 }
 
 .left_padding {
-  padding: 0 40px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .middle_padding {
@@ -54,4 +51,9 @@ button {
 
 button:hover {
   background-color: rgb(56, 137, 230);
+}
+
+img.icon {
+  width: 20px;
+  margin: 0 10px;
 }
