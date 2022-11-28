@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import HeaderNavLink from "@/components/HeaderNavLink";
 
 import logo from "@/assets/svg/normal/logo.svg";
 import github from "@/assets/svg/normal/github.svg";
@@ -22,12 +22,10 @@ const Header = () => {
         <div className="nav">
           <ul className="nav_ul flex_between">
             <li>
-              <NavLink to={"/home"} className={({ isActive }) => "nav" + (isActive ? " nav_on" : "")}>
-                首页
-              </NavLink>
+              <HeaderNavLink to={"/home"}>首页</HeaderNavLink>
             </li>
             <li>
-              <NavLink to={"/components"} className={({ isActive }) => "nav" + (isActive ? " nav_on" : "")}> 组件</NavLink>
+              <HeaderNavLink to={"/components"}> 组件</HeaderNavLink>
             </li>
           </ul>
         </div>
