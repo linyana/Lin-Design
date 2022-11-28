@@ -4,18 +4,14 @@ import showSrc from "@/assets/svg/normal/show.svg";
 
 import "./index.css";
 
-const Component1 = () => {
+const Component3 = () => {
   return (
     <>
-      <div className="compontent_title">
-        基本按钮
-      </div>
-      <p className="compontent_p">
-        最基本的按钮样式
-      </p>
+      <div className="compontent_title">圆角按钮</div>
+      <p className="compontent_p">圆角按钮样式</p>
       <div className="component_box">
         <div className="compontent_box_content">
-          <button className="button_compontent_button1">基本按钮</button>
+          <button className="button_compontent_button3">圆角按钮</button>
         </div>
         <div className="compontent_box_menu">
           查看代码
@@ -26,4 +22,4 @@ const Component1 = () => {
   );
 };
 
-export default Component1;
+export default Component3;

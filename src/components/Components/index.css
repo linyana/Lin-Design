@@ -35,7 +35,7 @@
 }
 
 p.compontent_p {
-  margin: 30px 0;  
+  margin-bottom: 30px;
   line-height: 26px;
-  
+  color: rgb(100, 99, 99);
 }
