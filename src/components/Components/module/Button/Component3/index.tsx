@@ -7,7 +7,7 @@ import "./index.css";
 const Component3 = () => {
   return (
     <>
-      <div className="compontent_title">圆角按钮</div>
+      <div className="compontent_title" id="rounded_corners_button">圆角按钮</div>
       <p className="compontent_p">圆角按钮样式</p>
       <div className="component_box">
         <div className="compontent_box_content">

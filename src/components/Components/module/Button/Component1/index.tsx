@@ -7,7 +7,7 @@ import "./index.css";
 const Component1 = () => {
   return (
     <>
-      <div className="compontent_title">
+      <div className="compontent_title" id="basic_button">
         基本按钮
       </div>
       <p className="compontent_p">
