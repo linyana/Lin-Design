@@ -1,0 +1,39 @@
+.code_box_left {
+  width: 220px;
+  transition: all 0.8s;
+}
+
+.code_box_left:hover {
+  background-color: #ececec;
+}
+
+.code_box_left_content {
+  padding: 30px;
+}
+
+.code_box_left_color_box {
+  width: 25px;
+  height: 25px;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.code_box_left_color_boxes {
+  margin: 10px 0;
+}
+
+.code_box_left_color_box:first-child {
+  background-color: rgb(224, 53, 230);
+}
+
+input.color_input {
+  width: 100%;
+  outline: none;
+  border: none;
+  height: 50px;
+}
+
+input.color_input::-webkit-color-swatch-wrapper {
+  background-color: rgb(185, 185, 185);
+  padding: 5px;
+}

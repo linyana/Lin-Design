@@ -1,0 +1,6 @@
+.code_box_header {
+  display: flex;
+  justify-content: right;
+  padding: 30px;
+  padding-top: 0;
+}

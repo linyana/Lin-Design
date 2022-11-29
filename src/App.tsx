@@ -3,6 +3,7 @@ import { useRoutes } from "react-router-dom";
 import Routes from "@/router";
 
 import Loading from "@/components/Loading";
+import CodeBox from "@/components/CodeBox";
 
 import "./App.css";
 
@@ -10,6 +11,7 @@ const App = () => {
   const route = useRoutes(Routes);
   return (
     <>
+      <CodeBox/>
       <Suspense fallback={<Loading />}>{route}</Suspense>
     </>
   );
