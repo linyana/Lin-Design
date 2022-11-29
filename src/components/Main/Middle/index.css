@@ -1,3 +1,5 @@
 .middle_content {
   width: calc(100% - 400px);
+  margin-right: 260px;
+  margin-left: 300px;
 }

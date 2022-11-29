@@ -1,0 +1,18 @@
+.right_content {
+  position: fixed;
+  right: 0;
+  width:  200px;
+  text-align: center;
+  line-height: 40px;
+  border-left: 1px solid #efefef;
+}
+
+.right_menu_line {
+  cursor: pointer;
+  transition: all 0.8s;
+  margin: 3px 0;
+}
+
+.right_menu_line:hover {
+  box-shadow: 0 0 5px  #d8d6d6;
+}

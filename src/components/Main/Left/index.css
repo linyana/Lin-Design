@@ -1,6 +1,9 @@
 .left_menu {
+  position: fixed;
+  left: 0;
   border-right: 1px solid #e9ecef;
   width: 300px;
+  height: calc(100vh - 100px);
 }
 
 .left_menu_line {

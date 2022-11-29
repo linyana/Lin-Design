@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-
-import { NavLink } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { nanoid } from "nanoid";
+
+import "./index.css";
 
 const scrollToAnchor = (anchorName: string) => {
   if (anchorName) {
@@ -14,26 +15,21 @@ const scrollToAnchor = (anchorName: string) => {
   }
 };
 
-interface AnchorTypes {
-  id?: string;
-  content?: string;
-}
-
 const Right = () => {
-  const [update, setUpdate] = useState([]);
+  const [anthor,setAnthor] = useState<Element[]>([]);
 
-  // 更新组件
+  // 获取当前url
+  const location = useLocation();
+  // 当url变化时，更新锚点列表
   useEffect(() => {
-    setTimeout(() => {
-      setUpdate([]);
-    }, 0);
-  }, []);
+    setAnthor([...document.querySelectorAll(".compontent_title")]);
+  }, [location]);
 
   return (
-    <div className="right_padding">
-      {[...document.querySelectorAll(".compontent_title")].map((item: any) => {
+    <div className="right_content right_padding">
+      {anthor.map((item: any) => {
         return (
-          <div key={nanoid()} onClick={() => scrollToAnchor(item.id)}>
+          <div className="right_menu_line" key={nanoid()} onClick={() => scrollToAnchor(item.id)}>
             {item.innerHTML}
           </div>
         );
