@@ -50,7 +50,6 @@ const Right = () => {
     }
 
     setCodeContent();
-    console.log(setting.kind,setting.version)
   },[setting.kind,setting.version,[]]);
 
   // 点击复制

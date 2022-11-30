@@ -31,12 +31,12 @@ button.button_compontent_button3:hover {
 }
 `,
   JSCode: `暂无`,
-  VueHTMLCode: `<div className="compontent_box_content">
-  <button className="button_compontent_button3">圆角按钮</button>
+  VueHTMLCode: `<div class="compontent_box_content">
+  <button class="button_compontent_button3">圆角按钮</button>
 </div>`,
   VueJSCode: `暂无`,
-  ReactHTMLCode: `<div className="compontent_box_content">
-  <button className="button_compontent_button3">基本按钮</button>
+  ReactHTMLCode: `<div class="compontent_box_content">
+  <button class="button_compontent_button3">基本按钮</button>
 </div>`,
   ReactJSCode: `暂无`,
   JSESCode: `暂无`,

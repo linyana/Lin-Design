@@ -10,8 +10,8 @@ const code: codeState = {
       <button className="button_compontent_button2">简洁按钮</button>
     </div>
   ),
-  HTMLCode: `<div className="compontent_box_content">
-  <button className="button_compontent_button2">简洁按钮</button>
+  HTMLCode: `<div class="compontent_box_content">
+  <button class="button_compontent_button2">简洁按钮</button>
 </div>  
 `,
   CSSCode: `button.button_compontent_button2 {
@@ -32,8 +32,8 @@ button.button_compontent_button2:hover {
 }
 `,
   JSCode: `暂无`,
-  VueHTMLCode: `<div className="compontent_box_content">
-  <button className="button_compontent_button2">简洁按钮</button>
+  VueHTMLCode: `<div class="compontent_box_content">
+  <button class="button_compontent_button2">简洁按钮</button>
 </div>
 `,
   VueJSCode: `暂无`,
