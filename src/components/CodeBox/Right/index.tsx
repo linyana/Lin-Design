@@ -1,5 +1,4 @@
-import { spawn } from "child_process";
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "@/store";
 
@@ -8,8 +7,22 @@ import "./index.css";
 const Right = () => {
   const code = useSelector((state: RootState) => state.codeBox);
 
-  const getCopyText = (content: string) => {
+  // 初始化copy选项
+  useEffect(() => {
+    const copys = document.querySelectorAll(".copy");
+    for (let i = 0; i < copys.length; i++) {
+      copys[i].innerHTML = "复制";
+    }
+  });
+
+  // 点击复制
+  const getCopyText = (
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>,
+    content: string
+  ) => {
     navigator.clipboard.writeText(content);
+    const box = event.target as HTMLElement;
+    box.innerHTML = "已复制";
   };
 
   return (
@@ -17,8 +30,8 @@ const Right = () => {
       <pre className="HTML">
         <div
           className="copy"
-          onClick={() => {
-            getCopyText(code.HTMLCode);
+          onClick={(event) => {
+            getCopyText(event, code.HTMLCode);
           }}
         >
           复制
@@ -28,8 +41,8 @@ const Right = () => {
       <pre className="CSS">
         <div
           className="copy"
-          onClick={() => {
-            getCopyText(code.CSSCode);
+          onClick={(event) => {
+            getCopyText(event, code.CSSCode);
           }}
         >
           复制
@@ -39,8 +52,8 @@ const Right = () => {
       <pre className="JS">
         <div
           className="copy"
-          onClick={() => {
-            getCopyText(code.JSCode);
+          onClick={(event) => {
+            getCopyText(event, code.JSCode);
           }}
         >
           复制

@@ -1,12 +1,6 @@
 .code_box_middle {
   width: calc(100% - 680px);
   height: 100%;
-  transition: all 0.8s;
-}
-
-
-.code_box_middle:hover {
-  background-color: #ececec;
 }
 
 .code_box_middle_content {
