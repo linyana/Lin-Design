@@ -1,5 +1,6 @@
 .code_box_right {
   display: flex;
+  flex-wrap: wrap;
   width: 460px;
   border-left: 1px solid #efefef;
   transition: all 0.8s;
@@ -8,16 +9,17 @@
 .code_box_right pre {
   position: relative;
   width: 100%;
+  height: 100%;
   padding: 32px;
   overflow: hidden;
+  transition: all 0.8s;
 }
 
-.code_box_right:hover {
+.code_box_right pre:hover {
   background-color: #ececec;
 }
 
 .code_box_right pre::after {
-  content: "HTML";
   position: absolute;
   top: 0;
   left: 90px;
@@ -26,8 +28,31 @@
   font-size: 14px;
 }
 
+.code_box_right pre.HTML::after {
+  content: "HTML";
+}
+
+.code_box_right pre.CSS::after {
+  content: "CSS";
+}
+
+.code_box_right pre.JS::after {
+  content: "JS";
+}
+
 pre.HTML {
   color: #ce7d69;
+  height: calc(30% - 64px);
+}
+
+pre.CSS {
+  color: #767cc9;
+  height: calc(30% - 64px);
+}
+
+pre.JS {
+  color: #c9b716;
+  height: calc(30% - 64px);
 }
 
 pre::before {

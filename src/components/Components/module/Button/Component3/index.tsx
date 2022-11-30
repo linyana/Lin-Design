@@ -11,9 +11,27 @@ const code: codeState = {
       <button className="button_compontent_button3">圆角按钮</button>
     </div>
   ),
-  HCode: `\t<span class="component_box_content">\n\t\t<span class="button_compontent_button3">圆角按钮</span></span>`,
-};
+  HTMLCode: `<div className="compontent_box_content">
+  <button className="button_compontent_button3">圆角按钮</button>
+</div>`,
+  CSSCode: `button.button_compontent_button3 {
+  cursor: pointer;
+  padding: 12px 40px;
+  background-color: rgb(47, 121, 206);
+  border: none;
+  outline: none;
+  border-radius: 100px;
+  color: white;
+  box-shadow: 0 0 5px rgba(32, 105, 189, 0.3);
+  transition: all 0.8s;
+}
 
+button.button_compontent_button3:hover {
+  background-color: rgb(56, 137, 230);
+}
+`,
+  JSCode: `暂无`,
+};
 
 const Component3 = () => {
   return (
@@ -26,7 +44,7 @@ const Component3 = () => {
         <div className="compontent_box_content">
           <button className="button_compontent_button3">圆角按钮</button>
         </div>
-        <ShowCode code={code}/>
+        <ShowCode code={code} />
       </div>
     </>
   );

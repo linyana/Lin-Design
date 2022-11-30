@@ -11,7 +11,13 @@ const Right = () => {
     <div className="code_box_right">
       <div className="copy"></div>
       <pre className="HTML">
-        {code.HCode}
+        {code.HTMLCode}
+      </pre>
+      <pre className="CSS">
+        {code.CSSCode}
+      </pre>
+      <pre className="JS">
+        {code.JSCode}
       </pre>
     </div>
   );
