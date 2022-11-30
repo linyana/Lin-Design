@@ -1,6 +1,17 @@
 import React from "react";
 import ShowCode from "@/components/Components/ShowCode";
+import { codeState } from "@/store/Code";
+
 import "./index.css";
+
+const code: codeState = {
+  element: () => (
+    <div className="compontent_box_content">
+      <button className="button_compontent_button2">简洁按钮</button>
+    </div>
+  ),
+  HCode: `\t<span class="component_box_content">\n\t\t<span class="button_compontent_button2">基本按钮</span></span>`,
+};
 
 const Component2 = () => {
   return (
@@ -13,7 +24,7 @@ const Component2 = () => {
         <div className="compontent_box_content">
           <button className="button_compontent_button2">简洁按钮</button>
         </div>
-        <ShowCode />
+        <ShowCode code={code} />
       </div>
     </>
   );

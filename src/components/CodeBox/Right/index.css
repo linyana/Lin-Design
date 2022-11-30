@@ -26,8 +26,8 @@
   font-size: 14px;
 }
 
-pre.HTML span {
-  color: #d86d53;
+pre.HTML {
+  color: #ce7d69;
 }
 
 pre::before {

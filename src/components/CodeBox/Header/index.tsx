@@ -17,9 +17,6 @@ const Header = () => {
         <select name="" id="">
           <option value="基础">基础</option>
         </select>
-        <select name="" id="">
-          <option value="分离">分离</option>
-        </select>
       </div>
       <img src={closeSrc} alt="关闭" className="close"  onClick={()=>{dispatch(changeShowCodeBox())}}/>
     </div>
