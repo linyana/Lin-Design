@@ -34,7 +34,7 @@ button.button_compontent_button1:hover {
   JSCode: `暂无`,
   VueHTMLCode: `<div class="component_box_content">
   <div class="button_compontent_button1">
-    基本按钮2
+    基本按钮
   </div>
 </div>`,
   VueJSCode: `暂无`,

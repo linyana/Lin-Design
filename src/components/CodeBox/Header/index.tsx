@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { changeShowCodeBox } from "@/store/IsCodeBoxShow";
-import { setKind } from "@/store/Settinrg";
+import { setKind, setVersion } from "@/store/Settinrg";
 import { RootState } from "@/store";
 
 import closeSrc from "@/assets/svg/codeBox/close.svg";
@@ -47,6 +47,10 @@ const Header = () => {
     dispatch(setKind(kind));
   };
 
+  const handleVersionOption = (version: string) => {
+    dispatch(setVersion(version));
+  };
+
   return (
     <div className="code_box_header">
       <div className="code_box_header_selects">
@@ -89,8 +93,15 @@ const Header = () => {
             className="options"
             style={{ display: select2 ? "block" : "none" }}
           >
-            <div className="option">Normal</div>
-            <div className="option">ES6</div>
+            <div
+              className="option"
+              onClick={() => handleVersionOption("Normal")}
+            >
+              Normal
+            </div>
+            <div className="option" onClick={() => handleVersionOption("ES6")}>
+              ES6
+            </div>
           </div>
         </div>
       </div>
