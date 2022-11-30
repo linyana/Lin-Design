@@ -9,6 +9,9 @@ export interface codeState {
   VueJSCode: string;
   ReactHTMLCode: string;
   ReactJSCode: string;
+  JSESCode: string;
+  VueJSESCode: string;
+  ReactJSESCode: string;
 }
 
 const initialState: codeState = {
@@ -20,6 +23,9 @@ const initialState: codeState = {
   VueJSCode: "",
   ReactHTMLCode: "",
   ReactJSCode: "",
+  JSESCode: "",
+  VueJSESCode: "",
+  ReactJSESCode: "",
 };
 
 export const codeSlice = createSlice({
@@ -35,6 +41,9 @@ export const codeSlice = createSlice({
       state.VueJSCode = payload.payload.VueJSCode;
       state.ReactHTMLCode = payload.payload.ReactHTMLCode;
       state.ReactJSCode = payload.payload.ReactJSCode;
+      state.JSESCode = payload.payload.JSESCode;
+      state.VueJSESCode = payload.payload.VueJSESCode;
+      state.ReactJSESCode = payload.payload.ReactJSESCode;
     },
   },
 });

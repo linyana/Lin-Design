@@ -41,6 +41,9 @@ button.button_compontent_button2:hover {
   <button className="button_compontent_button2">基本按钮</button>
 </div>`,
   ReactJSCode: `暂无`,
+  JSESCode: `暂无`,
+  VueJSESCode: `暂无`,
+  ReactJSESCode: `暂无`,
 };
 
 const Component2 = () => {

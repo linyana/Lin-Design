@@ -13,16 +13,34 @@ const Right = () => {
 
   const setting = useSelector((state: RootState) => state.setting);
 
-  const setCodeContent = () => {
-    if ((setting.kind === "HTML")) {
+  // 判断应该显示的代码
+  const setCodeContent = ():void => {
+    if (setting.kind === "HTML") {
       sethtml(code.HTMLCode);
-    }else if(setting.kind === "Vue"){
-      sethtml(code.VueHTMLCode)
+      if (setting.version === "Normal") {
+        setjs(code.JSCode);
+      } else {
+        setjs(code.JSESCode);
+      }
+    } else if (setting.kind === "Vue") {
+      sethtml(code.VueHTMLCode);
+      if (setting.version === "Normal") {
+        setjs(code.VueJSCode);
+      } else {
+        setjs(code.VueJSESCode);
+      }
+    } else {
+      if (setting.kind === "HTML") {
+        sethtml(code.ReactHTMLCode);
+        if (setting.version === "Normal") {
+          setjs(code.ReactJSCode);
+        } else {
+          setjs(code.ReactJSESCode);
+        }
+      }
     }
     setcss(code.CSSCode);
-    setjs(code.JSCode);
   };
-
 
   // 初始化copy选项
   useEffect(() => {
