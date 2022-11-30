@@ -3,7 +3,8 @@
   z-index: 99;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
 }
 
 .code_box {
@@ -13,7 +14,6 @@
   width: 90%;
   height: 90%;
   background-color: rgb(243, 242, 242);
-  backdrop-filter: blur(20px);
   border-radius: 15px;
 }
 

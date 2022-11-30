@@ -1,5 +1,6 @@
 import React from "react";
 
+
 import Header from "./Header";
 import Left from "./Left";
 import Middle from "./Middle";
@@ -8,7 +9,6 @@ import Right from "./Right";
 import "./index.css";
 
 const CodeBox = () => {
-  
   return (
     <div className="code_page">
       <div className="code_box">

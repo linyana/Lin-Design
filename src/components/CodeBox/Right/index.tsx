@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "@/store";
 
@@ -7,12 +7,31 @@ import "./index.css";
 const Right = () => {
   const code = useSelector((state: RootState) => state.codeBox);
 
+  const [html, sethtml] = useState<string>(code.HTMLCode);
+  const [css, setcss] = useState<string>(code.CSSCode);
+  const [js, setjs] = useState<string>(code.JSCode);
+
+  const setting = useSelector((state: RootState) => state.setting);
+
+  const setCodeContent = () => {
+    if ((setting.kind === "HTML")) {
+      sethtml(code.HTMLCode);
+    }else if(setting.kind === "Vue"){
+      sethtml(code.VueHTMLCode)
+    }
+    setcss(code.CSSCode);
+    setjs(code.JSCode);
+  };
+
+
   // 初始化copy选项
   useEffect(() => {
     const copys = document.querySelectorAll(".copy");
     for (let i = 0; i < copys.length; i++) {
       copys[i].innerHTML = "复制";
     }
+
+    setCodeContent();
   });
 
   // 点击复制
@@ -36,7 +55,7 @@ const Right = () => {
         >
           复制
         </div>
-        {code.HTMLCode}
+        {html}
       </pre>
       <pre className="CSS">
         <div
@@ -47,7 +66,7 @@ const Right = () => {
         >
           复制
         </div>
-        {code.CSSCode}
+        {css}
       </pre>
       <pre className="JS">
         <div
@@ -58,7 +77,7 @@ const Right = () => {
         >
           复制
         </div>
-        {code.JSCode}
+        {js}
       </pre>
     </div>
   );

@@ -1,15 +1,17 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import isCodeBoxShowSlice from "./isCodeBoxShow";
+import isCodeBoxShowSlice from "./IsCodeBoxShow";
 import codeSlice from "./Code";
+import settingSlice from "./Settinrg";
 
 export const store = configureStore({
   reducer: {
     isCodeBoxShow: isCodeBoxShowSlice,
     codeBox: codeSlice,
+    setting: settingSlice,
   },
   // 解决非序列化的问题
-  middleware: (getDefaultMiddleware) => 
+  middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: false,
     }),

@@ -10,6 +10,11 @@ img.close {
   cursor: pointer;
   width: 40px;
   margin-left: 20px;
+  transition: all 0.8s;
+}
+
+img.close:hover {
+  transform: rotate(270deg) scale(0.8);
 }
 
 .code_box_header_selects {

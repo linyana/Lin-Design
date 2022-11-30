@@ -1,9 +1,8 @@
 import React from "react";
 
 import { useDispatch } from "react-redux";
-import { changeShowCodeBox } from "@/store/isCodeBoxShow";
-import { setCode,codeState } from "@/store/Code";
-
+import { changeShowCodeBox } from "@/store/IsCodeBoxShow";
+import { setCode, codeState } from "@/store/Code";
 
 import showSrc from "@/assets/svg/normal/show.svg";
 

@@ -37,6 +37,10 @@ button.button_compontent_button2:hover {
 </div>
 `,
   VueJSCode: `暂无`,
+  ReactHTMLCode: `<div className="compontent_box_content">
+  <button className="button_compontent_button2">基本按钮</button>
+</div>`,
+  ReactJSCode: `暂无`,
 };
 
 const Component2 = () => {
