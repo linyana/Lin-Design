@@ -30,7 +30,7 @@ const Right = () => {
         setjs(code.VueJSESCode);
       }
     } else {
-      if (setting.kind === "HTML") {
+      if (setting.kind === "React") {
         sethtml(code.ReactHTMLCode);
         if (setting.version === "Normal") {
           setjs(code.ReactJSCode);
@@ -50,7 +50,8 @@ const Right = () => {
     }
 
     setCodeContent();
-  });
+    console.log(setting.kind,setting.version)
+  },[setting.kind,setting.version,[]]);
 
   // 点击复制
   const getCopyText = (
