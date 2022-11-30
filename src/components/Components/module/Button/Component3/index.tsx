@@ -31,6 +31,10 @@ button.button_compontent_button3:hover {
 }
 `,
   JSCode: `暂无`,
+  VueHTMLCode: `<div className="compontent_box_content">
+  <button className="button_compontent_button3">圆角按钮</button>
+</div>`,
+  VueJSCode: `暂无`,
 };
 
 const Component3 = () => {

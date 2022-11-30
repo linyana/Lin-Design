@@ -11,3 +11,64 @@ img.close {
   width: 40px;
   margin-left: 20px;
 }
+
+.code_box_header_selects {
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.select {
+  position: relative;
+  width: 122px;
+  text-align: center;
+  line-height: 32px;
+}
+
+.select_title {
+  position: relative;
+  cursor: pointer;
+  border: 1px solid #c7c5c5;
+  border-radius: 4px;
+  width: 60px;
+  padding: 0 40px;
+  padding-left: 20px;
+}
+
+img.pull_img {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  width: 20px;
+}
+
+.options {
+  display: none;
+  border-radius: 4px;
+  z-index: 105;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  border: 1px solid #c7c5c5;
+}
+
+.option {
+  cursor: pointer;
+  background-color: #f3f2f2;
+  transition: all 0.8s;
+}
+
+.option:hover {
+  background-color: rgb(228, 227, 227);
+}
+
+.option:first-child {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.option:last-child {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}

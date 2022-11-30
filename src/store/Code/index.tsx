@@ -5,13 +5,17 @@ export interface codeState {
   HTMLCode: string;
   CSSCode: string;
   JSCode: string;
+  VueHTMLCode: string;
+  VueJSCode: string;
 }
 
 const initialState: codeState = {
-  element: () => <button>基本按钮</button>,
-  HTMLCode: "<span></span>",
-  CSSCode: "<span></span>",
-  JSCode: "<span></span>",
+  element: () => <></>,
+  HTMLCode: "",
+  CSSCode: "",
+  JSCode: "",
+  VueHTMLCode: "",
+  VueJSCode: "",
 };
 
 export const codeSlice = createSlice({
@@ -23,6 +27,8 @@ export const codeSlice = createSlice({
       state.HTMLCode = payload.payload.HTMLCode;
       state.CSSCode = payload.payload.CSSCode;
       state.JSCode = payload.payload.JSCode;
+      state.VueHTMLCode = payload.payload.VueHTMLCode;
+      state.VueJSCode = payload.payload.VueJSCode;
     },
   },
 });
