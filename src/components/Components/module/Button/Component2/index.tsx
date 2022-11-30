@@ -6,9 +6,7 @@ import "./index.css";
 
 const code: codeState = {
   element: () => (
-    <div className="compontent_box_content">
-      <button className="button_compontent_button2">简洁按钮</button>
-    </div>
+    <button className="button_compontent_button2">简洁按钮</button>
   ),
   HTMLCode: `<div class="compontent_box_content">
   <button class="button_compontent_button2">简洁按钮</button>

@@ -12,6 +12,7 @@
 }
 
 .code_box_left_color_box {
+  cursor: pointer;
   width: 25px;
   height: 25px;
   border-radius: 4px;
