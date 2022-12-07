@@ -6,29 +6,34 @@ import "./index.css";
 
 const code: codeState = {
   element: () => (
-    <button className="button_compontent_button2">简洁按钮</button>
+    <button
+      className="button_compontent_button2"
+      style={{ border: "1px solid var(--bgColor)",backgroundColor: "var(--bgColor01)",color: "var(--bgColor)", boxShadow: "var(--bgColor03)" }}
+    >
+      简洁按钮
+    </button>
   ),
   HTMLCode: `<div class="compontent_box_content">
   <button class="button_compontent_button2">简洁按钮</button>
 </div>  
 `,
-  CSSCode: `button.button_compontent_button2 {
-  cursor: pointer;
-  padding: 12px 40px;
-  background-color: transparent;
-  border: 1px solid rgb(174, 200, 230);
-  outline: none;
-  border-radius: 6px;
-  box-shadow: 0 0 5px rgba(127, 173, 226, 0.3);
-  transition: all 0.8s;
-  color: rgb(47, 121, 206);
-  background-color: rgba(92, 154, 226, 0.1);
-}
-
-button.button_compontent_button2:hover {
-  border: 1px solid rgb(56, 137, 230);
-}
-`,
+  CSSCode: (bgColor: string) => `button.button_compontent_button2 {
+      cursor: pointer;
+      padding: 12px 40px;
+      background-color: transparent;
+      border: 1px solid ${bgColor};
+      outline: none;
+      border-radius: 6px;
+      box-shadow: 0 0 5px ${bgColor.replace(')',', 0.3)')};
+      transition: all 0.8s;
+      color: ${bgColor};
+      background-color:  ${bgColor.replace(')',', 0.1)')};
+    }
+    
+    button.button_compontent_button2:hover {
+      border: 1px solid rgb(56, 137, 230);
+    }
+    `,
   JSCode: `暂无`,
   VueHTMLCode: `<div class="compontent_box_content">
   <button class="button_compontent_button2">简洁按钮</button>

@@ -14,42 +14,40 @@ const Component1 = () => {
     element: () => (
       <button
         className="button_compontent_button1"
-        style={{ backgroundColor: bgColor ? bgColor : "unset", }}
+        style={{ backgroundColor: 'var(--bgColor)', boxShadow: 'var(--bgColor03)' }}
       >
         基本按钮
       </button>
     ),
-    HTMLCode: `<div class="component_box_content">
-    <div class="button_compontent_button1">
-      基本按钮
-    </div>
-  </div>`,
-    CSSCode: `button.button_compontent_button1 {
-    cursor: pointer;
-    padding: 12px 40px;
-    background-color: rgb(47, 121, 206);
-    border: none;
-    outline: none;
-    border-radius: 6px;
-    color: white;
-    box-shadow: 0 0 5px rgba(32, 105, 189, 0.3);
-    transition: all 0.8s;
-  }
-  
-  button.button_compontent_button1:hover {
-    background-color: rgb(56, 137, 230);
-  }
-    `,
+    HTMLCode: `<button class="button_compontent_button1">
+  基本按钮
+</button>`,
+    CSSCode: (bgColor: string) => {
+      return `button.button_compontent_button1 {
+        cursor: pointer;
+        padding: 12px 40px;
+        background-color: ${bgColor};
+        border: none;
+        outline: none;
+        border-radius: 6px;
+        color: white;
+        box-shadow: 0 0 5px ${bgColor.replace(')',', 0.3)')};
+        transition: all 0.5s;
+      }
+      
+      button.button_compontent_button1:hover {
+        background-color: rgb(56, 137, 230);
+      }
+        `
+    },
     JSCode: `暂无`,
-    VueHTMLCode: `<div class="component_box_content">
-    <div class="button_compontent_button1">
-      基本按钮
-    </div>
-  </div>`,
+    VueHTMLCode: `<button class="button_compontent_button1">
+  基本按钮
+</button>`,
     VueJSCode: `暂无`,
-    ReactHTMLCode: `<div className="compontent_box_content">
-    <button className="button_compontent_button1">基本按钮</button>
-  </div>`,
+    ReactHTMLCode: `<button className="button_compontent_button1">
+  基本按钮
+</button>`,
     ReactJSCode: `暂无`,
     TSCode: `暂无`,
     VueTSCode: `暂无`,

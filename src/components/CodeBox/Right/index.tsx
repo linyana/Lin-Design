@@ -6,12 +6,11 @@ import "./index.css";
 
 const Right = () => {
   const code = useSelector((state: RootState) => state.codeBox);
+  const setting = useSelector((state: RootState) => state.setting);
 
   const [html, sethtml] = useState<string>(code.HTMLCode);
-  const [css, setcss] = useState<string>(code.CSSCode);
+  const [css, setcss] = useState(code.CSSCode(setting.bgColor));
   const [js, setjs] = useState<string>(code.JSCode);
-
-  const setting = useSelector((state: RootState) => state.setting);
 
   // 判断应该显示的代码
   const setCodeContent = (): void => {
@@ -39,7 +38,7 @@ const Right = () => {
         }
       }
     }
-    setcss(code.CSSCode);
+    setcss(code.CSSCode(setting.bgColor));
   };
 
   // 初始化copy选项
@@ -79,7 +78,7 @@ const Right = () => {
         <div
           className="copy"
           onClick={(event) => {
-            getCopyText(event, code.CSSCode);
+            getCopyText(event, code.CSSCode(setting.bgColor));
           }}
         >
           复制

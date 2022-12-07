@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export interface codeState {
   element: () => JSX.Element;
   HTMLCode: string;
-  CSSCode: string;
+  CSSCode: (bgColor: string) => string;
   JSCode: string;
   VueHTMLCode: string;
   VueJSCode: string;
@@ -17,7 +17,7 @@ export interface codeState {
 const initialState: codeState = {
   element: () => <></>,
   HTMLCode: "",
-  CSSCode: "",
+  CSSCode: () => ``,
   JSCode: "",
   VueHTMLCode: "",
   VueJSCode: "",
@@ -35,8 +35,8 @@ export const codeSlice = createSlice({
     setCode: (state, payload: any): void => {
       state.element = payload.payload.element;
       state.HTMLCode = payload.payload.HTMLCode;
-      state.CSSCode = payload.payload.CSSCode;
       state.JSCode = payload.payload.JSCode;
+      state.CSSCode = payload.payload.CSSCode;
       state.VueHTMLCode = payload.payload.VueHTMLCode;
       state.VueJSCode = payload.payload.VueJSCode;
       state.ReactHTMLCode = payload.payload.ReactHTMLCode;

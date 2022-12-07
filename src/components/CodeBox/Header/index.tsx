@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { changeShowCodeBox } from "@/store/IsCodeBoxShow";
-import { setKind, setVersion } from "@/store/Settinrg";
+import { setKind, setFormat } from "@/store/Setting";
 import { RootState } from "@/store";
 
 import closeSrc from "@/assets/svg/codeBox/close.svg";
@@ -48,7 +48,7 @@ const Header = () => {
   };
 
   const handleVersionOption = (format: string) => {
-    dispatch(setVersion(format));
+    dispatch(setFormat(format));
   };
 
   return (

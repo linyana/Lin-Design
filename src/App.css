@@ -5,6 +5,10 @@
   color: #495057;
 }
 
+:root {
+  --bgColor: #2f79ce;
+}
+
 @font-face {
   font-family: "PuHuiTiBold";
   font-weight: 700;

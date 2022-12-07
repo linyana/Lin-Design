@@ -9,7 +9,7 @@ export interface settingState {
 
 const initialState: settingState = {
   color: "white",
-  bgColor: "rgb(47, 121, 206)",
+  bgColor: localStorage.getItem("bgColor") as string,
   kind: "HTML",
   format: "JavaScript",
 };
@@ -23,17 +23,20 @@ export const settingSlice = createSlice({
     },
     setBgColor: (state, payload) => {
       state.bgColor = payload.payload;
+      localStorage.setItem("bgColor", state.bgColor);
     },
     setKind: (state, payload) => {
       state.kind = payload.payload;
+      localStorage.setItem("kind", state.kind);
     },
-    setVersion: (state, payload) => {
+    setFormat: (state, payload) => {
       state.format = payload.payload;
+      localStorage.setItem("kind", state.kind);
     },
   },
 });
 
-export const { setColor, setBgColor, setKind, setVersion } =
+export const { setColor, setBgColor, setKind, setFormat } =
   settingSlice.actions;
 
 export default settingSlice.reducer;

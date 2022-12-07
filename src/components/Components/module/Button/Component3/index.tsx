@@ -7,27 +7,31 @@ import "./index.css";
 
 const code: codeState = {
   element: () => (
-    <button className="button_compontent_button3">圆角按钮</button>
+    <button
+      className="button_compontent_button3"
+      style={{ backgroundColor: "var(--bgColor)", boxShadow: "var(--bgColor03)"}}
+    >
+      圆角按钮
+    </button>
   ),
   HTMLCode: `<div className="compontent_box_content">
   <button className="button_compontent_button3">圆角按钮</button>
 </div>`,
-  CSSCode: `button.button_compontent_button3 {
+  CSSCode: (bgColor: string) => `button.button_compontent_button3 {
   cursor: pointer;
   padding: 12px 40px;
-  background-color: rgb(47, 121, 206);
+  background-color: ${bgColor};
   border: none;
   outline: none;
   border-radius: 100px;
   color: white;
-  box-shadow: 0 0 5px rgba(32, 105, 189, 0.3);
-  transition: all 0.8s;
+  box-shadow: 0 0 5px ${bgColor.replace(')',', 0.3)')};
+  transition: all 0.5s;
 }
-
+    
 button.button_compontent_button3:hover {
-  background-color: rgb(56, 137, 230);
-}
-`,
+  background-color: ${bgColor.replace(')',', 0.8)')};
+}`,
   JSCode: `暂无`,
   VueHTMLCode: `<div class="compontent_box_content">
   <button class="button_compontent_button3">圆角按钮</button>

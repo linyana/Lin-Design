@@ -2,7 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 
 import isCodeBoxShowSlice from "./IsCodeBoxShow";
 import codeSlice from "./Code";
-import settingSlice from "./Settinrg";
+import settingSlice from "./Setting";
 
 export const store = configureStore({
   reducer: {
