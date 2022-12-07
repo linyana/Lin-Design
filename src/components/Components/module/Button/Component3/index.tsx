@@ -33,13 +33,13 @@ button.button_compontent_button3:hover {
   background-color: ${bgColor.replace(')',', 0.8)')};
 }`,
   JSCode: `暂无`,
-  VueHTMLCode: `<div class="compontent_box_content">
-  <button class="button_compontent_button3">圆角按钮</button>
-</div>`,
+  VueHTMLCode: `<button class="button_compontent_button3">
+  圆角按钮
+</button>`,
   VueJSCode: `暂无`,
-  ReactHTMLCode: `<div class="compontent_box_content">
-  <button class="button_compontent_button3">基本按钮</button>
-</div>`,
+  ReactHTMLCode: `<button class="button_compontent_button3">
+  基本按钮
+</button>`,
   ReactJSCode: `暂无`,
   TSCode: `暂无`,
   VueTSCode: `暂无`,

@@ -36,7 +36,7 @@ const Component1 = () => {
       }
       
       button.button_compontent_button1:hover {
-        background-color: rgb(56, 137, 230);
+        background-color:${bgColor.replace(')',', 0.8)')};
       }
         `
     },

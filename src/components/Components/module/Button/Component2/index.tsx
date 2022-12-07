@@ -13,10 +13,9 @@ const code: codeState = {
       简洁按钮
     </button>
   ),
-  HTMLCode: `<div class="compontent_box_content">
-  <button class="button_compontent_button2">简洁按钮</button>
-</div>  
-`,
+  HTMLCode: `<button class="button_compontent_button2">
+  简洁按钮
+</button>`,
   CSSCode: (bgColor: string) => `button.button_compontent_button2 {
       cursor: pointer;
       padding: 12px 40px;
@@ -25,24 +24,23 @@ const code: codeState = {
       outline: none;
       border-radius: 6px;
       box-shadow: 0 0 5px ${bgColor.replace(')',', 0.3)')};
-      transition: all 0.8s;
+      transition: all 0.5s;
       color: ${bgColor};
       background-color:  ${bgColor.replace(')',', 0.1)')};
     }
     
     button.button_compontent_button2:hover {
-      border: 1px solid rgb(56, 137, 230);
+      border: 1px solid ${bgColor.replace(')',', 0.8)')}';
     }
     `,
   JSCode: `暂无`,
-  VueHTMLCode: `<div class="compontent_box_content">
-  <button class="button_compontent_button2">简洁按钮</button>
-</div>
-`,
+  VueHTMLCode: `<button class="button_compontent_button2">
+  简洁按钮
+</button>`,
   VueJSCode: `暂无`,
-  ReactHTMLCode: `<div className="compontent_box_content">
-  <button className="button_compontent_button2">基本按钮</button>
-</div>`,
+  ReactHTMLCode: `<button className="button_compontent_button2">
+  基本按钮
+</button>`,
   ReactJSCode: `暂无`,
   TSCode: `暂无`,
   VueTSCode: `暂无`,
