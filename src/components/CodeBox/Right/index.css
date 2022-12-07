@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   width: 460px;
   border-left: 1px solid #efefef;
-  transition: all 0.8s;
+  transition: all 0.5s;
 }
 
 .code_box_right pre {
@@ -12,7 +12,7 @@
   height: 100%;
   padding: 32px;
   overflow: hidden;
-  transition: all 0.8s;
+  transition: all 0.5s;
 }
 
 .code_box_right pre:hover {
@@ -88,7 +88,7 @@ pre::before {
   color: white;
   border-radius: 4px;
   font-size: 14px;
-  transition: all 0.8s;
+  transition: all 0.5s;
 }
 
 .code_box_right pre:hover .copy {

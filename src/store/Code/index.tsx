@@ -9,9 +9,9 @@ export interface codeState {
   VueJSCode: string;
   ReactHTMLCode: string;
   ReactJSCode: string;
-  JSESCode: string;
-  VueJSESCode: string;
-  ReactJSESCode: string;
+  TSCode: string;
+  VueTSCode: string;
+  ReactTSCode: string;
 }
 
 const initialState: codeState = {
@@ -23,9 +23,9 @@ const initialState: codeState = {
   VueJSCode: "",
   ReactHTMLCode: "",
   ReactJSCode: "",
-  JSESCode: "",
-  VueJSESCode: "",
-  ReactJSESCode: "",
+  TSCode: "",
+  VueTSCode: "",
+  ReactTSCode: "",
 };
 
 export const codeSlice = createSlice({
@@ -41,9 +41,9 @@ export const codeSlice = createSlice({
       state.VueJSCode = payload.payload.VueJSCode;
       state.ReactHTMLCode = payload.payload.ReactHTMLCode;
       state.ReactJSCode = payload.payload.ReactJSCode;
-      state.JSESCode = payload.payload.JSESCode;
-      state.VueJSESCode = payload.payload.VueJSESCode;
-      state.ReactJSESCode = payload.payload.ReactJSESCode;
+      state.TSCode = payload.payload.TSCode;
+      state.VueTSCode = payload.payload.VueTSCode;
+      state.ReactTSCode = payload.payload.ReactTSCode;
     },
   },
 });

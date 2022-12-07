@@ -17,25 +17,25 @@ const Right = () => {
   const setCodeContent = ():void => {
     if (setting.kind === "HTML") {
       sethtml(code.HTMLCode);
-      if (setting.version === "Normal") {
+      if (setting.format === "JavaScript") {
         setjs(code.JSCode);
       } else {
-        setjs(code.JSESCode);
+        setjs(code.TSCode);
       }
     } else if (setting.kind === "Vue") {
       sethtml(code.VueHTMLCode);
-      if (setting.version === "Normal") {
+      if (setting.format === "JavaScript") {
         setjs(code.VueJSCode);
       } else {
-        setjs(code.VueJSESCode);
+        setjs(code.VueTSCode);
       }
     } else {
       if (setting.kind === "React") {
         sethtml(code.ReactHTMLCode);
-        if (setting.version === "Normal") {
+        if (setting.format === "JavaScript") {
           setjs(code.ReactJSCode);
         } else {
-          setjs(code.ReactJSESCode);
+          setjs(code.ReactTSCode);
         }
       }
     }
@@ -50,7 +50,7 @@ const Right = () => {
     }
 
     setCodeContent();
-  },[setting.kind,setting.version,[]]);
+  },[setting.kind,setting.format,[]]);
 
   // 点击复制
   const getCopyText = (

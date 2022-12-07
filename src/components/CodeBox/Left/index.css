@@ -1,6 +1,6 @@
 .code_box_left {
   width: 220px;
-  transition: all 0.8s;
+  transition: all 0.5s;
 }
 
 .code_box_left:hover {

@@ -28,11 +28,11 @@
   padding: 15px 30px;
   display: flex;
   justify-content: center;
-  transition: all 0.8s;
+  transition: all 0.5s;
 }
 
 .compontent_box_menu:hover {
-  background-color: rgb(240, 239, 239);
+  background-color: rgb(252, 251, 251);
 }
 
 p.compontent_p {

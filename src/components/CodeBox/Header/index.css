@@ -61,7 +61,7 @@ img.pull_img {
 .option {
   cursor: pointer;
   background-color: #f3f2f2;
-  transition: all 0.8s;
+  transition: all 0.5s;
 }
 
 .option:hover {

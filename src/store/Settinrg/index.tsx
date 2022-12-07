@@ -4,14 +4,14 @@ export interface settingState {
   color: string;
   bgColor: string;
   kind: string;
-  version: string;
+  format: string;
 }
 
 const initialState: settingState = {
   color: "white",
   bgColor: "rgb(47, 121, 206)",
   kind: "HTML",
-  version: "Normal",
+  format: "JavaScript",
 };
 
 export const settingSlice = createSlice({
@@ -28,7 +28,7 @@ export const settingSlice = createSlice({
       state.kind = payload.payload;
     },
     setVersion: (state, payload) => {
-      state.version = payload.payload;
+      state.format = payload.payload;
     },
   },
 });

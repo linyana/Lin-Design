@@ -7,7 +7,7 @@ button.button_compontent_button1 {
   border-radius: 6px;
   color: white;
   box-shadow: 0 0 5px rgba(47, 121, 206, 0.3);
-  transition: all 0.8s;
+  transition: all 0.5s;
 }
 
 button.button_compontent_button1:hover {

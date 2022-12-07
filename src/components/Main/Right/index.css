@@ -9,7 +9,7 @@
 
 .right_menu_line {
   cursor: pointer;
-  transition: all 0.8s;
+  transition: all 0.5s;
   margin: 3px 0;
 }
 

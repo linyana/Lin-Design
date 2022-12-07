@@ -37,9 +37,9 @@ button.button_compontent_button3:hover {
   <button class="button_compontent_button3">基本按钮</button>
 </div>`,
   ReactJSCode: `暂无`,
-  JSESCode: `暂无`,
-  VueJSESCode: `暂无`,
-  ReactJSESCode: `暂无`,
+  TSCode: `暂无`,
+  VueTSCode: `暂无`,
+  ReactTSCode: `暂无`,
 };
 
 const Component3 = () => {

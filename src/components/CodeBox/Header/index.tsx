@@ -47,8 +47,8 @@ const Header = () => {
     dispatch(setKind(kind));
   };
 
-  const handleVersionOption = (version: string) => {
-    dispatch(setVersion(version));
+  const handleVersionOption = (format: string) => {
+    dispatch(setVersion(format));
   };
 
   return (
@@ -86,7 +86,7 @@ const Header = () => {
               changeSelect2();
             }}
           >
-            {setting.version}
+            {setting.format}
             <img src={pullSrc} alt="下拉" className="pull_img" />
           </div>
           <div
@@ -95,12 +95,15 @@ const Header = () => {
           >
             <div
               className="option"
-              onClick={() => handleVersionOption("Normal")}
+              onClick={() => handleVersionOption("JavaScript")}
             >
-              Normal
+              JavaScript
             </div>
-            <div className="option" onClick={() => handleVersionOption("ES6")}>
-              ES6
+            <div
+              className="option"
+              onClick={() => handleVersionOption("TypeScript")}
+            >
+              TypeScript
             </div>
           </div>
         </div>
