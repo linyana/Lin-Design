@@ -6,7 +6,7 @@ import "./index.css";
 const Left = () => {
   const dispatch = useDispatch();
 
-  const handleClickColorBox = (event:any) => {
+  const handleClickColorBox = (event: any) => {
     console.log(event.target.style.backgroundColor)
   }
 

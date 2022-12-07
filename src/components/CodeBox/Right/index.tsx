@@ -14,7 +14,7 @@ const Right = () => {
   const setting = useSelector((state: RootState) => state.setting);
 
   // 判断应该显示的代码
-  const setCodeContent = ():void => {
+  const setCodeContent = (): void => {
     if (setting.kind === "HTML") {
       sethtml(code.HTMLCode);
       if (setting.format === "JavaScript") {
@@ -50,7 +50,7 @@ const Right = () => {
     }
 
     setCodeContent();
-  },[setting.kind,setting.format,[]]);
+  }, [setting.kind, setting.format, []]);
 
   // 点击复制
   const getCopyText = (
@@ -64,7 +64,7 @@ const Right = () => {
 
   return (
     <div className="code_box_right">
-      <pre className="HTML">
+      <div className="pre">
         <div
           className="copy"
           onClick={(event) => {
@@ -73,9 +73,9 @@ const Right = () => {
         >
           复制
         </div>
-        {html}
-      </pre>
-      <pre className="CSS">
+        <pre className="HTML">{html}</pre>
+      </div>
+      <div className="pre">
         <div
           className="copy"
           onClick={(event) => {
@@ -84,9 +84,9 @@ const Right = () => {
         >
           复制
         </div>
-        {css}
-      </pre>
-      <pre className="JS">
+        <pre className="CSS">{css}</pre>
+      </div>
+      <div className="pre">
         <div
           className="copy"
           onClick={(event) => {
@@ -95,8 +95,8 @@ const Right = () => {
         >
           复制
         </div>
-        {js}
-      </pre>
+        <pre className="JS">{js}</pre>
+      </div>
     </div>
   );
 };

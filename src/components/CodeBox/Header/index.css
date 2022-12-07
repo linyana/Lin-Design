@@ -25,7 +25,6 @@ img.close:hover {
 
 .select {
   position: relative;
-  width: 122px;
   text-align: center;
   line-height: 32px;
 }
@@ -35,7 +34,6 @@ img.close:hover {
   cursor: pointer;
   border: 1px solid #c7c5c5;
   border-radius: 4px;
-  width: 60px;
   padding: 0 40px;
   padding-left: 20px;
 }

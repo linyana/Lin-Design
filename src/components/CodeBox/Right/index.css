@@ -8,11 +8,14 @@
 
 .code_box_right pre {
   position: relative;
+  z-index: 9;
   width: 100%;
   height: 100%;
   padding: 32px;
   overflow: hidden;
   transition: all 0.5s;
+  width: calc(100% - 64px);
+  height: calc(100% - 64px);
 }
 
 .code_box_right pre:hover {
@@ -42,17 +45,20 @@
 
 pre.HTML {
   color: #ce7d69;
-  height: calc(30% - 64px);
 }
 
 pre.CSS {
   color: #767cc9;
-  height: calc(30% - 64px);
 }
 
 pre.JS {
   color: #c9b716;
-  height: calc(30% - 64px);
+}
+
+.pre {
+  position: relative;
+  width: 100%;
+  height: 30%;
 }
 
 pre::before {
@@ -78,10 +84,11 @@ pre::before {
 }
 
 .copy {
+  z-index: 99999;
   opacity: 0;
   cursor: pointer;
   position: absolute;
-  left: 376px;
+  right: 23px;
   top: 8px;
   padding: 3px 10px;
   background-color: rgb(173, 173, 173);
@@ -89,8 +96,9 @@ pre::before {
   border-radius: 4px;
   font-size: 14px;
   transition: all 0.5s;
+  white-space: nowrap;
 }
 
-.code_box_right pre:hover .copy {
+.code_box_right .pre:hover .copy {
   opacity: 1;
 }
