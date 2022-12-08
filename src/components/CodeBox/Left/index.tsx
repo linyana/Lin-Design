@@ -75,6 +75,7 @@ const Left = () => {
           {colorList.map((item) => {
             return (
               <div
+                key={item}
                 className="code_box_left_color_box"
                 style={{ background: item }}
                 onClick={(event) => handleClickColorBox(event)}
@@ -86,6 +87,7 @@ const Left = () => {
           {colorList2.map((item) => {
             return (
               <div
+                key={item}
                 className="code_box_left_color_box"
                 style={{ background: item }}
                 onClick={(event) => handleClickColorBox(event)}
