@@ -1,15 +1,15 @@
 button.button_compontent_button1 {
   cursor: pointer;
   padding: 12px 40px;
-  background-color: rgb(47, 121, 206);
+  background-color: var(--bgColor);
   border: none;
   outline: none;
   border-radius: 6px;
   color: white;
-  box-shadow: 0 0 5px rgba(47, 121, 206, 0.3);
+  box-shadow: 0 0 5px var(--bgColor03);
   transition: all 0.5s;
 }
 
 button.button_compontent_button1:hover {
-  background-color: rgb(56, 137, 230);
+  background-color: var(--bgColor08)!important;
 }

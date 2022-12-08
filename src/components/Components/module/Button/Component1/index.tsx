@@ -1,14 +1,10 @@
 import React from "react";
 import ShowCode from "@/components/Components/ShowCode";
 import { codeState } from "@/store/Code";
-import { useSelector } from "react-redux";
-import { RootState } from "@/store";
 
 import "./index.css";
 
 const Component1 = () => {
-
-  const bgColor = useSelector((state: RootState) => state.setting.bgColor)
 
   const code: codeState = {
     element: () => (

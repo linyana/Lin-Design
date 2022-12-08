@@ -1,6 +1,5 @@
-import { setCode } from "@/store/Code";
+import React, { useRef } from "react";
 import { setBgColor } from "@/store/Setting";
-import React from "react";
 import { useDispatch } from "react-redux";
 
 import "./index.css";
@@ -12,10 +11,38 @@ const Left = () => {
     dispatch(setBgColor(event.target.style.backgroundColor));
   };
 
+  const set16ToRgb = (str: string) => {
+    var reg = /^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/;
+    if (!reg.test(str)) {
+      return;
+    }
+    let newStr = str.toLowerCase().replace(/\#/g, "");
+    let len = newStr.length;
+    if (len == 3) {
+      let t = "";
+      for (var i = 0; i < len; i++) {
+        t += newStr.slice(i, i + 1).concat(newStr.slice(i, i + 1));
+      }
+      newStr = t;
+    }
+    let arr = []; //将字符串分隔，两个两个的分隔
+    for (var i = 0; i < 6; i = i + 2) {
+      let s = newStr.slice(i, i + 2);
+      arr.push(parseInt("0x" + s));
+    }
+    return "rgb(" + arr.join(",") + ")";
+  };
+
   return (
     <div className="code_box_left">
       <div className="code_box_left_content">
-        <input type="color" className="color_input" />
+        <input
+          type="color"
+          className="color_input"
+          onChange={(e) => {
+            dispatch(setBgColor(set16ToRgb(e.target.value)));
+          }}
+        />
         <div className="flex_between code_box_left_color_boxes">
           <div
             className="code_box_left_color_box"

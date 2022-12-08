@@ -9,7 +9,7 @@ export interface settingState {
 
 const initialState: settingState = {
   color: "white",
-  bgColor: localStorage.getItem("bgColor") as string,
+  bgColor: localStorage.getItem("bgColor") as string || 'rgb(47, 121, 206)',
   kind: "HTML",
   format: "JavaScript",
 };
