@@ -3,13 +3,16 @@ import { createSlice } from "@reduxjs/toolkit";
 export interface settingState {
   color: string;
   bgColor: string;
+  hoverColor: string;
   kind: string;
   format: string;
 }
 
 const initialState: settingState = {
-  color: "white",
-  bgColor: localStorage.getItem("bgColor") as string || 'rgb(47, 121, 206)',
+  color: (localStorage.getItem("color") as string) || "white",
+  bgColor: (localStorage.getItem("bgColor") as string) || "rgb(47, 121, 206)",
+  hoverColor:
+    (localStorage.getItem("hoverColor") as string) || "rgb(56, 137, 230)",
   kind: "HTML",
   format: "JavaScript",
 };
@@ -25,6 +28,10 @@ export const settingSlice = createSlice({
       state.bgColor = payload.payload;
       localStorage.setItem("bgColor", state.bgColor);
     },
+    setHoverColor: (state, payload) => {
+      state.hoverColor = payload.payload;
+      localStorage.setItem("hoverColor", state.hoverColor);
+    },
     setKind: (state, payload) => {
       state.kind = payload.payload;
       localStorage.setItem("kind", state.kind);
@@ -36,7 +43,7 @@ export const settingSlice = createSlice({
   },
 });
 
-export const { setColor, setBgColor, setKind, setFormat } =
+export const { setColor, setBgColor, setKind, setFormat, setHoverColor } =
   settingSlice.actions;
 
 export default settingSlice.reducer;

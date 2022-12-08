@@ -1,10 +1,5 @@
 .code_box_left {
   width: 220px;
-  transition: all 0.5s;
-}
-
-.code_box_left:hover {
-  background-color: #ececec;
 }
 
 .code_box_left_content {
@@ -37,4 +32,33 @@ input.color_input {
 input.color_input::-webkit-color-swatch-wrapper {
   background-color: rgb(185, 185, 185);
   padding: 5px;
+}
+
+.color_nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  background-color: rgb(235, 235, 235);
+  border-radius: 15px;
+}
+
+.color_nav_box {
+  cursor: pointer;
+  z-index: 91;
+  text-align: center;
+  line-height: 45px;
+  width: 33.3%;
+}
+
+.color_hover_box {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  z-index: 90;
+  background-color: rgb(243, 243, 243);
+  height: 37px;
+  width: 33%;
+  transition: all 0.3s;
+  border-radius: 15px;
 }

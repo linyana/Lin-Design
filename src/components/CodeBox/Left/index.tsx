@@ -1,6 +1,7 @@
-import React, { MutableRefObject, useRef } from "react";
-import { setBgColor } from "@/store/Setting";
-import { useDispatch } from "react-redux";
+import React, { MutableRefObject, useRef, useState } from "react";
+import { setBgColor, setColor, setHoverColor } from "@/store/Setting";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "@/store";
 
 import "./index.css";
 
@@ -21,11 +22,35 @@ const colorList2 = [
 ];
 
 const Left = () => {
+  const setting = useSelector((state: RootState) => state.setting);
+
   const dispatch = useDispatch();
+  const [hoverBoxPosition, setHoverBoxPosition] = useState<string>("0");
+  const [hoverBoxTruePosition, setHoverBoxTruePosition] = useState<string>("0");
+  const [colorKind, setColorKind] = useState<string>("bgColor");
+
+  const bgColorInput: MutableRefObject<any> = useRef(null);
+  const colorInput: MutableRefObject<any> = useRef(null);
+  const hoverColorInput: MutableRefObject<any> = useRef(null);
 
   const handleClickColorBox = (event: any) => {
-    dispatch(setBgColor(event.target.style.backgroundColor));
-    colorInput.current.value = setRgbtoHex(event.target.style.backgroundColor);
+    console.log(colorKind === "bgColor");
+    if (colorKind == "bgColor") {
+      dispatch(setBgColor(event.target.style.backgroundColor));
+      bgColorInput.current.value = setRgbtoHex(
+        event.target.style.backgroundColor
+      );
+    } else if (colorKind === "color") {
+      dispatch(setColor(event.target.style.backgroundColor));
+      colorInput.current.value = setRgbtoHex(
+        event.target.style.backgroundColor
+      );
+    } else {
+      dispatch(setHoverColor(event.target.style.backgroundColor));
+      hoverColorInput.current.value = setRgbtoHex(
+        event.target.style.backgroundColor
+      );
+    }
   };
 
   const setRgbtoHex = (color: string) => {
@@ -58,19 +83,99 @@ const Left = () => {
     return "rgb(" + arr.join(",") + ")";
   };
 
-  const colorInput: MutableRefObject<any> = useRef(null);
-
   return (
     <div className="code_box_left">
       <div className="code_box_left_content">
-        <input
-          type="color"
-          className="color_input"
-          onChange={(e) => {
-            dispatch(setBgColor(setHexToRgb(e.target.value)));
-          }}
-          ref={colorInput}
-        />
+        <div className="color_nav">
+          <div
+            className="color_hover_box"
+            style={{ left: hoverBoxPosition }}
+          ></div>
+          <div
+            className="color_nav_box"
+            onMouseEnter={() => {
+              setHoverBoxPosition("0");
+            }}
+            onMouseLeave={() => {
+              setHoverBoxPosition(hoverBoxTruePosition);
+            }}
+            onClick={() => {
+              setColorKind("bgColor");
+              setHoverBoxTruePosition("0");
+              setTimeout(() => {
+                bgColorInput.current.value = setRgbtoHex(setting.bgColor);
+              }, 0);
+            }}
+          >
+            <span>背景</span>
+          </div>
+          <div
+            className="color_nav_box"
+            onMouseEnter={() => {
+              setHoverBoxPosition("33.3%");
+            }}
+            onMouseLeave={() => {
+              setHoverBoxPosition(hoverBoxTruePosition);
+            }}
+            onClick={() => {
+              setColorKind("color");
+              setHoverBoxTruePosition("33.3%");
+              setTimeout(() => {
+                colorInput.current.value = setRgbtoHex(setting.color);
+              }, 0);
+            }}
+          >
+            <span>字体</span>
+          </div>
+          <div
+            className="color_nav_box"
+            onMouseEnter={() => {
+              setHoverBoxPosition("66.6%");
+            }}
+            onMouseLeave={() => {
+              setHoverBoxPosition(hoverBoxTruePosition);
+            }}
+            onClick={() => {
+              setColorKind("hoverColor");
+              setHoverBoxTruePosition("66.6%");
+              setTimeout(() => {
+                hoverColorInput.current.value = setRgbtoHex(setting.hoverColor);
+              }, 0);
+            }}
+          >
+            <span>悬浮</span>
+          </div>
+        </div>
+        {colorKind === "bgColor" && (
+          <input
+            type="color"
+            className="color_input"
+            onChange={(e) => {
+              dispatch(setBgColor(setHexToRgb(e.target.value)));
+            }}
+            ref={bgColorInput}
+          />
+        )}
+        {colorKind === "color" && (
+          <input
+            type="color"
+            className="color_input"
+            onChange={(e) => {
+              dispatch(setBgColor(setHexToRgb(e.target.value)));
+            }}
+            ref={colorInput}
+          />
+        )}
+        {colorKind === "hoverColor" && (
+          <input
+            type="color"
+            className="color_input"
+            onChange={(e) => {
+              dispatch(setColor(setHexToRgb(e.target.value)));
+            }}
+            ref={hoverColorInput}
+          />
+        )}
         <div className="flex_between code_box_left_color_boxes">
           {colorList.map((item) => {
             return (
