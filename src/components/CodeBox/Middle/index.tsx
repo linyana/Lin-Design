@@ -25,6 +25,8 @@ const Middle = () => {
       "--bgColor05",
       setting.bgColor.replace(")", ", 0.5)")
     );
+    document.body.style.setProperty("--color", setting.color);
+    document.body.style.setProperty("--hoverColor", setting.hoverColor);
   }
 
   return (

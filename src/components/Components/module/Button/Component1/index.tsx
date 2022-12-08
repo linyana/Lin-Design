@@ -10,7 +10,7 @@ const Component1 = () => {
     element: () => (
       <button
         className="button_compontent_button1"
-        style={{ backgroundColor: 'var(--bgColor)', boxShadow: 'var(--bgColor03)' }}
+        style={{ backgroundColor: 'var(--bgColor)', boxShadow: 'var(--bgColor03)',color: 'var(--color)' }}
       >
         基本按钮
       </button>

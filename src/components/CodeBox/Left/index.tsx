@@ -161,7 +161,7 @@ const Left = () => {
             type="color"
             className="color_input"
             onChange={(e) => {
-              dispatch(setBgColor(setHexToRgb(e.target.value)));
+              dispatch(setColor(setHexToRgb(e.target.value)));
             }}
             ref={colorInput}
           />
@@ -171,7 +171,7 @@ const Left = () => {
             type="color"
             className="color_input"
             onChange={(e) => {
-              dispatch(setColor(setHexToRgb(e.target.value)));
+              dispatch(setHoverColor(setHexToRgb(e.target.value)));
             }}
             ref={hoverColorInput}
           />
