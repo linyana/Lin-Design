@@ -9,7 +9,9 @@ const Right = () => {
   const setting = useSelector((state: RootState) => state.setting);
 
   const [html, sethtml] = useState<string>(code.HTMLCode);
-  const [css, setcss] = useState(code.CSSCode(setting.bgColor));
+  const [css, setcss] = useState(
+    code.CSSCode(setting.bgColor, setting.color, setting.hoverColor)
+  );
   const [js, setjs] = useState<string>(code.JSCode);
 
   // 判断应该显示的代码
@@ -38,7 +40,7 @@ const Right = () => {
         }
       }
     }
-    setcss(code.CSSCode(setting.bgColor));
+    setcss(code.CSSCode(setting.bgColor, setting.color, setting.hoverColor));
   };
 
   // 初始化copy选项
@@ -78,7 +80,7 @@ const Right = () => {
         <div
           className="copy"
           onClick={(event) => {
-            getCopyText(event, code.CSSCode(setting.bgColor));
+            getCopyText(event, code.CSSCode(setting.bgColor, setting.color, setting.hoverColor));
           }}
         >
           复制
