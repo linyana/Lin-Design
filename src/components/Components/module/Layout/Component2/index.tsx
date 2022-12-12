@@ -8,7 +8,7 @@ const Component1 = () => {
   const code: codeState = {
     element: () => (
       <div className="layout_component2">
-        <div className="head">nav</div>
+        <div className="head">header</div>
         <div className="content">content</div>
         <div className="foot">footer</div>
       </div>
@@ -16,7 +16,7 @@ const Component1 = () => {
     HTMLCode: (className: string) => `<div${
       className.trim() ? ` class="${className.replace(".", "")}"` : ""
     }>
-  <div className="head">nav</div>
+  <div className="head">header</div>
   <div className="content">content</div>
   <div className="foot">footer</div>
 </div>`,
@@ -46,7 +46,7 @@ div${localStorage.getItem("class")} .layout_component2_content3 {
     VueHTMLCode: (className: string) => `<div${
       className.trim() ? ` class="${className.replace(".", "")}"` : ""
     }>
-  <div className="head">nav</div>
+  <div className="head">header</div>
   <div className="content">content</div>
   <div className="foot">footer</div>
 </div>`,
@@ -54,7 +54,7 @@ div${localStorage.getItem("class")} .layout_component2_content3 {
     ReactHTMLCode: (className: string) => `<div${
       className.trim() ? ` className="${className.replace(".", "")}"` : ""
     }>
-  <div className="head">nav</div>
+  <div className="head">header</div>
   <div className="content">content</div>
   <div className="foot">footer</div>
 </div>`,
@@ -75,7 +75,7 @@ div${localStorage.getItem("class")} .layout_component2_content3 {
       <div className="component_box">
         <div className="compontent_box_content">
           <div className="layout_component2">
-            <div className="head">nav</div>
+            <div className="head">header</div>
             <div className="content">content</div>
             <div className="foot">footer</div>
           </div>
