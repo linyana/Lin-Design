@@ -17,20 +17,20 @@ const code: codeState = {
   HTMLCode: `<div className="compontent_box_content">
   <button className="button_compontent_button3">圆角按钮</button>
 </div>`,
-  CSSCode: (bgColor: string) => `button.button_compontent_button3 {
+  CSSCode: (bgColor: string, color: string, hoverColor: string) => `button.button_compontent_button3 {
   cursor: pointer;
   padding: 12px 40px;
   background-color: ${bgColor};
   border: none;
   outline: none;
   border-radius: 100px;
-  color: white;
+  color: ${color};
   box-shadow: 0 0 5px ${bgColor.replace(')',', 0.3)')};
   transition: all 0.5s;
 }
     
 button.button_compontent_button3:hover {
-  background-color: ${bgColor.replace(')',', 0.8)')};
+  background-color: ${hoverColor};
 }`,
   JSCode: `暂无`,
   VueHTMLCode: `<button class="button_compontent_button3">

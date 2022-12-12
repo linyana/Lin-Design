@@ -6,10 +6,10 @@ import { RootState } from "@/store";
 import "./index.css";
 
 const colorList = [
+  "rgb(0,0,0)",
+  "rgb(255,255,255)",
   "rgb(47, 121, 206)",
-  "rgb(173,181,189)",
   "rgb(74, 211, 85)",
-  "rgb(209, 211, 74)",
   "rgb(230, 147, 53)",
 ];
 

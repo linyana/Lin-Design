@@ -5,20 +5,14 @@ import { codeState } from "@/store/Code";
 import "./index.css";
 
 const Component1 = () => {
-
   const code: codeState = {
     element: () => (
-      <button
-        className="button_compontent_button1"
-        style={{ backgroundColor: 'var(--bgColor)', boxShadow: 'var(--bgColor03)',color: 'var(--color)' }}
-      >
-        基本按钮
-      </button>
+      <button className="button_compontent_button1">基本按钮</button>
     ),
     HTMLCode: `<button class="button_compontent_button1">
   基本按钮
 </button>`,
-    CSSCode: (bgColor: string) => {
+    CSSCode: (bgColor: string, color: string, hoverColor: string) => {
       return `button.button_compontent_button1 {
         cursor: pointer;
         padding: 12px 40px;
@@ -26,15 +20,15 @@ const Component1 = () => {
         border: none;
         outline: none;
         border-radius: 6px;
-        color: white;
-        box-shadow: 0 0 5px ${bgColor.replace(')',', 0.3)')};
+        color: ${color};
+        box-shadow: 0 0 5px ${bgColor.replace(")", ", 0.3)")};
         transition: all 0.5s;
       }
       
       button.button_compontent_button1:hover {
-        background-color:${bgColor.replace(')',', 0.8)')};
+        background-color:${hoverColor};
       }
-        `
+        `;
     },
     JSCode: `暂无`,
     VueHTMLCode: `<button class="button_compontent_button1">

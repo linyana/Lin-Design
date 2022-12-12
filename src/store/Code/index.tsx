@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export interface codeState {
   element: () => JSX.Element;
   HTMLCode: string;
-  CSSCode: (bgColor: string) => string;
+  CSSCode: (bgColor: string, color: string, hoverColor: string) => string;
   JSCode: string;
   VueHTMLCode: string;
   VueJSCode: string;

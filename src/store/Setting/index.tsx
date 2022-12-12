@@ -23,6 +23,7 @@ export const settingSlice = createSlice({
   reducers: {
     setColor: (state, payload) => {
       state.color = payload.payload;
+      localStorage.setItem("color", state.color);
     },
     setBgColor: (state, payload) => {
       state.bgColor = payload.payload;

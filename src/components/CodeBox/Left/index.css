@@ -40,7 +40,7 @@ input.color_input::-webkit-color-swatch-wrapper {
   justify-content: space-between;
   margin-bottom: 15px;
   background-color: rgb(235, 235, 235);
-  border-radius: 15px;
+  border-radius: 5px;
 }
 
 .color_nav_box {
@@ -48,7 +48,7 @@ input.color_input::-webkit-color-swatch-wrapper {
   z-index: 91;
   text-align: center;
   line-height: 45px;
-  width: 33.3%;
+  width: 30%;
 }
 
 .color_hover_box {
@@ -58,7 +58,7 @@ input.color_input::-webkit-color-swatch-wrapper {
   z-index: 90;
   background-color: rgb(243, 243, 243);
   height: 37px;
-  width: 33%;
+  width: 30%;
   transition: all 0.3s;
   border-radius: 15px;
 }

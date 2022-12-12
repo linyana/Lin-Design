@@ -26,7 +26,7 @@ const Component2 = () => {
     HTMLCode: `<button class="button_compontent_button2">
   简洁按钮
 </button>`,
-    CSSCode: (bgColor: string) => `button.button_compontent_button2 {
+    CSSCode: (bgColor: string, _color: string, hoverColor: string) => `button.button_compontent_button2 {
     cursor: pointer;
     padding: 12px 40px;
     background-color: transparent;
@@ -40,7 +40,7 @@ const Component2 = () => {
   }
   
   button.button_compontent_button2:hover {
-    border: 1px solid ${bgColor.replace(")", ", 0.5)")};
+    border: 1px solid ${hoverColor};
   }`,
     JSCode: `暂无`,
     VueHTMLCode: `<button class="button_compontent_button2">
