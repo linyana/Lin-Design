@@ -29,6 +29,10 @@ const Middle = () => {
     document.body.style.setProperty("--hoverColor", setting.hoverColor);
   }
 
+  if (localStorage.getItem("class") === null) {
+    localStorage.setItem("class", "");
+  }
+
   return (
     <div className="code_box_middle">
       <div className="code_box_middle_content">{element()}</div>

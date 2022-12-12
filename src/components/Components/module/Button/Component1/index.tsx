@@ -9,11 +9,13 @@ const Component1 = () => {
     element: () => (
       <button className="button_compontent_button1">基本按钮</button>
     ),
-    HTMLCode: `<button class="button_compontent_button1">
+    HTMLCode: (className: string) => `<button${
+      className.trim() ? ` class="${className.replace(".", "")}"` : ""
+    }>
   基本按钮
 </button>`,
     CSSCode: (bgColor: string, color: string, hoverColor: string) => {
-      return `button${localStorage.getItem('class')} {
+      return `button${localStorage.getItem("class")} {
         cursor: pointer;
         padding: 12px 40px;
         background-color: ${bgColor};
@@ -25,17 +27,21 @@ const Component1 = () => {
         transition: all 0.5s;
       }
       
-      button${localStorage.getItem('class')}:hover {
+      button${localStorage.getItem("class")}:hover {
         background-color:${hoverColor};
       }
         `;
     },
     JSCode: `暂无`,
-    VueHTMLCode: `<button class="button_compontent_button1">
+    VueHTMLCode: (className: string) => `<button${
+      className.trim() ? ` class="${className.replace(".", "")}"` : ""
+    }>
   基本按钮
 </button>`,
     VueJSCode: `暂无`,
-    ReactHTMLCode: `<button className="button_compontent_button1">
+    ReactHTMLCode: (className: string) => `<button${
+      className.trim() ? ` className="${className.replace(".", "")}"` : ""
+    }>
   基本按钮
 </button>`,
     ReactJSCode: `暂无`,

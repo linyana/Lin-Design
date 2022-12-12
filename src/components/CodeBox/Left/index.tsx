@@ -94,7 +94,7 @@ const Left = () => {
               if (v.target.value.trim() === "") {
                 dispatch(setClass(""));
               } else {
-                dispatch(setClass("." + v.target.value));
+                dispatch(setClass("." + v.target.value.trim()));
               }
             }}
           />

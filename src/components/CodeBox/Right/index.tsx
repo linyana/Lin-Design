@@ -8,7 +8,7 @@ const Right = () => {
   const code = useSelector((state: RootState) => state.codeBox);
   const setting = useSelector((state: RootState) => state.setting);
 
-  const [html, sethtml] = useState<string>(code.HTMLCode);
+  const [html, sethtml] = useState<string>(code.HTMLCode(setting.class));
   const [css, setcss] = useState(
     code.CSSCode(setting.bgColor, setting.color, setting.hoverColor)
   );
@@ -17,14 +17,14 @@ const Right = () => {
   // 判断应该显示的代码
   const setCodeContent = (): void => {
     if (setting.kind === "HTML") {
-      sethtml(code.HTMLCode);
+      sethtml(code.HTMLCode(setting.class));
       if (setting.format === "JavaScript") {
         setjs(code.JSCode);
       } else {
         setjs(code.TSCode);
       }
     } else if (setting.kind === "Vue") {
-      sethtml(code.VueHTMLCode);
+      sethtml(code.VueHTMLCode(setting.class));
       if (setting.format === "JavaScript") {
         setjs(code.VueJSCode);
       } else {
@@ -32,7 +32,7 @@ const Right = () => {
       }
     } else {
       if (setting.kind === "React") {
-        sethtml(code.ReactHTMLCode);
+        sethtml(code.ReactHTMLCode(setting.class));
         if (setting.format === "JavaScript") {
           setjs(code.ReactJSCode);
         } else {
@@ -69,7 +69,7 @@ const Right = () => {
         <div
           className="copy"
           onClick={(event) => {
-            getCopyText(event, code.HTMLCode);
+            getCopyText(event, code.HTMLCode(setting.class));
           }}
         >
           复制

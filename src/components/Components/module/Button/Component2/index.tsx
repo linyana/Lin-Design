@@ -23,14 +23,20 @@ const Component2 = () => {
         简洁按钮
       </button>
     ),
-    HTMLCode: `<button class="button_compontent_button2">
+    HTMLCode: (className: string) => `<button${
+      className.trim() ? ` class="${className.replace(".", "")}"` : ""
+    }>
   简洁按钮
 </button>`,
-    CSSCode: (bgColor: string, _color: string, hoverColor: string) => `button${localStorage.getItem('class')} {
+    CSSCode: (
+      bgColor: string,
+      _color: string,
+      hoverColor: string
+    ) => `button${localStorage.getItem("class")} {
     cursor: pointer;
     padding: 12px 40px;
     background-color: transparent;
-    border: 1px solid${bgColor.replace(")", ", 0.1)")};
+    border: 1px solid ${bgColor.replace(")", ", 0.1)")};
     outline: none;
     border-radius: 6px;
     box-shadow: 0 0 3px ${bgColor.replace(")", ", 0.3)")};
@@ -39,16 +45,22 @@ const Component2 = () => {
     background-color: ${bgColor.replace(")", ", 0.1)")};
   }
   
-  button${localStorage.getItem('class')}:hover {
+  button${localStorage.getItem("class")}:hover {
     border: 1px solid ${hoverColor};
   }`,
     JSCode: `暂无`,
-    VueHTMLCode: `<button class="button_compontent_button2">
+    VueHTMLCode: (className: string) => `<button${
+      className.trim() ? ` class="${className.replace(".", "")}"` : ""
+    }>
   简洁按钮
 </button>`,
     VueJSCode: `暂无`,
-    ReactHTMLCode: `<button className="button_compontent_button2">
-  基本按钮
+    ReactHTMLCode: (
+      className: string
+    ) => `<button${
+      className.trim() ? ` className="${className.replace(".", "")}"` : ""
+    }>
+  简洁按钮
 </button>`,
     ReactJSCode: `暂无`,
     TSCode: `暂无`,

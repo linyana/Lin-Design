@@ -9,15 +9,26 @@ const code: codeState = {
   element: () => (
     <button
       className="button_compontent_button3"
-      style={{ backgroundColor: "var(--bgColor)", boxShadow: "var(--bgColor03)"}}
+      style={{
+        backgroundColor: "var(--bgColor)",
+        boxShadow: "var(--bgColor03)",
+      }}
     >
       圆角按钮
     </button>
   ),
-  HTMLCode: `<div className="compontent_box_content">
-  <button className="button_compontent_button3">圆角按钮</button>
-</div>`,
-  CSSCode: (bgColor: string, color: string, hoverColor: string) => `button${localStorage.getItem('class')} {
+  HTMLCode: (
+    className: string
+  ) => `<button${
+    className.trim() ? ` class="${className.replace(".", "")}"` : ""
+  }>
+  圆角按钮
+</button>`,
+  CSSCode: (
+    bgColor: string,
+    color: string,
+    hoverColor: string
+  ) => `button${localStorage.getItem("class")} {
   cursor: pointer;
   padding: 12px 40px;
   background-color: ${bgColor};
@@ -25,20 +36,24 @@ const code: codeState = {
   outline: none;
   border-radius: 100px;
   color: ${color};
-  box-shadow: 0 0 5px ${bgColor.replace(')',', 0.3)')};
+  box-shadow: 0 0 5px ${bgColor.replace(")", ", 0.3)")};
   transition: all 0.5s;
 }
     
-button${localStorage.getItem('class')}:hover {
+button${localStorage.getItem("class")}:hover {
   background-color: ${hoverColor};
 }`,
   JSCode: `暂无`,
-  VueHTMLCode: `<button class="button_compontent_button3">
+  VueHTMLCode: (className: string) => `<button${
+    className.trim() ? ` class="${className.replace(".", "")}"` : ""
+  }>
   圆角按钮
 </button>`,
   VueJSCode: `暂无`,
-  ReactHTMLCode: `<button class="button_compontent_button3">
-  基本按钮
+  ReactHTMLCode: (className: string) => `<button${
+    className.trim() ? ` className="${className.replace(".", "")}"` : ""
+  }>
+  圆角按钮
 </button>`,
   ReactJSCode: `暂无`,
   TSCode: `暂无`,

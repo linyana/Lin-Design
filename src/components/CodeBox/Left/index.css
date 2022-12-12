@@ -81,6 +81,7 @@ input.color_input::-webkit-color-swatch-wrapper {
 
 .left_content_input input:focus {
   box-shadow: 0 0 3px #2f79ce;
+  background-color:transparent;
 }
 
 .left_content_title {

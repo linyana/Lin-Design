@@ -2,12 +2,12 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export interface codeState {
   element: () => JSX.Element;
-  HTMLCode: string;
+  HTMLCode: (className: string) => string;
   CSSCode: (bgColor: string, color: string, hoverColor: string) => string;
   JSCode: string;
-  VueHTMLCode: string;
+  VueHTMLCode: (className: string) => string;
   VueJSCode: string;
-  ReactHTMLCode: string;
+  ReactHTMLCode: (className: string) => string;
   ReactJSCode: string;
   TSCode: string;
   VueTSCode: string;
@@ -16,12 +16,12 @@ export interface codeState {
 
 const initialState: codeState = {
   element: () => <></>,
-  HTMLCode: "",
+  HTMLCode: () => "",
   CSSCode: () => ``,
   JSCode: "",
-  VueHTMLCode: "",
+  VueHTMLCode: () => "",
   VueJSCode: "",
-  ReactHTMLCode: "",
+  ReactHTMLCode: () => "",
   ReactJSCode: "",
   TSCode: "",
   VueTSCode: "",

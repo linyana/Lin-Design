@@ -16,7 +16,7 @@ const initialState: settingState = {
     (localStorage.getItem("hoverColor") as string) || "rgb(56, 137, 230)",
   kind: "HTML",
   format: "JavaScript",
-  class: "lin",
+  class: "",
 };
 
 export const settingSlice = createSlice({
