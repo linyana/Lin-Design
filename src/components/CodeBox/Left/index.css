@@ -38,27 +38,50 @@ input.color_input::-webkit-color-swatch-wrapper {
   position: relative;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 15px;
-  background-color: rgb(235, 235, 235);
-  border-radius: 5px;
+  margin-bottom: 20px;
+  border-radius: 50px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  padding: 0 2%;
+  background-color: #fff;
 }
 
 .color_nav_box {
   cursor: pointer;
   z-index: 91;
   text-align: center;
-  line-height: 45px;
-  width: 30%;
+  line-height: 42px;
+  width: 33%;
+  font-size: 15px;
 }
 
 .color_hover_box {
   position: absolute;
   left: 0;
-  top: 4px;
+  top: 0px;
   z-index: 90;
-  background-color: rgb(243, 243, 243);
-  height: 37px;
-  width: 30%;
+  background-color: rgb(235, 235, 235);
+  height: 42px;
+  width: 35%;
   transition: all 0.3s;
-  border-radius: 15px;
+  border-radius: 50px;
+}
+
+.left_content_input {
+  margin-bottom: 30px;
+}
+
+.left_content_input input {
+  border: none;
+  outline: none;
+  padding: 8px 0;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.1);
+}
+
+.left_content_title {
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: rgb(100, 98, 98);
+  font-size: 20px;
 }

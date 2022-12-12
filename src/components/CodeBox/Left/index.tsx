@@ -86,6 +86,15 @@ const Left = () => {
   return (
     <div className="code_box_left">
       <div className="code_box_left_content">
+        <div className="left_content_title">
+          名字
+        </div>
+        <div className="left_content_input">
+          <input type="text" onChange={()=>{}} />
+        </div>
+        <div className="left_content_title">
+          颜色
+        </div>
         <div className="color_nav">
           <div
             className="color_hover_box"
@@ -112,14 +121,14 @@ const Left = () => {
           <div
             className="color_nav_box"
             onMouseEnter={() => {
-              setHoverBoxPosition("33.3%");
+              setHoverBoxPosition("32%");
             }}
             onMouseLeave={() => {
               setHoverBoxPosition(hoverBoxTruePosition);
             }}
             onClick={() => {
               setColorKind("color");
-              setHoverBoxTruePosition("33.3%");
+              setHoverBoxTruePosition("32%");
               setTimeout(() => {
                 colorInput.current.value = setRgbtoHex(setting.color);
               }, 0);
@@ -130,14 +139,14 @@ const Left = () => {
           <div
             className="color_nav_box"
             onMouseEnter={() => {
-              setHoverBoxPosition("66.6%");
+              setHoverBoxPosition("64.7%");
             }}
             onMouseLeave={() => {
               setHoverBoxPosition(hoverBoxTruePosition);
             }}
             onClick={() => {
               setColorKind("hoverColor");
-              setHoverBoxTruePosition("66.6%");
+              setHoverBoxTruePosition("64.7%");
               setTimeout(() => {
                 hoverColorInput.current.value = setRgbtoHex(setting.hoverColor);
               }, 0);

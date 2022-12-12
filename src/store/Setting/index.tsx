@@ -6,6 +6,7 @@ export interface settingState {
   hoverColor: string;
   kind: string;
   format: string;
+  class: string;
 }
 
 const initialState: settingState = {
@@ -15,6 +16,7 @@ const initialState: settingState = {
     (localStorage.getItem("hoverColor") as string) || "rgb(56, 137, 230)",
   kind: "HTML",
   format: "JavaScript",
+  class: "lin",
 };
 
 export const settingSlice = createSlice({
@@ -40,6 +42,10 @@ export const settingSlice = createSlice({
     setFormat: (state, payload) => {
       state.format = payload.payload;
       localStorage.setItem("kind", state.kind);
+    },
+    setClass: (state, payload) => {
+      state.class = payload.payload;
+      localStorage.setItem("class", state.class);
     },
   },
 });
