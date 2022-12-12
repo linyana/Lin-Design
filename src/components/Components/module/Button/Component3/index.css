@@ -5,11 +5,11 @@ button.button_compontent_button3 {
   border: none;
   outline: none;
   border-radius: 100px;
-  color: white;
+  color: var(--color);
   box-shadow: 0 0 5px var(--bgColor03);
   transition: all 0.8s;
 }
 
 button.button_compontent_button3:hover {
-  background-color: var(--bgColor);
+  background-color: var(--hoverColor)!important;
 }
