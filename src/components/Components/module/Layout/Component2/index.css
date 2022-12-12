@@ -1,0 +1,28 @@
+.layout_component2 {
+  width: 100%;
+  height: 400px;
+}
+
+.layout_component2 .head {
+  height: 25%;
+  background-color: rgb(215, 217, 228);
+}
+
+.layout_component2 .content {
+  height: 50%;
+  background-color: rgb(225, 227, 238);
+}
+
+.layout_component2 .foot {
+  height: 25%;
+  background-color: rgb(215, 217, 228);
+}
+
+.layout_component2 > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(128, 127, 127);
+  font-size: 30px;
+  width: 100%;
+}

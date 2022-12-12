@@ -13,12 +13,12 @@ const Component1 = () => {
   content
 </div>`,
     CSSCode: (bgColor: string, color: string, hoverColor: string) => {
-      return `.${localStorage.getItem('class')} {
-        margin: auto;
-        min-height: 200px;
-        background-color: rgb(225, 227, 238);
-        padding: 10px;
-      }
+      return `div${localStorage.getItem('class')} {
+  margin: auto;
+  min-height: 200px;
+  background-color: rgb(225, 227, 238);
+  padding: 10px;
+}
         `;
     },
     JSCode: `暂无`,
