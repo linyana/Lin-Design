@@ -12,5 +12,5 @@ button.button_compontent_button2 {
 }
 
 button.button_compontent_button2:hover {
-  border: 1px solid var(--bgColor05)!important
+  border: 1px solid var(--bgColor05)!important;
 }

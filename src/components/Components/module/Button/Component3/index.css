@@ -11,5 +11,5 @@ button.button_compontent_button3 {
 }
 
 button.button_compontent_button3:hover {
-  background-color: var(--hoverColor)!important
+  background-color: var(--hoverColor)!important;
 }
