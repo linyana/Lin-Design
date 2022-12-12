@@ -50,7 +50,7 @@ export const settingSlice = createSlice({
   },
 });
 
-export const { setColor, setBgColor, setKind, setFormat, setHoverColor } =
+export const { setColor, setBgColor, setKind, setFormat, setHoverColor, setClass } =
   settingSlice.actions;
 
 export default settingSlice.reducer;

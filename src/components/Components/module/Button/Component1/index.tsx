@@ -13,7 +13,7 @@ const Component1 = () => {
   基本按钮
 </button>`,
     CSSCode: (bgColor: string, color: string, hoverColor: string) => {
-      return `button.button_compontent_button1 {
+      return `button${localStorage.getItem('class')} {
         cursor: pointer;
         padding: 12px 40px;
         background-color: ${bgColor};
@@ -25,7 +25,7 @@ const Component1 = () => {
         transition: all 0.5s;
       }
       
-      button.button_compontent_button1:hover {
+      button${localStorage.getItem('class')}:hover {
         background-color:${hoverColor};
       }
         `;

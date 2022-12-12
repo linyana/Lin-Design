@@ -26,7 +26,7 @@ const Component2 = () => {
     HTMLCode: `<button class="button_compontent_button2">
   简洁按钮
 </button>`,
-    CSSCode: (bgColor: string, _color: string, hoverColor: string) => `button.button_compontent_button2 {
+    CSSCode: (bgColor: string, _color: string, hoverColor: string) => `button${localStorage.getItem('class')} {
     cursor: pointer;
     padding: 12px 40px;
     background-color: transparent;
@@ -39,7 +39,7 @@ const Component2 = () => {
     background-color: ${bgColor.replace(")", ", 0.1)")};
   }
   
-  button.button_compontent_button2:hover {
+  button${localStorage.getItem('class')}:hover {
     border: 1px solid ${hoverColor};
   }`,
     JSCode: `暂无`,

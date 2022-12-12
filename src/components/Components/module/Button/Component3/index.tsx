@@ -17,7 +17,7 @@ const code: codeState = {
   HTMLCode: `<div className="compontent_box_content">
   <button className="button_compontent_button3">圆角按钮</button>
 </div>`,
-  CSSCode: (bgColor: string, color: string, hoverColor: string) => `button.button_compontent_button3 {
+  CSSCode: (bgColor: string, color: string, hoverColor: string) => `button${localStorage.getItem('class')} {
   cursor: pointer;
   padding: 12px 40px;
   background-color: ${bgColor};
@@ -29,7 +29,7 @@ const code: codeState = {
   transition: all 0.5s;
 }
     
-button.button_compontent_button3:hover {
+button${localStorage.getItem('class')}:hover {
   background-color: ${hoverColor};
 }`,
   JSCode: `暂无`,

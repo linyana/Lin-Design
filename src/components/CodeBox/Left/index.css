@@ -79,6 +79,10 @@ input.color_input::-webkit-color-swatch-wrapper {
   box-shadow: 0 0 3px rgba(0,0,0,0.1);
 }
 
+.left_content_input input:focus {
+  box-shadow: 0 0 3px #2f79ce;
+}
+
 .left_content_title {
   font-weight: 700;
   margin-bottom: 20px;

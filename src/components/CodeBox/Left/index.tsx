@@ -1,5 +1,5 @@
 import React, { MutableRefObject, useRef, useState } from "react";
-import { setBgColor, setColor, setHoverColor } from "@/store/Setting";
+import { setBgColor, setColor, setHoverColor, setClass } from "@/store/Setting";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/store";
 
@@ -86,15 +86,20 @@ const Left = () => {
   return (
     <div className="code_box_left">
       <div className="code_box_left_content">
-        <div className="left_content_title">
-          名字
-        </div>
+        <div className="left_content_title">类名</div>
         <div className="left_content_input">
-          <input type="text" onChange={()=>{}} />
+          <input
+            type="text"
+            onChange={(v) => {
+              if (v.target.value.trim() === "") {
+                dispatch(setClass(""));
+              } else {
+                dispatch(setClass("." + v.target.value));
+              }
+            }}
+          />
         </div>
-        <div className="left_content_title">
-          颜色
-        </div>
+        <div className="left_content_title">颜色</div>
         <div className="color_nav">
           <div
             className="color_hover_box"
