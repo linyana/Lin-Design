@@ -35,7 +35,7 @@ const Middle = () => {
 
   return (
     <div className="code_box_middle">
-      <div className="code_box_middle_content">{element()}</div>
+     {element()}
     </div>
   );
 };

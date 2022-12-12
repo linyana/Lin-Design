@@ -1,9 +1,18 @@
-import React from 'react'
+import React from "react";
 
-const Layout = () => {
+import Component1 from "./Component1";
+
+import "@/components/Components/index.css";
+
+const Button = () => {
   return (
-    <div>Layout</div>
-  )
-}
+    <div>
+      <div className="component_big_title">
+        内容 <span>Layout</span>
+      </div>
+      <Component1 />
+    </div>
+  );
+};
 
-export default Layout
+export default Button;

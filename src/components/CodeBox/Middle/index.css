@@ -1,11 +1,6 @@
 .code_box_middle {
-  width: calc(100% - 680px);
-  height: 100%;
-}
-
-.code_box_middle_content {
-  position: relative;
-  height: 100%;
+  width: calc(100% - 760px);
+  height: calc(100% - 40px);
   display: flex;
   justify-content: center;
   align-items: center;

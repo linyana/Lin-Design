@@ -1,0 +1,17 @@
+.layout_component1_content1 {
+  margin: auto;
+  min-height: 200px;
+  background-color: rgb(225, 227, 238);
+  padding: 10px;
+}
+
+.layout_component1_content1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(128, 127, 127);
+  font-size: 30px;
+  width: 90%;
+  height: 50%;
+  width: 100%;
+}
