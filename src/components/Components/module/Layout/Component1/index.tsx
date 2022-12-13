@@ -49,7 +49,7 @@ const Component1 = () => {
       <div className="compontent_title" id="basic_button">
         基本布局
       </div>
-      <p className="compontent_p">利用margin来进行居中,可以给他添加宽度。</p>
+      <p className="compontent_p">利用margin来进行居中,建议自行设置宽度。</p>
       <div className="component_box">
         <div className="compontent_box_content">
           <div className="layout_component1_content1">content</div>

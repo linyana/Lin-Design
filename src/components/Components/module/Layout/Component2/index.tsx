@@ -75,7 +75,7 @@ div${className} .layout_component2_content3 {
         基本布局2
       </div>
       <p className="compontent_p">
-        利用margin来进行居中,可以给他添加宽度,划分了头部和底部。
+        利用margin来进行居中,添加了header和footer,建议自行设置宽度和高度。
       </p>
       <div className="component_box">
         <div className="compontent_box_content">
