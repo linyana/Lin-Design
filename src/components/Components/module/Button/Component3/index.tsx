@@ -17,18 +17,17 @@ const code: codeState = {
       圆角按钮
     </button>
   ),
-  HTMLCode: (
-    className: string
-  ) => `<button${
+  HTMLCode: (className: string) => `<button${
     className.trim() ? ` class="${className.replace(".", "")}"` : ""
   }>
   圆角按钮
 </button>`,
   CSSCode: (
+    className: string,
     bgColor: string,
     color: string,
     hoverColor: string
-  ) => `button${localStorage.getItem("class")} {
+  ) => `button${className} {
   cursor: pointer;
   padding: 12px 40px;
   background-color: ${bgColor};
@@ -40,7 +39,7 @@ const code: codeState = {
   transition: all 0.5s;
 }
     
-button${localStorage.getItem("class")}:hover {
+button${className}:hover {
   background-color: ${hoverColor};
 }`,
   JSCode: `暂无`,

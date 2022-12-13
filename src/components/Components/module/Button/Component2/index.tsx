@@ -29,10 +29,11 @@ const Component2 = () => {
   简洁按钮
 </button>`,
     CSSCode: (
+      className: string,
       bgColor: string,
       _color: string,
       hoverColor: string
-    ) => `button${localStorage.getItem("class")} {
+    ) => `button${className} {
     cursor: pointer;
     padding: 12px 40px;
     background-color: transparent;
@@ -45,7 +46,7 @@ const Component2 = () => {
     background-color: ${bgColor.replace(")", ", 0.1)")};
   }
   
-  button${localStorage.getItem("class")}:hover {
+  button${className}:hover {
     border: 1px solid ${hoverColor};
   }`,
     JSCode: `暂无`,
@@ -55,9 +56,7 @@ const Component2 = () => {
   简洁按钮
 </button>`,
     VueJSCode: `暂无`,
-    ReactHTMLCode: (
-      className: string
-    ) => `<button${
+    ReactHTMLCode: (className: string) => `<button${
       className.trim() ? ` className="${className.replace(".", "")}"` : ""
     }>
   简洁按钮

@@ -10,7 +10,7 @@ const Right = () => {
 
   const [html, sethtml] = useState<string>(code.HTMLCode(setting.class));
   const [css, setcss] = useState(
-    code.CSSCode(setting.bgColor, setting.color, setting.hoverColor)
+    code.CSSCode(setting.class, setting.bgColor, setting.color, setting.hoverColor)
   );
   const [js, setjs] = useState<string>(code.JSCode);
 
@@ -40,7 +40,7 @@ const Right = () => {
         }
       }
     }
-    setcss(code.CSSCode(setting.bgColor, setting.color, setting.hoverColor));
+    setcss(code.CSSCode(setting.class, setting.bgColor, setting.color, setting.hoverColor));
   };
 
   // 初始化copy选项
@@ -80,7 +80,7 @@ const Right = () => {
         <div
           className="copy"
           onClick={(event) => {
-            getCopyText(event, code.CSSCode(setting.bgColor, setting.color, setting.hoverColor));
+            getCopyText(event, code.CSSCode(setting.class, setting.bgColor, setting.color, setting.hoverColor));
           }}
         >
           复制

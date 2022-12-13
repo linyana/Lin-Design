@@ -20,8 +20,13 @@ const Component1 = () => {
   <div className="content">content</div>
   <div className="foot">footer</div>
 </div>`,
-    CSSCode: (bgColor: string, color: string, hoverColor: string) => {
-      return `div${localStorage.getItem("class")} {
+    CSSCode: (
+      className: string,
+      bgColor: string,
+      color: string,
+      hoverColor: string
+    ) => {
+      return `div${className} {
   width: 100%;
   height: 400px;
 }
@@ -31,12 +36,12 @@ div${localStorage.getItem("class")}.layout_component2_content1 {
   background-color: rgb(215, 217, 228);
 }
 
-div${localStorage.getItem("class")} .layout_component2_content2 {
+div${className} .layout_component2_content2 {
   height: 50%;
   background-color: rgb(225, 227, 238);
 }
 
-div${localStorage.getItem("class")} .layout_component2_content3 {
+div${className} .layout_component2_content3 {
   height: 25%;
   background-color: rgb(215, 217, 228);
 }
