@@ -110,17 +110,16 @@ div${className} p {
       <div className="compontent_title" id="basic_button">
         图文1
       </div>
-      <p className="compontent_p">图文</p>
       <div className="component_box">
         <div className="compontent_box_content1">
           <div className="component_content_content1">
             <img src={img} alt="请添加图片" />
             <div className="text">
-              <h2>内容</h2>
-              <p>
+              <h2 style={{color: 'rgb(73,80,87)'}}>内容</h2>
+              <p style={{color: 'rgb(73,80,87)'}}>
                 我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容。
               </p>
-              <p>
+              <p style={{color: 'rgb(73,80,87)'}}>
                 我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容。
               </p>
             </div>

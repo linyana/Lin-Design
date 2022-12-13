@@ -6,8 +6,8 @@ import { RootState } from "@/store";
 import "./index.css";
 
 const colorList = [
-  "rgb(0,0,0)",
-  "rgb(255,255,255)",
+  "rgb(73,80,87)",
+  "rgb(248, 248, 248)",
   "rgb(47, 121, 206)",
   "rgb(74, 211, 85)",
   "rgb(230, 147, 53)",
@@ -18,7 +18,7 @@ const colorList2 = [
   "rgb(34,184,207)",
   "rgb(132,94,247)",
   "rgb(224, 53, 230)",
-  "rgb(252,196,25)",
+  "rgb(224,184,120)",
 ];
 
 const Left = () => {

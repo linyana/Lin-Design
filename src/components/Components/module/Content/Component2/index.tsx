@@ -4,51 +4,107 @@ import { codeState } from "@/store/Code";
 
 import "./index.css";
 
+import img from "@/assets/images/normal/img.jpg";
+
 const Component1 = () => {
   const code: codeState = {
     element: () => (
-      <button className="button_compontent_button1">基本按钮</button>
+      <div className="component_content_content2">
+        <img src={img} alt="请添加图片" />
+        <div className="text">
+          <div className="text_content">
+            <h2>内容</h2>
+            <p>
+              我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容。
+            </p>
+          </div>
+        </div>
+      </div>
     ),
-    HTMLCode: (className: string) => `<button${
+    HTMLCode: (className: string) => `<div${
       className.trim() ? ` class="${className.replace(".", "")}"` : ""
     }>
-  基本按钮
-</button>`,
+  <img src={img} alt="请添加图片" />
+  <div class="text">
+    <h2>内容</h2>
+    <p>
+      我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容。
+    </p>
+  </div>
+</div>`,
     CSSCode: (
       className: string,
       bgColor: string,
       color: string,
       hoverColor: string
     ) => {
-      return `button${className} {
-        cursor: pointer;
-        padding: 12px 40px;
-        background-color: ${bgColor};
-        border: none;
-        outline: none;
-        border-radius: 6px;
-        color: ${color};
-        box-shadow: 0 0 5px ${bgColor.replace(")", ", 0.3)")};
-        transition: all 0.5s;
-      }
-      
-      button${className}:hover {
-        background-color:${hoverColor};
-      }
-        `;
+      return `div${className} {
+  position: relative;
+  margin: 20px 0;
+}
+
+div${className} img {
+  width: 70%;
+}
+
+div${className} .text {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  width: 50%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: ${bgColor};
+}
+
+div${className} .text_content {
+  padding: 0 10%;
+}
+
+div${className} h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: ${color};
+}
+
+div${className} p {
+  text-indent: 2em;
+  line-height: 28px;
+  letter-spacing: 0.3px;
+  color: ${color};
+}`;
     },
     JSCode: `暂无`,
-    VueHTMLCode: (className: string) => `<button${
+    VueHTMLCode: (className: string) => `<div${
       className.trim() ? ` class="${className.replace(".", "")}"` : ""
     }>
-  基本按钮
-</button>`,
+  <img src={img} alt="请添加图片" />
+  <div class="text">
+    <div class="text_content">
+      <h2>内容</h2>
+      <p>
+        我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容。
+      </p>
+    </div>
+  </div>
+</div>`,
     VueJSCode: `暂无`,
-    ReactHTMLCode: (className: string) => `<button${
+    ReactHTMLCode: (className: string) => `<div${
       className.trim() ? ` className="${className.replace(".", "")}"` : ""
     }>
-  基本按钮
-</button>`,
+    <img src={img} alt="请添加图片" />
+    <div className="text">
+      <div className="text_content">
+        <h2>内容</h2>
+        <p>
+          我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容。
+        </p>
+      </div>
+    </div>
+  </div>
+</div>`,
     ReactJSCode: `暂无`,
     TSCode: `暂无`,
     VueTSCode: `暂无`,
@@ -58,12 +114,21 @@ const Component1 = () => {
   return (
     <>
       <div className="compontent_title" id="basic_button">
-        基本按钮
+        图文2
       </div>
-      <p className="compontent_p">最基本的按钮样式</p>
       <div className="component_box">
-        <div className="compontent_box_content">
-          <button className="button_compontent_button1">基本按钮</button>
+        <div className="compontent_box_content1">
+          <div className="component_content_content2">
+            <img src={img} alt="请添加图片" />
+            <div className="text" style={{backgroundColor: 'rgb(224,184,120)'}}>
+              <div className="text_content">
+                <h2 style={{color: 'rgb(248, 248, 248)'}}>内容</h2>
+                <p style={{color: 'rgb(248, 248, 248)'}}>
+                  我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容。
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
         <ShowCode code={code} />
       </div>

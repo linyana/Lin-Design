@@ -1,0 +1,37 @@
+.component_content_content2 {
+  position: relative;
+  margin: 20px 0;
+}
+
+.component_content_content2 img {
+  width: 70%;
+}
+
+.component_content_content2 .text {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  width: 50%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bgColor);
+}
+
+.component_content_content2 .text_content {
+  padding: 0 10%;
+}
+
+.component_content_content2 h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--color);
+}
+
+.component_content_content2 p {
+  text-indent: 2em;
+  line-height: 28px;
+  letter-spacing: 0.3px;
+  color: var(--color);
+}
