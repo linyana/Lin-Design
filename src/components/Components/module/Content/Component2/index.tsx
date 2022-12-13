@@ -40,7 +40,6 @@ const Component1 = () => {
     ) => {
       return `div${className} {
   position: relative;
-  margin: 20px 0;
 }
 
 div${className} img {
