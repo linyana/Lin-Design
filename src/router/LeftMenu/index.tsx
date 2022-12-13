@@ -10,6 +10,11 @@ const leftMenu = [
     to: "typography",
   },
   {
+    name: "内容",
+    smallName: "Content",
+    to: "Content",
+  },
+  {
     name: "按钮",
     smallName: "Button",
     to: "button",

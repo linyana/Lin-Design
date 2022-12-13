@@ -11,6 +11,8 @@ const Button = lazy(() => import("@/components/Components/module/Button"));
 const Card = lazy(() => import("@/components/Components/module/Card"));
 const Typography = lazy(() => import("@/components/Components/module/Typography"));
 const Layout = lazy(() => import("@/components/Components/module/Layout"));
+const Content = lazy(() => import("@/components/Components/module/Content"));
+
 
 const routes: RouteObject[] = [
   {
@@ -40,6 +42,10 @@ const routes: RouteObject[] = [
       {
         path: "layout",
         element: <Layout />,
+      },
+      {
+        path: "Content",
+        element: <Content />
       }
     ]
   },
