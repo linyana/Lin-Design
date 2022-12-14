@@ -47,7 +47,7 @@ div${className} .layout_component2_content3 {
 }
         `;
     },
-    JSCode: `暂无`,
+    JSCode: () => `暂无`,
     VueHTMLCode: (className: string) => `<div${
       className.trim() ? ` class="${className.replace(".", "")}"` : ""
     }>
@@ -55,7 +55,7 @@ div${className} .layout_component2_content3 {
   <div className="content">content</div>
   <div className="foot">footer</div>
 </div>`,
-    VueJSCode: `暂无`,
+    VueJSCode: () => `暂无`,
     ReactHTMLCode: (className: string) => `<div${
       className.trim() ? ` className="${className.replace(".", "")}"` : ""
     }>
@@ -63,10 +63,10 @@ div${className} .layout_component2_content3 {
   <div className="content">content</div>
   <div className="foot">footer</div>
 </div>`,
-    ReactJSCode: `暂无`,
-    TSCode: `暂无`,
-    VueTSCode: `暂无`,
-    ReactTSCode: `暂无`,
+    ReactJSCode: () => `暂无`,
+    TSCode: () => `暂无`,
+    VueTSCode: () => `暂无`,
+    ReactTSCode: () => `暂无`,
   };
 
   return (

@@ -4,28 +4,28 @@ export interface codeState {
   element: () => JSX.Element;
   HTMLCode: (className: string) => string;
   CSSCode: (bgColor: string, color: string, hoverColor: string, className: string) => string;
-  JSCode: string;
+  JSCode: (className: string) => string;
   VueHTMLCode: (className: string) => string;
-  VueJSCode: string;
+  VueJSCode: (className: string) => string;
   ReactHTMLCode: (className: string) => string;
-  ReactJSCode: string;
-  TSCode: string;
-  VueTSCode: string;
-  ReactTSCode: string;
+  ReactJSCode: (className: string) => string;
+  TSCode: (className: string) => string;
+  VueTSCode: (className: string) => string;
+  ReactTSCode: (className: string) => string;
 }
 
 const initialState: codeState = {
   element: () => <></>,
-  HTMLCode: () => "",
+  HTMLCode: () => ``,
   CSSCode: () => ``,
-  JSCode: "",
-  VueHTMLCode: () => "",
-  VueJSCode: "",
-  ReactHTMLCode: () => "",
-  ReactJSCode: "",
-  TSCode: "",
-  VueTSCode: "",
-  ReactTSCode: "",
+  JSCode: () => ``,
+  VueHTMLCode: () => ``,
+  VueJSCode: () => ``,
+  ReactHTMLCode: () => ``,
+  ReactJSCode: () => ``,
+  TSCode: () => ``,
+  VueTSCode: () => ``,
+  ReactTSCode: () => ``,
 };
 
 export const codeSlice = createSlice({

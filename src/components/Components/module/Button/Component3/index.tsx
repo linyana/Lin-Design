@@ -42,22 +42,22 @@ const code: codeState = {
 button${className}:hover {
   background-color: ${hoverColor};
 }`,
-  JSCode: `暂无`,
+  JSCode: () => `暂无`,
   VueHTMLCode: (className: string) => `<button${
     className.trim() ? ` class="${className.replace(".", "")}"` : ""
   }>
   圆角按钮
 </button>`,
-  VueJSCode: `暂无`,
+  VueJSCode: () => `暂无`,
   ReactHTMLCode: (className: string) => `<button${
     className.trim() ? ` className="${className.replace(".", "")}"` : ""
   }>
   圆角按钮
 </button>`,
-  ReactJSCode: `暂无`,
-  TSCode: `暂无`,
-  VueTSCode: `暂无`,
-  ReactTSCode: `暂无`,
+  ReactJSCode: () => `暂无`,
+  TSCode: () => `暂无`,
+  VueTSCode: () => `暂无`,
+  ReactTSCode: () => `暂无`,
 };
 
 const Component3 = () => {

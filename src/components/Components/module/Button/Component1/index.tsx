@@ -37,22 +37,22 @@ const Component1 = () => {
       }
         `;
     },
-    JSCode: `暂无`,
+    JSCode: () => `暂无`,
     VueHTMLCode: (className: string) => `<button${
       className.trim() ? ` class="${className.replace(".", "")}"` : ""
     }>
   基本按钮
 </button>`,
-    VueJSCode: `暂无`,
+    VueJSCode: () => `暂无`,
     ReactHTMLCode: (className: string) => `<button${
       className.trim() ? ` className="${className.replace(".", "")}"` : ""
     }>
   基本按钮
 </button>`,
-    ReactJSCode: `暂无`,
-    TSCode: `暂无`,
-    VueTSCode: `暂无`,
-    ReactTSCode: `暂无`,
+    ReactJSCode: () => `暂无`,
+    TSCode: () => `暂无`,
+    VueTSCode: () => `暂无`,
+    ReactTSCode: () => `暂无`,
   };
 
   return (
