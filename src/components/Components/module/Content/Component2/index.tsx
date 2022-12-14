@@ -24,7 +24,7 @@ const Component1 = () => {
     HTMLCode: (className: string) => `<div${
       className.trim() ? ` class="${className.replace(".", "")}"` : ""
     }>
-  <img src={img} alt="请添加图片" />
+  <img src="" alt="请添加图片" />
   <div class="text">
     <h2>内容</h2>
     <p>
@@ -79,7 +79,7 @@ div${className} p {
     VueHTMLCode: (className: string) => `<div${
       className.trim() ? ` class="${className.replace(".", "")}"` : ""
     }>
-  <img src={img} alt="请添加图片" />
+  <img src="" alt="请添加图片" />
   <div class="text">
     <div class="text_content">
       <h2>内容</h2>
@@ -93,7 +93,7 @@ div${className} p {
     ReactHTMLCode: (className: string) => `<div${
       className.trim() ? ` className="${className.replace(".", "")}"` : ""
     }>
-    <img src={img} alt="请添加图片" />
+    <img src="" alt="请添加图片" />
     <div className="text">
       <div className="text_content">
         <h2>内容</h2>
