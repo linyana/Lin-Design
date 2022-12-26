@@ -32,9 +32,13 @@ const Left = () => {
   const bgColorInput: MutableRefObject<any> = useRef(null);
   const colorInput: MutableRefObject<any> = useRef(null);
   const hoverColorInput: MutableRefObject<any> = useRef(null);
+  const classInput: MutableRefObject<any> = useRef(null);
+
+  if (classInput.current !== null) {
+    classInput.current.value = setting.class.replace(".", "");
+  }
 
   const handleClickColorBox = (event: any) => {
-    console.log(colorKind === "bgColor");
     if (colorKind == "bgColor") {
       dispatch(setBgColor(event.target.style.backgroundColor));
       bgColorInput.current.value = setRgbtoHex(
@@ -90,6 +94,7 @@ const Left = () => {
         <div className="left_content_input">
           <input
             type="text"
+            ref={classInput}
             onChange={(v) => {
               if (v.target.value.trim() === "") {
                 dispatch(setClass(""));

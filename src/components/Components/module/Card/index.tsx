@@ -1,9 +1,18 @@
-import React from 'react'
+import React from "react";
 
-const Card = () => {
+import Component1 from "./Component1";
+import Component2 from "./Component2";
+
+import "@/components/Components/index.css";
+
+const Button = () => {
   return (
-    <div>Card</div>
-  )
-}
+    <div>
+      <div className="component_big_title">卡片 <span>Card</span></div>
+      <Component1 />
+      <Component2 />  
+    </div>
+  );
+};
 
-export default Card
+export default Button;

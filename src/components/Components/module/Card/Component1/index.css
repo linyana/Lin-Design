@@ -1,0 +1,12 @@
+.card_component1_content {
+  width: 300px;
+  height: 400px;
+  border-radius: 15px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+.card_component1_content .card_top {
+  padding: 30px;
+  font-size: 20px;
+  font-weight: 500;
+}

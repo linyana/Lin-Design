@@ -30,13 +30,13 @@ const Component1 = () => {
     VueHTMLCode: (className: string) => `<div${
       className.trim() ? ` class="${className.replace(".", "")}"` : ""
     }>
-  content
+  基本按钮
 </div>`,
     VueJSCode: () => `暂无`,
     ReactHTMLCode: (className: string) => `<div${
       className.trim() ? ` className="${className.replace(".", "")}"` : ""
     }>
-  content
+  基本按钮
 </div>`,
     ReactJSCode: () => `暂无`,
     TSCode: () => `暂无`,
@@ -52,7 +52,10 @@ const Component1 = () => {
       <p className="compontent_p">利用margin来进行居中,建议自行设置宽度。</p>
       <div className="component_box">
         <div className="compontent_box_content">
-          <div className="layout_component1_content1">content</div>
+          <div className="card_component2_content">
+            <div className="card_top"></div>
+            <div className="card_bottom"></div>
+          </div>
         </div>
         <ShowCode code={code} />
       </div>

@@ -16,9 +16,9 @@ const Component1 = () => {
     HTMLCode: (className: string) => `<div${
       className.trim() ? ` class="${className.replace(".", "")}"` : ""
     }>
-  <div className="head">header</div>
-  <div className="content">content</div>
-  <div className="foot">footer</div>
+  <div class="head">header</div>
+  <div class="content">content</div>
+  <div class="foot">footer</div>
 </div>`,
     CSSCode: (
       className: string,
@@ -31,7 +31,7 @@ const Component1 = () => {
   height: 400px;
 }
 
-div${localStorage.getItem("class")}.layout_component2_content1 {
+div${className} .layout_component2_content1 {
   height: 25%;
   background-color: rgb(215, 217, 228);
 }
@@ -51,9 +51,9 @@ div${className} .layout_component2_content3 {
     VueHTMLCode: (className: string) => `<div${
       className.trim() ? ` class="${className.replace(".", "")}"` : ""
     }>
-  <div className="head">header</div>
-  <div className="content">content</div>
-  <div className="foot">footer</div>
+  <div class="head">header</div>
+  <div class="content">content</div>
+  <div class="foot">footer</div>
 </div>`,
     VueJSCode: () => `暂无`,
     ReactHTMLCode: (className: string) => `<div${

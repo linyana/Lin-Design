@@ -23,7 +23,7 @@ const Component1 = () => {
       className.trim() ? ` class="${className.replace(".", "")}"` : ""
     }>
   <img src="" alt="请添加图片" />
-  <div className="text">
+  <div class="text">
     <h2>内容</h2>
     <p>
       我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容。
@@ -72,7 +72,7 @@ div${className} p {
       className.trim() ? ` class="${className.replace(".", "")}"` : ""
     }>
   <img src="" alt="请添加图片" />
-  <div className="text">
+  <div class="text">
     <h2>内容</h2>
     <p>
       我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容。
