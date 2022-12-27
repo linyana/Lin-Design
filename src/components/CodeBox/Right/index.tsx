@@ -12,7 +12,7 @@ const Right = () => {
   const [css, setcss] = useState(
     code.CSSCode(setting.class, setting.bgColor, setting.color, setting.hoverColor)
   );
-  const [js, setjs] = useState<string>(code.JSCode);
+  const [js, setjs] = useState(code.JSCode(setting.class));
 
   // 判断应该显示的代码
   const setCodeContent = (): void => {
@@ -91,7 +91,7 @@ const Right = () => {
         <div
           className="copy"
           onClick={(event) => {
-            getCopyText(event, code.JSCode);
+            getCopyText(event, code.JSCode(setting.class));
           }}
         >
           复制
