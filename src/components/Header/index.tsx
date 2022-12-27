@@ -32,7 +32,7 @@ const Header = () => {
       </div>
       {/* 导航栏右侧--github */}
       <div className="header_right right_padding">
-        <img src={github} alt="github" className="header_logo" />
+        <img src={github} alt="github" className="header_logo" onClick={()=>{window.open('https://github.com/linyana/LinUI-page')}} />
       </div>
     </div>
   );
