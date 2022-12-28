@@ -48,12 +48,14 @@ div${className} .card_title {
   font-size: 28px;
   font-weight: 500;
   border-bottom: 1px solid rgba(148, 146, 146, 0.3);
+  color: ${color};
 }
 
 div${className} .card_text {
   padding: 30px 30px 0;
   font-size: 18px;
   line-height: 30px;
+  color: ${color};
 }`;
 		},
 		JSCode: () => `暂无`,
