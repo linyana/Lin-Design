@@ -1,0 +1,29 @@
+.card_component2_content {
+    cursor: pointer;
+    width: 260px;
+    background-color: var(--bgColor);
+    transition: all 0.1s;
+    border-radius: 15px;
+}
+
+.card_component2_content:hover {
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.card_component2_content .card_title {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border: 1px solid rgba(148, 146, 146, 0.3);
+    padding: 15px 30px;
+    font-size: 28px;
+    font-weight: 500;
+    border-bottom: 2px solid rgba(148, 146, 146, 0.3);
+    color: var(--color);
+}
+
+.card_component2_content .card_img img {
+    width: 100%;
+    vertical-align: bottom;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
