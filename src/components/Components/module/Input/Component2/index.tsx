@@ -56,9 +56,9 @@ input${className}:focus {
 	return (
 		<>
 			<div className="compontent_title" id="basic_button">
-				输入框
+				长度变化
 			</div>
-			<p className="compontent_p">较为基本的输入框。</p>
+			<p className="compontent_p">选中时变化长度。</p>
 			<div className="component_box">
 				<div className="compontent_box_content">
 					<input className="input_component2_content1" />
