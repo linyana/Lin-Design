@@ -42,6 +42,8 @@ const Component1 = () => {
     ) => {
       return `div${className} {
   position: relative;
+  margin: 20px 0;
+  padding-left: 30px;
 }
 
 div${className} img {
@@ -57,6 +59,8 @@ div${className} .text {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden; 
   background-color: ${bgColor};
 }
 
@@ -66,7 +70,8 @@ div${className} .text_content {
 
 div${className} h2 {
   text-align: center;
-  margin-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   color: ${color};
 }
 

@@ -1,5 +1,5 @@
 .code_box_middle {
-  width: calc(100% - 760px);
+  width: calc(70% - 300px);
   height: calc(100% - 40px);
   display: flex;
   justify-content: center;

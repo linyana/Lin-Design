@@ -1,7 +1,7 @@
 .code_box_right {
   display: flex;
   flex-wrap: wrap;
-  width: 460px;
+  width: 30%;
   border-left: 1px solid #efefef;
   transition: all 0.5s;
 }

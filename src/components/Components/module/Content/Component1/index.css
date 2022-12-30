@@ -1,6 +1,7 @@
 div.component_content_content1 {
   overflow: hidden;
   margin: 20px 0;
+  padding: 0 30px;
 }
 
 div.component_content_content1 img {
@@ -10,19 +11,18 @@ div.component_content_content1 img {
 
 div.component_content_content1 .text {
   /* 这个60px为padding第二个值的双倍 */
-  width: calc(60% - 60px);
-  padding: 0 30px;
+  padding-left: 30px;
+  width: calc(60% - 30px);
   float: left;
 }
 
 div.component_content_content1 h2 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: var(--color);
 }
 
 div.component_content_content1 p {
   text-indent: 2em;
   line-height: 28px;
-  letter-spacing: 1px;
   color: var(--color);
 }
