@@ -27,6 +27,10 @@ const Middle = () => {
     );
     document.body.style.setProperty("--color", setting.color);
     document.body.style.setProperty("--hoverColor", setting.hoverColor);
+    document.body.style.setProperty(
+      "--hoverColor05",
+      setting.hoverColor.replace(")", ", 0.5)")
+    );
   }
 
   if (localStorage.getItem("class") === null) {

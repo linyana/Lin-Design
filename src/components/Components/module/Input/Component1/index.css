@@ -1,0 +1,17 @@
+input.input_component1_content1 {
+    width: 200px;
+    height: 35px;
+    border: none;
+    outline: none;
+    border: 1px solid rgb(201, 200, 200);
+    box-shadow: 0 0 5px rgba(201, 200, 200,0.6);
+    border-radius: 5px;
+    transition: all 0.3s;
+    text-indent: 6px;
+    font-size: 12px;
+}
+
+input.input_component1_content1:focus {
+    border: 1px solid var(--hoverColor);
+    box-shadow: 0 0 5px var(--hoverColor05);
+}
