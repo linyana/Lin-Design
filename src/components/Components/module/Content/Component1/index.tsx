@@ -36,30 +36,30 @@ const Component1 = () => {
 			color: string,
 			hoverColor: string
 		) => {
-			return `div${className} {
+			return `${className === ''?'div':className} {
   overflow: hidden;
   margin: 20px 0;
   padding: 0 30px;
 }
 
-div${className} img {
+${className === ''?'div':className} img {
   width: 40%;
   float: left;
 }
 
-div${className} .text {
+${className === ''?'div':className} .text {
   /* 这个60px为padding第二个值的双倍 */
   padding-left: 30px;
   width: calc(60% - 30px);
   float: left;
 }
 
-div${className} h2 {
+${className === ''?'div':className} h2 {
   margin-bottom: 10px;
   color: ${color};
 }
 
-div${className} p {
+${className === ''?'div':className}p {
   text-indent: 2em;
   line-height: 28px;
   letter-spacing: 1px;

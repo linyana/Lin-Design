@@ -58,7 +58,7 @@ input${className}:focus {
 			<div className="compontent_title" id="basic_button">
 				长度变化
 			</div>
-			<p className="compontent_p">选中时变化长度。</p>
+			<p className="compontent_p">选中时变化长度，如果能让他水平居中的话会有意想不到的效果。</p>
 			<div className="component_box">
 				<div className="compontent_box_content">
 					<input className="input_component2_content1" />

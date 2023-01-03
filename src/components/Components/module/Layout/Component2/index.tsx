@@ -26,22 +26,22 @@ const Component1 = () => {
       color: string,
       hoverColor: string
     ) => {
-      return `div${className} {
+      return `${className === ''?'div':className} {
   width: 100%;
   height: 400px;
 }
 
-div${className} .layout_component2_content1 {
+${className === ''?'div':className} .layout_component2_content1 {
   height: 25%;
   background-color: rgb(215, 217, 228);
 }
 
-div${className} .layout_component2_content2 {
+${className === ''?'div':className} .layout_component2_content2 {
   height: 50%;
   background-color: rgb(225, 227, 238);
 }
 
-div${className} .layout_component2_content3 {
+${className === ''?'div':className} .layout_component2_content3 {
   height: 25%;
   background-color: rgb(215, 217, 228);
 }

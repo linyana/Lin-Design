@@ -52,7 +52,11 @@ const Component1 = () => {
       <p className="compontent_p">利用margin来进行居中,建议自行设置宽度。</p>
       <div className="component_box">
         <div className="compontent_box_content">
-          <div className="layout_component1_content1">content</div>
+          <div className="title_component1_contents">
+            <div className="title_component1_content">
+
+            </div>
+          </div>
         </div>
         <ShowCode code={code} />
       </div>

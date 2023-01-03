@@ -34,7 +34,7 @@ input${className}:focus {
     border: 1px solid ${hoverColor};
     box-shadow: 0 0 5px ${hoverColor.replace(")", ", 0.5)")};
 }
-        `;
+`;
 		},
 		JSCode: () => `暂无`,
 		VueHTMLCode: (className: string) =>

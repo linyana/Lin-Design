@@ -40,17 +40,17 @@ const Component1 = () => {
       color: string,
       hoverColor: string
     ) => {
-      return `div${className} {
+      return `${className === ''?'div':className} {
   position: relative;
   margin: 20px 0;
   padding-left: 30px;
 }
 
-div${className} img {
+${className === ''?'div':className} img {
   width: 70%;
 }
 
-div${className} .text {
+${className === ''?'div':className} .text {
   position: absolute;
   right: 5%;
   top: 5%;
@@ -64,18 +64,18 @@ div${className} .text {
   background-color: ${bgColor};
 }
 
-div${className} .text_content {
+${className === ''?'div':className} .text_content {
   padding: 0 10%;
 }
 
-div${className} h2 {
+${className === ''?'div':className} h2 {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
   color: ${color};
 }
 
-div${className} p {
+${className === ''?'div':className} p {
   text-indent: 2em;
   line-height: 28px;
   letter-spacing: 0.3px;

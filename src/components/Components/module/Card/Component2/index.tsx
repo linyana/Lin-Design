@@ -30,7 +30,7 @@ const Component1 = () => {
 			color: string,
 			hoverColor: string
 		) => {
-			return `div${className} {
+			return `${className === ''?'div':className} {
   cursor: pointer;
   width: 260px;
   background-color: ${bgColor};
@@ -38,11 +38,11 @@ const Component1 = () => {
   border-radius: 15px;
 }
 
-div${className}:hover {
+${className === ''?'div':className}:hover {
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
 
-div${className} .card_title {
+${className === ''?'div':className} .card_title {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   border: 1px solid rgba(148, 146, 146, 0.3);
@@ -53,7 +53,7 @@ div${className} .card_title {
   color: ${color}
 }
 
-div${className} .card_img img {
+${className === ''?'div':className} .card_img img {
   width: 100%;
   vertical-align: bottom;
   border-bottom-left-radius: 15px;

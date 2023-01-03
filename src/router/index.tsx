@@ -9,9 +9,10 @@ const Main = lazy(() => import("@/pages/Main"));
 const Input = lazy(() => import("@/components/Components/module/Input"));
 const Button = lazy(() => import("@/components/Components/module/Button"));
 const Card = lazy(() => import("@/components/Components/module/Card"));
-const Typography = lazy(() => import("@/components/Components/module/Typography"));
+const Plate = lazy(() => import("@/components/Components/module/Plate"));
 const Layout = lazy(() => import("@/components/Components/module/Layout"));
 const Content = lazy(() => import("@/components/Components/module/Content"));
+const Title = lazy(() => import("@/components/Components/module/Title"));
 
 
 const routes: RouteObject[] = [
@@ -32,8 +33,8 @@ const routes: RouteObject[] = [
         element: <Button />,
       },
       {
-        path: "typography",
-        element: <Typography/>,
+        path: "plate",
+        element: <Plate/>,
       },
       {
         path: "card",
@@ -44,8 +45,12 @@ const routes: RouteObject[] = [
         element: <Layout />,
       },
       {
-        path: "Content",
+        path: "content",
         element: <Content />
+      },
+      {
+        path: "title",
+        element: <Title />
       }
     ]
   },
