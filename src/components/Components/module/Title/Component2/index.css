@@ -1,0 +1,19 @@
+.title_component2_content {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 60px;
+    color: var(--color);
+}
+
+.title_component2_content:hover {
+    color: var(--hoverColor);
+}
+
+.title_line {
+    height: 2px;
+    width: 100px;
+    margin: 10px auto;
+    background-color: var(--bgColor);
+    border-radius: 50%;
+}
