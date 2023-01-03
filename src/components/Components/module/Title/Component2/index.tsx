@@ -37,7 +37,7 @@ ${className === "" ? "div" : className}:hover {
 }
 
 ${className === "" ? "div" : className} .title_line {
-  height: 2px;
+  height: 3px;
   width: 100px;
   margin: 10px auto;
   background-color: ${bgColor};
@@ -70,7 +70,7 @@ ${className === "" ? "div" : className} .title_line {
 			<div className="compontent_title" id="basic_button">
 				居中下划线
 			</div>
-			<p className="compontent_p">利用margin来进行居中,建议自行设置宽度。</p>
+			<p className="compontent_p">下划线的颜色根据背景颜色变化。</p>
 			<div className="component_box">
 				<div className="compontent_box_content">
 					<div
