@@ -1,12 +1,12 @@
 .title_component1_content {
-    font-size: 26px;
-    line-height: 60px;
-    color: var(--color);
-    width: 100%;
-    border-bottom: 1px solid var(--bgColor);
-    font-weight: 700;
+	font-size: 26px;
+	line-height: 60px;
+	color: var(--color);
+	width: 100%;
+	border-bottom: 2px solid var(--bgColor);
+	font-weight: 700;
 }
 
 .title_component1_content:hover {
-    color: var(--hoverColor);
+	color: var(--hoverColor);
 }

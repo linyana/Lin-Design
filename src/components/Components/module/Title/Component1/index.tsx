@@ -22,7 +22,7 @@ const Component1 = () => {
   font-size: 26px;
   line-height: 60px;
   color: ${color};
-  border-bottom: 1px solid ${bgColor};
+  border-bottom: 2px solid ${bgColor};
   font-weight: 700;
 }
         `;
@@ -56,7 +56,7 @@ const Component1 = () => {
 					<div
 						className="title_component1_content"
 						style={{
-							borderBottom: "1px solid rgb(61, 60, 60)",
+							borderBottom: "2px solid rgb(61, 60, 60)",
 							color: "#495057",
 						}}
 					>
