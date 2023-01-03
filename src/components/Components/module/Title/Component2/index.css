@@ -2,8 +2,9 @@
     text-align: center;
     font-size: 26px;
     font-weight: 700;
-    line-height: 60px;
+    line-height: 30px;
     color: var(--color);
+    margin-top: 30px;
 }
 
 .title_component2_content:hover {
@@ -13,7 +14,7 @@
 .title_line {
     height: 3px;
     width: 100px;
-    margin: 10px auto;
+    margin: 20px auto;
     background-color: var(--bgColor);
     border-radius: 50%;
 }

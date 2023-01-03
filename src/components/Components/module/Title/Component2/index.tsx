@@ -28,8 +28,9 @@ const Component1 = () => {
   text-align: center;
   font-size: 26px;
   font-weight: 700;
-  line-height: 60px;
+  line-height: 30px;
   color: ${color};
+  margin-top: 30px;
 }
 
 ${className === "" ? "div" : className}:hover {
@@ -39,7 +40,7 @@ ${className === "" ? "div" : className}:hover {
 ${className === "" ? "div" : className} .title_line {
   height: 3px;
   width: 100px;
-  margin: 10px auto;
+  margin: 20px auto;
   background-color: ${bgColor};
   border-radius: 50%;
 }

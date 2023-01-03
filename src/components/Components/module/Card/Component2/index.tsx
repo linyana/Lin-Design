@@ -35,7 +35,7 @@ const Component1 = () => {
   width: 260px;
   background-color: ${bgColor};
   transition: all 0.1s;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 ${className === ''?'div':className}:hover {
@@ -43,8 +43,8 @@ ${className === ''?'div':className}:hover {
 }
 
 ${className === ''?'div':className} .card_title {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   border: 1px solid rgba(148, 146, 146, 0.3);
   padding: 15px 30px;
   font-size: 28px;
@@ -56,8 +56,8 @@ ${className === ''?'div':className} .card_title {
 ${className === ''?'div':className} .card_img img {
   width: 100%;
   vertical-align: bottom;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
         `;
 		},
@@ -90,7 +90,7 @@ ${className === ''?'div':className} .card_img img {
 			<div className="compontent_title" id="basic_button">
 				带图片的卡片
 			</div>
-			<p className="compontent_p">用于有图片的情况。</p>
+			<p className="compontent_p">用于有图片的情况，如有多个尺度不一的图片会导致高度不一致，请在css中统一图片的高度。</p>
 			<div className="component_box">
 				<div className="compontent_box_content">
 					<div
