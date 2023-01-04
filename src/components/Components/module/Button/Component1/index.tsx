@@ -57,7 +57,7 @@ const Component1 = () => {
 
   return (
     <>
-      <div className="compontent_title" id="basic_button">
+      <div className="compontent_title" id="button-anchor1">
         基本按钮
       </div>
       <p className="compontent_p">最基本的按钮样式</p>

@@ -69,7 +69,7 @@ const Component2 = () => {
 
   return (
     <>
-      <div className="compontent_title" id="concise_button">
+      <div className="compontent_title" id="button-anchor2">
         简洁按钮
       </div>
       <p className="compontent_p">颜色更简洁的按钮</p>

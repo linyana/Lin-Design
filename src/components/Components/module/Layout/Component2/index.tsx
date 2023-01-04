@@ -71,7 +71,7 @@ ${className === ''?'div':className} .layout_component2_content3 {
 
   return (
     <>
-      <div className="compontent_title" id="basic_button">
+      <div className="compontent_title" id="layout-anchor2">
         基本布局2
       </div>
       <p className="compontent_p">

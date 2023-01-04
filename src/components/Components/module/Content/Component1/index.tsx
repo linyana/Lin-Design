@@ -99,7 +99,7 @@ ${className === ''?'div':className}p {
 
 	return (
 		<>
-			<div className="compontent_title" id="basic_button">
+			<div className="compontent_title" id="content-anchor1">
 				图文1
 			</div>
 			<div className="component_box">

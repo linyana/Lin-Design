@@ -46,7 +46,7 @@ const Component1 = () => {
 
   return (
     <>
-      <div className="compontent_title" id="basic_button">
+      <div className="compontent_title" id="layout-anchor1">
         基本布局
       </div>
       <p className="compontent_p">利用margin来进行居中,建议自行设置宽度。</p>

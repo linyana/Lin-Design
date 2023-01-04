@@ -63,7 +63,7 @@ button${className}:hover {
 const Component3 = () => {
   return (
     <>
-      <div className="compontent_title" id="rounded_corners_button">
+      <div className="compontent_title" id="button-anchor3">
         圆角按钮
       </div>
       <p className="compontent_p">圆角按钮样式</p>

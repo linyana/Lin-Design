@@ -47,7 +47,7 @@ const Component1 = () => {
 
 	return (
 		<>
-			<div className="compontent_title" id="basic_button">
+			<div className="compontent_title" id="title-anchor2">
 				长下划线
 			</div>
 			<p className="compontent_p">在标题下方增加一条下划线增强视觉效果</p>

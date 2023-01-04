@@ -78,13 +78,13 @@ div${className} .title {
 
 div${className} .text {
 	text-align: center;
-	margin: 10px 0;
+	margin: 15px 0;
 	color: ${color};
 }
 
 div${className} .button {
 	text-align: center;
-	margin-top: 20px;
+	margin-top: 25px;
 }
 
 div${className} .button button {
@@ -100,7 +100,7 @@ div${className} .button button {
 }
 
 div${className} .button button:hover {
-	background-color: #5697e0;
+	background-color: ${hoverColor}
 }
         `;
 		},
@@ -124,14 +124,14 @@ div${className} .button button:hover {
 
 	return (
 		<>
-			<div className="compontent_title" id="basic_button">
-				基本布局
+			<div className="compontent_title" id="card-anchor3">
+				图片+按钮
 			</div>
-			<p className="compontent_p">利用margin来进行居中,建议自行设置宽度。</p>
+			<p className="compontent_p"></p>
 			<div className="component_box">
 				<div className="compontent_box_content">
 					<div
-						className="card_component3_content"
+						className="card_component3_content card_component3_content_hover"
 						style={{ backgroundColor: "white" }}
 					>
 						<div className="img">

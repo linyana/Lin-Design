@@ -84,7 +84,7 @@ ${className === ''?'div':className} .card_text {
 
 	return (
 		<>
-			<div className="compontent_title" id="basic_button">
+			<div className="compontent_title" id="card-anchor1">
 				文字卡片
 			</div>
 			<p className="compontent_p">用于设置标题和文字</p>

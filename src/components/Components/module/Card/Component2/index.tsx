@@ -87,7 +87,7 @@ ${className === ''?'div':className} .card_img img {
 
 	return (
 		<>
-			<div className="compontent_title" id="basic_button">
+			<div className="compontent_title" id="card-anchor2">
 				带图片的卡片
 			</div>
 			<p className="compontent_p">用于有图片的情况，如有多个尺度不一的图片会导致高度不一致，请在css中统一图片的高度。</p>
