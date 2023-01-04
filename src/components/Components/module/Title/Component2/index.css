@@ -11,7 +11,7 @@
     color: var(--hoverColor);
 }
 
-.title_line {
+.title_component2_content .title_line {
     height: 3px;
     width: 100px;
     margin: 20px auto;
