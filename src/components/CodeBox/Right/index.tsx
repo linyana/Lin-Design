@@ -69,7 +69,7 @@ const Right = () => {
         <div
           className="copy"
           onClick={(event) => {
-            getCopyText(event, code.HTMLCode(setting.class));
+            getCopyText(event, html);
           }}
         >
           复制
@@ -80,7 +80,7 @@ const Right = () => {
         <div
           className="copy"
           onClick={(event) => {
-            getCopyText(event, code.CSSCode(setting.class, setting.bgColor, setting.color, setting.hoverColor));
+            getCopyText(event, css);
           }}
         >
           复制
@@ -91,7 +91,7 @@ const Right = () => {
         <div
           className="copy"
           onClick={(event) => {
-            getCopyText(event, code.JSCode(setting.class));
+            getCopyText(event, js);
           }}
         >
           复制
