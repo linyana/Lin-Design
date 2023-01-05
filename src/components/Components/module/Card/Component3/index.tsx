@@ -46,29 +46,29 @@ const Component1 = () => {
 			color: string,
 			hoverColor: string
 		) => {
-			return `div${className} {
+			return `${className === ''?'div':className} {
 	width: 300px;
 	padding: 30px;
 	transition: all 0.5s;
 	background-color: ${bgColor};
 }
 
-div${className}:hover {
+${className === ''?'div':className}:hover {
 	background-color: rgb(248, 248, 248);
 }
 
-div${className} .img {
+${className === ''?'div':className} .img {
 	margin-bottom: 15px;
 	text-align: center;
 }
 
-div${className} .img img {
+${className === ''?'div':className} .img img {
 	width: 120px;
 	height: 120px;
 	border-radius: 50%;
 }
 
-div${className} .title {
+${className === ''?'div':className} .title {
 	text-align: center;
 	font-size: 26px;
 	font-weight: 700;
@@ -76,18 +76,18 @@ div${className} .title {
 	margin-bottom: 10px;
 }
 
-div${className} .text {
+${className === ''?'div':className} .text {
 	text-align: center;
 	margin: 15px 0;
 	color: ${color};
 }
 
-div${className} .button {
+${className === ''?'div':className} .button {
 	text-align: center;
 	margin-top: 25px;
 }
 
-div${className} .button button {
+${className === ''?'div':className} .button button {
 	cursor: pointer;
 	padding: 8px 40px;
 	background-color: #73a0d3;

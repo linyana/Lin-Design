@@ -5,22 +5,22 @@ import { codeState } from "@/store/Code";
 import "./index.css";
 
 const Component1 = () => {
-  const code: codeState = {
-    element: () => (
-      <button className="button_compontent_button1">基本按钮</button>
-    ),
-    HTMLCode: (className: string) => `<button${
-      className.trim() ? ` class="${className.replace(".", "")}"` : ""
-    }>
+	const code: codeState = {
+		element: () => (
+			<button className="button_compontent_button1">基本按钮</button>
+		),
+		HTMLCode: (className: string) => `<button${
+			className.trim() ? ` class="${className.replace(".", "")}"` : ""
+		}>
   基本按钮
 </button>`,
-    CSSCode: (
-      className: string,
-      bgColor: string,
-      color: string,
-      hoverColor: string
-    ) => {
-      return `button${className} {
+		CSSCode: (
+			className: string,
+			bgColor: string,
+			color: string,
+			hoverColor: string
+		) => {
+			return `button${className} {
         cursor: pointer;
         padding: 12px 40px;
         background-color: ${bgColor};
@@ -36,39 +36,47 @@ const Component1 = () => {
         background-color:${hoverColor};
       }
         `;
-    },
-    JSCode: () => `暂无`,
-    VueHTMLCode: (className: string) => `<button${
-      className.trim() ? ` class="${className.replace(".", "")}"` : ""
-    }>
+		},
+		JSCode: () => `暂无`,
+		VueHTMLCode: (className: string) => `<button${
+			className.trim() ? ` class="${className.replace(".", "")}"` : ""
+		}>
   基本按钮
 </button>`,
-    VueJSCode: () => `暂无`,
-    ReactHTMLCode: (className: string) => `<button${
-      className.trim() ? ` className="${className.replace(".", "")}"` : ""
-    }>
+		VueJSCode: () => `暂无`,
+		ReactHTMLCode: (className: string) => `<button${
+			className.trim() ? ` className="${className.replace(".", "")}"` : ""
+		}>
   基本按钮
 </button>`,
-    ReactJSCode: () => `暂无`,
-    TSCode: () => `暂无`,
-    VueTSCode: () => `暂无`,
-    ReactTSCode: () => `暂无`,
-  };
+		ReactJSCode: () => `暂无`,
+		TSCode: () => `暂无`,
+		VueTSCode: () => `暂无`,
+		ReactTSCode: () => `暂无`,
+	};
 
-  return (
-    <>
-      <div className="compontent_title" id="button-anchor1">
-        基本按钮
-      </div>
-      <p className="compontent_p">最基本的按钮样式</p>
-      <div className="component_box">
-        <div className="compontent_box_content">
-          <button className="button_compontent_button1">基本按钮</button>
-        </div>
-        <ShowCode code={code} />
-      </div>
-    </>
-  );
+	return (
+		<>
+			<div className="compontent_title" id="button-anchor1">
+				基本按钮
+			</div>
+			<p className="compontent_p">最基本的按钮样式</p>
+			<div className="component_box">
+				<div className="compontent_box_content">
+					<button
+						className="button_compontent_button1"
+						style={{
+							backgroundColor: "rgb(47, 121, 206)",
+							color: "rgb(248, 248, 248)",
+						}}
+					>
+						基本按钮
+					</button>
+				</div>
+				<ShowCode code={code} />
+			</div>
+		</>
+	);
 };
 
 export default Component1;
