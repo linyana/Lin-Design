@@ -64,7 +64,7 @@ const Component1 = () => {
 			<div className="component_box">
 				<div className="compontent_box_content">
 					<button
-						className="button_compontent_button1"
+						className="button_compontent_button1 button_compontent_button1_hover"
 						style={{
 							backgroundColor: "rgb(47, 121, 206)",
 							color: "rgb(248, 248, 248)",

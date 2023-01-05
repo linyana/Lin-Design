@@ -13,3 +13,7 @@ button.button_compontent_button3 {
 button.button_compontent_button3:hover {
   background-color: var(--hoverColor)!important;
 }
+
+button.button_compontent_button3_hover:hover {
+  background-color: rgb(70, 145, 245)!important;
+}
