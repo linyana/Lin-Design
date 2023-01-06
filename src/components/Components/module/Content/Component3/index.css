@@ -1,42 +1,42 @@
-.card_component4_content {
+.content_component3_content {
 	display: flex;
 	justify-content: space-around;
 }
 
-.move_card {
+.content_component3_content .move_card {
 	width: 22%;
 	padding: 3%;
 	height: 200px;
 	transition: all 0.8s;
 }
 
-.move_card:hover {
+.content_component3_content .move_card:hover {
 	width: 36%;
 }
 
-.move_card1 {
+.content_component3_content .move_card1 {
 	background-color: #e7b46c;
 }
 
-.move_card2 {
+.content_component3_content .move_card2 {
 	background-color: #6e9ae5;
 }
 
-.move_card3 {
+.content_component3_content .move_card3 {
 	background-color: #7277c3;
 }
 
-.move_card .move_card_title,
-.move_card .move_card_text {
+.content_component3_content .move_card .move_card_title,
+.content_component3_content .move_card .move_card_text {
 	color: white;
 }
 
-.move_card .move_card_title {
+.content_component3_content .move_card .move_card_title {
 	text-align: center;
 	font-size: 26px;
 	line-height: 60px;
 }
 
-.move_card .move_card_text {
+.content_component3_content .move_card .move_card_text {
 	width: 100%
 }

@@ -21,23 +21,23 @@ const Component1 = () => {
 			hoverColor: string
 		) => {
 			return `button${className} {
-        cursor: pointer;
-				padding: 0 30px;
-				height: 36px;
-        background-color: ${bgColor};
-        border: none;
-        outline: none;
-        border-radius: 6px;
-        color: ${color};
-        box-shadow: 0 0 5px ${bgColor.replace(")", ", 0.3)")};
-        transition: all 0.5s;
-      }
-      
-      button${className}:hover {
-        background-color:${hoverColor};
-      }
-        `;
-		},
+	cursor: pointer;
+	padding: 0 30px;
+	height: 36px;
+	background-color: ${bgColor};
+	border: none;
+	outline: none;
+	border-radius: 6px;
+	color: ${color};
+	box-shadow: 0 0 5px ${bgColor.replace(")", ", 0.3)")};
+	transition: all 0.5s;
+}
+
+button${className}:hover {
+	background-color:${hoverColor};
+}
+	`;
+},
 		JSCode: () => `暂无`,
 		VueHTMLCode: (className: string) => `<button${
 			className.trim() ? ` class="${className.replace(".", "")}"` : ""

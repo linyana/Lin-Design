@@ -1,0 +1,38 @@
+.content_component4_content {
+	display: flex;
+	justify-content: space-around;
+}
+
+.content_component4_content .move_card {
+	width: 22%;
+	padding: 3%;
+	height: 200px;
+	transition: all 0.8s;
+}
+
+.content_component4_content .move_card1 {
+	background-color: #e7b46c;
+}
+
+.content_component4_content .move_card2 {
+	background-color: #6e9ae5;
+}
+
+.content_component4_content .move_card3 {
+	background-color: #7277c3;
+}
+
+.content_component4_content .move_card .move_card_title,
+.content_component4_content .move_card .move_card_text {
+	color: white;
+}
+
+.content_component4_content .move_card .move_card_title {
+	text-align: center;
+	font-size: 26px;
+	line-height: 60px;
+}
+
+.content_component4_content .move_card .move_card_text {
+	width: 100%
+}

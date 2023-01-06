@@ -34,22 +34,22 @@ const Component2 = () => {
 			_color: string,
 			hoverColor: string
 		) => `button${className} {
-    cursor: pointer;
-		padding: 0 30px;
-		height: 36px;
-    background-color: transparent;
-    border: 1px solid ${bgColor.replace(")", ", 0.1)")};
-    outline: none;
-    border-radius: 6px;
-    box-shadow: 0 0 3px ${bgColor.replace(")", ", 0.3)")};
-    transition: all 0.5s;
-    color: ${bgColor};
-    background-color: ${bgColor.replace(")", ", 0.1)")};
-  }
+	cursor: pointer;
+	padding: 0 30px;
+	height: 36px;
+	background-color: transparent;
+	border: 1px solid ${bgColor.replace(")", ", 0.1)")};
+	outline: none;
+	border-radius: 6px;
+	box-shadow: 0 0 3px ${bgColor.replace(")", ", 0.3)")};
+	transition: all 0.5s;
+	color: ${bgColor};
+	background-color: ${bgColor.replace(")", ", 0.1)")};
+}
   
-  button${className}:hover {
-    border: 1px solid ${hoverColor};
-  }`,
+button${className}:hover {
+	border: 1px solid ${hoverColor};
+}`,
 		JSCode: () => `暂无`,
 		VueHTMLCode: (className: string) => `<button${
 			className.trim() ? ` class="${className.replace(".", "")}"` : ""
