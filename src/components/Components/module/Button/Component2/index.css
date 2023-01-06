@@ -1,6 +1,7 @@
 button.button_compontent_button2 {
   cursor: pointer;
-  padding: 12px 40px;
+  padding: 0 30px;
+  height: 36px;
   background-color: transparent;
   border: 1px solid var(--bgColor01);
   outline: none;

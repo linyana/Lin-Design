@@ -59,7 +59,7 @@ ${className === ''?'div':className} h2 {
   color: ${color};
 }
 
-${className === ''?'div':className}p {
+${className === ''?'div':className} p {
   text-indent: 2em;
   line-height: 28px;
   letter-spacing: 1px;

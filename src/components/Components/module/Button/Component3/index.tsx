@@ -29,7 +29,8 @@ const code: codeState = {
 		hoverColor: string
 	) => `button${className} {
   cursor: pointer;
-  padding: 12px 40px;
+  padding: 0 30px;
+  height: 36px;
   background-color: ${bgColor};
   border: none;
   outline: none;

@@ -35,7 +35,8 @@ const Component2 = () => {
 			hoverColor: string
 		) => `button${className} {
     cursor: pointer;
-    padding: 12px 40px;
+		padding: 0 30px;
+		height: 36px;
     background-color: transparent;
     border: 1px solid ${bgColor.replace(")", ", 0.1)")};
     outline: none;
@@ -72,7 +73,7 @@ const Component2 = () => {
 			<div className="compontent_title" id="button-anchor2">
 				简洁按钮
 			</div>
-			<p className="compontent_p">颜色更简洁的按钮</p>
+			<p className="compontent_p">颜色更简洁的按钮,只适合浅色背景。</p>
 			<div className="component_box">
 				<div className="compontent_box_content">
 					<button
