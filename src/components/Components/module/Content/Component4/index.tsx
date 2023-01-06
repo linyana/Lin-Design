@@ -80,26 +80,53 @@ ${className === "" ? "div" : className} .move_card .move_card_text {
 		VueHTMLCode: (className: string) => `<div${
 			className.trim() ? ` class="${className.replace(".", "")}"` : ""
 		}>
-	<div class="move_card move_card1">
-		<div class="move_card_title">标题</div>
-		<div class="move_card_text">
+	<div
+		className="move_card move_card1"
+		:style="{ width: width1 ? '36%' : '22%' }"
+		@mouseenter="restore(1)"
+	>
+		<div className="move_card_title">标题</div>
+		<div className="move_card_text">
 			我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容
 		</div>
 	</div>
-	<div class="move_card move_card2">
-		<div class="move_card_title">标题</div>
-		<div class="move_card_text">
+	<div
+		className="move_card move_card2"
+		:style="{ width: width2 ? '36%' : '22%' }"
+		@mouseenter="restore(2)"
+	>
+		<div className="move_card_title">标题</div>
+		<div className="move_card_text">
 			我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容
 		</div>
 	</div>
-	<div class="move_card move_card3">
-		<div class="move_card_title">标题</div>
-		<div class="move_card_text">
+	<div
+		className="move_card move_card3"
+		:style="{ width: width3 ? '36%' : '22%' }"
+		@mouseenter="restore(3)"
+	>
+		<div className="move_card_title">标题</div>
+		<div className="move_card_text">
 			我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容
 		</div>
 	</div>
 </div>`,
-		VueJSCode: () => `暂无`,
+		VueJSCode: () => `
+import { ref } from "vue";
+
+const width1 = ref(true);
+const width2 = ref(false);
+const width3 = ref(false);
+const restore = (index: number) => {
+	width1.value = false;
+	width2.value = false;
+	width3.value = false;
+	index === 1
+		? (width1.value = true)
+		: index === 2
+		? (width2.value = true)
+		: (width3.value = true);
+};`,
 		ReactHTMLCode: (className: string) => `<div${
 			className.trim() ? ` className="${className.replace(".", "")}"` : ""
 		}>
@@ -157,7 +184,23 @@ const restore = () => {
 };		
 		`,
 		TSCode: () => `暂无`,
-		VueTSCode: () => `暂无`,
+		VueTSCode: () => `
+import { ref } from "vue";
+
+const width1 = ref<boolean>(true);
+const width2 = ref<boolean>(false);
+const width3 = ref<boolean>(false);
+const restore = (index: number): void => {
+	width1.value = false;
+	width2.value = false;
+	width3.value = false;
+	index === 1
+		? (width1.value = true)
+		: index === 2
+		? (width2.value = true)
+		: (width3.value = true);
+};
+		`,
 		ReactTSCode: () => `
 import { useState } from 'react'
 
@@ -184,7 +227,7 @@ const restore = (): void => {
 
 	return (
 		<>
-			<div className="compontent_title" id="basic_button">
+			<div className="compontent_title" id="content-anchor4">
 				鼠标经过变宽2
 			</div>
 			<p className="compontent_p">跟上一个组件相比，增加了默认打开的状态。</p>
