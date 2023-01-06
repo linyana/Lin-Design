@@ -7,7 +7,7 @@ import "./index.css";
 const Component1 = () => {
 	const code: codeState = {
 		element: () => (
-			<div className="card_component3_content" style={{ width: 700 }}>
+			<div className="content_component3_content" style={{ width: 700 }}>
 				<div className="move_card move_card1">
 					<div className="move_card_title">标题</div>
 					<div className="move_card_text">

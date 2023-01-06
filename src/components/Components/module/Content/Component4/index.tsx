@@ -76,7 +76,19 @@ ${className === "" ? "div" : className} .move_card .move_card_text {
   width: 100%
 }`;
 		},
-		JSCode: () => `暂无`,
+		JSCode: () => `
+const moveCards = document.querySelectorAll(".move_card");
+const restore = () => {
+	for (let i = 0; i < moveCards.length; i++) {
+		moveCards[i].style.width = "22%";
+	}
+};
+for (let i = 0; i < moveCards.length; i++) {
+	moveCards[i].addEventListener('mouseenter',() => {
+		restore();
+		moveCards[i].style.width = "36%";
+	})
+}`,
 		VueHTMLCode: (className: string) => `<div${
 			className.trim() ? ` class="${className.replace(".", "")}"` : ""
 		}>
@@ -183,7 +195,19 @@ const restore = () => {
 	setWidth3(false);
 };		
 		`,
-		TSCode: () => `暂无`,
+		TSCode: () => `
+const moveCards = document.querySelectorAll(".move_card");
+const restore = (): void => {
+	for (let i = 0; i < moveCards.length; i++) {
+		moveCards[i].style.width = "22%";
+	}
+};
+for (let i = 0; i < moveCards.length; i++) {
+	moveCards[i].addEventListener('mouseenter',() => {
+		restore();
+		moveCards[i].style.width = "36%";
+	})
+}`,
 		VueTSCode: () => `
 import { ref } from "vue";
 
