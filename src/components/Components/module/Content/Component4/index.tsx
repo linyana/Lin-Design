@@ -146,9 +146,9 @@ ${className === "" ? "div" : className} .move_card .move_card_text {
 		ReactJSCode: () => `
 import { useState } from 'react'
 
-const [width1, setWidth1] = useState<boolean>(true);
-const [width2, setWidth2] = useState<boolean>(false);
-const [width3, setWidth3] = useState<boolean>(false);
+const [width1, setWidth1] = useState(true);
+const [width2, setWidth2] = useState(false);
+const [width3, setWidth3] = useState(false);
 
 const restore = () => {
 	setWidth1(false);
@@ -158,14 +158,25 @@ const restore = () => {
 		`,
 		TSCode: () => `暂无`,
 		VueTSCode: () => `暂无`,
-		ReactTSCode: () => `暂无`,
+		ReactTSCode: () => `
+import { useState } from 'react'
+
+const [width1, setWidth1] = useState<boolean>(true);
+const [width2, setWidth2] = useState<boolean>(false);
+const [width3, setWidth3] = useState<boolean>(false);
+
+const restore = (): void => {
+	setWidth1(false);
+	setWidth2(false);
+	setWidth3(false);
+};`,
 	};
 
 	const [width1, setWidth1] = useState<boolean>(true);
 	const [width2, setWidth2] = useState<boolean>(false);
 	const [width3, setWidth3] = useState<boolean>(false);
 
-	const restore = () => {
+	const restore = (): void => {
 		setWidth1(false);
 		setWidth2(false);
 		setWidth3(false);
@@ -232,7 +243,7 @@ const Component = () => {
 	const [width2, setWidth2] = useState<boolean>(false);
 	const [width3, setWidth3] = useState<boolean>(false);
 
-	const restore = () => {
+	const restore = (): void => {
 		setWidth1(false);
 		setWidth2(false);
 		setWidth3(false);
@@ -240,7 +251,7 @@ const Component = () => {
 
 	return (
 		<>
-			<div className="content_component4_content" style={{ width: 700 }}>
+			<div className="content_component4_content">
 				<div
 					className="move_card move_card1"
 					style={{ width: width1 ? "36%" : "22%" }}
