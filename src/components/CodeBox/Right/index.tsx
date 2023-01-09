@@ -65,7 +65,7 @@ const Right = () => {
 
   return (
     <div className="code_box_right">
-      <div className="pre">
+      <div className="pre_content">
         <div
           className="copy"
           onClick={(event) => {
@@ -76,7 +76,7 @@ const Right = () => {
         </div>
         <pre className="HTML">{html}</pre>
       </div>
-      <div className="pre">
+      <div className="pre_content">
         <div
           className="copy"
           onClick={(event) => {
@@ -87,7 +87,7 @@ const Right = () => {
         </div>
         <pre className="CSS">{css}</pre>
       </div>
-      <div className="pre">
+      <div className="pre_content">
         <div
           className="copy"
           onClick={(event) => {

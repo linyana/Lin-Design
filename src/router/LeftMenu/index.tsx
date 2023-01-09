@@ -33,6 +33,11 @@ const leftMenu = [
     name: "标题",
     smallName: "Title",
     to: "title",
+  },
+  {
+    name: '轮播图',
+    smallName: 'Slide',
+    to: 'slide',
   }
 ]
 

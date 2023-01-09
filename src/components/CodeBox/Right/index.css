@@ -55,7 +55,7 @@ pre.JS {
   color: #c9b716;
 }
 
-.pre {
+.pre_content {
   position: relative;
   width: 100%;
   height: 30%;
@@ -99,6 +99,6 @@ pre::before {
   white-space: nowrap;
 }
 
-.code_box_right .pre:hover .copy {
+.code_box_right .pre_content:hover .copy {
   opacity: 1;
 }
