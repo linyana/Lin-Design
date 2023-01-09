@@ -25,8 +25,8 @@ const Component1 = () => {
 			return `${className === "" ? "div" : className} {
   position: relative;
   width: 100%;
-  height: 100%;
   height: 400px;
+  min-width: 500px; 
   overflow: hidden;
 }
 
@@ -135,26 +135,35 @@ ${className === "" ? "div" : className} .next {
   <div className={slideArr[3]}>4</div>
   <div className={slideArr[4]}>5</div>
 </div>`,
-		ReactJSCode: () => `const length = slideArr.length;
-  let slideIndex = 4;
-  let timer;
-  useEffect(() => {
-    if (timer) {
-      return; 
-    } else {
-      timer = setInterval(() => {
-        slideIndex++;
-        slideIndex = slideIndex === length ? 0 : slideIndex;
-        setSlideArr([(slideArr[slideIndex] = "slide_box active"), ...slideArr]);
-        const preIndex = slideIndex === 0 ? length - 1 : slideIndex - 1;
-        setSlideArr([(slideArr[preIndex] = "slide_box pre"), ...slideArr]);
-        const preIndex2 = preIndex === 0 ? length - 1 : preIndex - 1;
-        setSlideArr([(slideArr[preIndex2] = "slide_box"), ...slideArr]);
-        const nextIndex = slideIndex === length - 1 ? 0 : slideIndex + 1;
-        setSlideArr([(slideArr[nextIndex] = "slide_box next"), ...slideArr]);
-      }, 3000);
-    }
-  }, []);
+		ReactJSCode: () => `
+  const [slideArr, setSlideArr] = useState<Array<string>>([
+    "slide_box active",
+    "slide_box next",
+    "slide_box",
+    "slide_box",
+    "slide_box pre",
+]);  
+
+const length = slideArr.length;
+let slideIndex = 4;
+let timer;
+useEffect(() => {
+  if (timer) {
+    return; 
+  } else {
+    timer = setInterval(() => {
+      slideIndex++;
+      slideIndex = slideIndex === length ? 0 : slideIndex;
+      setSlideArr([(slideArr[slideIndex] = "slide_box active"), ...slideArr]);
+      const preIndex = slideIndex === 0 ? length - 1 : slideIndex - 1;
+      setSlideArr([(slideArr[preIndex] = "slide_box pre"), ...slideArr]);
+      const preIndex2 = preIndex === 0 ? length - 1 : preIndex - 1;
+      setSlideArr([(slideArr[preIndex2] = "slide_box"), ...slideArr]);
+      const nextIndex = slideIndex === length - 1 ? 0 : slideIndex + 1;
+      setSlideArr([(slideArr[nextIndex] = "slide_box next"), ...slideArr]);
+    }, 3000);
+  }
+}, []);
   `,
 		TSCode: () => `const slideBox = document.querySelectorAll(".slide_box");
   let timer;
@@ -208,26 +217,34 @@ ${className === "" ? "div" : className} .next {
   };
   
   setTime();`,
-		ReactTSCode: () => `const length: number = slideArr.length;
-  let slideIndex: number = 4;
-  let timer: NodeJS.Timer;
-  useEffect(() => {
-    if (timer) {
-      return;
-    } else {
-      timer = setInterval(() => {
-        slideIndex++;
-        slideIndex = slideIndex === length ? 0 : slideIndex;
-        setSlideArr([(slideArr[slideIndex] = "slide_box active"), ...slideArr]);
-        const preIndex = slideIndex === 0 ? length - 1 : slideIndex - 1;
-        setSlideArr([(slideArr[preIndex] = "slide_box pre"), ...slideArr]);
-        const preIndex2 = preIndex === 0 ? length - 1 : preIndex - 1;
-        setSlideArr([(slideArr[preIndex2] = "slide_box"), ...slideArr]);
-        const nextIndex = slideIndex === length - 1 ? 0 : slideIndex + 1;
-        setSlideArr([(slideArr[nextIndex] = "slide_box next"), ...slideArr]);
-      }, 3000);
-    }
-  }, []);
+		ReactTSCode: () => `
+const [slideArr, setSlideArr] = useState<Array<string>>([
+    "slide_box active",
+    "slide_box next",
+    "slide_box",
+    "slide_box",
+    "slide_box pre",
+]);  
+const length: number = slideArr.length;
+let slideIndex: number = 4;
+let timer: NodeJS.Timer;
+useEffect(() => {
+  if (timer) {
+    return;
+  } else {
+    timer = setInterval(() => {
+      slideIndex++;
+      slideIndex = slideIndex === length ? 0 : slideIndex;
+      setSlideArr([(slideArr[slideIndex] = "slide_box active"), ...slideArr]);
+      const preIndex = slideIndex === 0 ? length - 1 : slideIndex - 1;
+      setSlideArr([(slideArr[preIndex] = "slide_box pre"), ...slideArr]);
+      const preIndex2 = preIndex === 0 ? length - 1 : preIndex - 1;
+      setSlideArr([(slideArr[preIndex2] = "slide_box"), ...slideArr]);
+      const nextIndex = slideIndex === length - 1 ? 0 : slideIndex + 1;
+      setSlideArr([(slideArr[nextIndex] = "slide_box next"), ...slideArr]);
+    }, 3000);
+  }
+}, []);
   `,
 	};
 
@@ -265,7 +282,9 @@ ${className === "" ? "div" : className} .next {
 			<div className="compontent_title" id="slide-anchor3">
 				无缝滚动
 			</div>
-			<p className="compontent_p">在首尾切换时无缝滚动,可以把里面的数字替换为图片，本组件不支持自定义颜色。</p>
+			<p className="compontent_p">
+				在首尾切换时无缝滚动,可以把里面的数字替换为图片，本组件不支持自定义颜色。
+			</p>
 			<div className="component_box">
 				<div className="compontent_box_content">
 					<div className="slide_component3_content">
