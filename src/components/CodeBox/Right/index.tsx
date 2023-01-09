@@ -19,24 +19,24 @@ const Right = () => {
     if (setting.kind === "HTML") {
       sethtml(code.HTMLCode(setting.class));
       if (setting.format === "JavaScript") {
-        setjs(code.JSCode);
+        setjs(code.JSCode(setting.class));
       } else {
-        setjs(code.TSCode);
+        setjs(code.TSCode(setting.class));
       }
     } else if (setting.kind === "Vue") {
       sethtml(code.VueHTMLCode(setting.class));
       if (setting.format === "JavaScript") {
-        setjs(code.VueJSCode);
+        setjs(code.VueJSCode(setting.class));
       } else {
-        setjs(code.VueTSCode);
+        setjs(code.VueTSCode(setting.class));
       }
     } else {
       if (setting.kind === "React") {
         sethtml(code.ReactHTMLCode(setting.class));
         if (setting.format === "JavaScript") {
-          setjs(code.ReactJSCode);
+          setjs(code.ReactJSCode(setting.class));
         } else {
-          setjs(code.ReactTSCode);
+          setjs(code.ReactTSCode(setting.class));
         }
       }
     }
