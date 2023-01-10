@@ -5,7 +5,6 @@ import { nanoid } from "nanoid";
 import "./index.css";
 
 const scrollToAnchor = (anchorName: string) => {
-  window.console.log(anchorName)
   if (anchorName) {
     // 找到锚点
     let anchorElement = document.getElementById(anchorName);
@@ -13,7 +12,6 @@ const scrollToAnchor = (anchorName: string) => {
     if (anchorElement) {
       anchorElement.scrollIntoView();
     }
-    window.console.log(anchorElement)
   }
 };
 
