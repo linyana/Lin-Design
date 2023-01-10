@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState,useEffect,useRef } from "react";
 import ShowCode from "@/components/Components/ShowCode";
 import { codeState } from "@/store/Code";
 
@@ -136,34 +136,34 @@ ${className === "" ? "div" : className} .next {
   <div className={slideArr[4]}>5</div>
 </div>`,
 		ReactJSCode: () => `
-  const [slideArr, setSlideArr] = useState<Array<string>>([
-    "slide_box active",
-    "slide_box next",
-    "slide_box",
-    "slide_box",
-    "slide_box pre",
-]);  
+const [slideArr, setSlideArr] = useState([
+  "slide_box active",
+  "slide_box next",
+  "slide_box",
+  "slide_box",
+  "slide_box pre",
+]);
+const [slideIndex, setSlideIndex] = useState(0);
+const SlideRef = useRef(slideIndex);
+SlideRef.current = slideIndex;
 
-const length = slideArr.length;
-let slideIndex = 4;
-let timer;
-useEffect(() => {
-  if (timer) {
-    return; 
-  } else {
-    timer = setInterval(() => {
-      slideIndex++;
-      slideIndex = slideIndex === length ? 0 : slideIndex;
-      setSlideArr([(slideArr[slideIndex] = "slide_box active"), ...slideArr]);
-      const preIndex = slideIndex === 0 ? length - 1 : slideIndex - 1;
-      setSlideArr([(slideArr[preIndex] = "slide_box pre"), ...slideArr]);
-      const preIndex2 = preIndex === 0 ? length - 1 : preIndex - 1;
-      setSlideArr([(slideArr[preIndex2] = "slide_box"), ...slideArr]);
-      const nextIndex = slideIndex === length - 1 ? 0 : slideIndex + 1;
-      setSlideArr([(slideArr[nextIndex] = "slide_box next"), ...slideArr]);
-    }, 3000);
-  }
-}, []);
+const length = 5;  
+useEffect(() => { 
+  const timer = setInterval(() => {
+    setSlideIndex(slideIndex => slideIndex + 1); 
+    if(SlideRef.current === length - 1){
+      setSlideIndex(0);
+    }
+    setSlideArr([(slideArr[SlideRef.current] = "slide_box active"), ...slideArr]);
+    const preIndex = SlideRef.current === 0 ? length - 1 : SlideRef.current - 1;
+    setSlideArr([(slideArr[preIndex] = "slide_box pre"), ...slideArr]);
+    const preIndex2 = preIndex === 0 ? length - 1 : preIndex - 1;
+    setSlideArr([(slideArr[preIndex2] = "slide_box"), ...slideArr]);
+    const nextIndex = SlideRef.current === length - 1 ? 0 : SlideRef.current + 1;
+    setSlideArr([(slideArr[nextIndex] = "slide_box next"), ...slideArr]);
+  }, 1000);  
+  return () => clearInterval(timer)     
+},[]) );
   `,
 		TSCode: () => `const slideBox = document.querySelectorAll(".slide_box");
   let timer;
@@ -219,32 +219,33 @@ useEffect(() => {
   setTime();`,
 		ReactTSCode: () => `
 const [slideArr, setSlideArr] = useState<Array<string>>([
-    "slide_box active",
-    "slide_box next",
-    "slide_box",
-    "slide_box",
-    "slide_box pre",
-]);  
-const length: number = slideArr.length;
-let slideIndex: number = 4;
-let timer: NodeJS.Timer;
-useEffect(() => {
-  if (timer) {
-    return;
-  } else {
-    timer = setInterval(() => {
-      slideIndex++;
-      slideIndex = slideIndex === length ? 0 : slideIndex;
-      setSlideArr([(slideArr[slideIndex] = "slide_box active"), ...slideArr]);
-      const preIndex = slideIndex === 0 ? length - 1 : slideIndex - 1;
-      setSlideArr([(slideArr[preIndex] = "slide_box pre"), ...slideArr]);
-      const preIndex2 = preIndex === 0 ? length - 1 : preIndex - 1;
-      setSlideArr([(slideArr[preIndex2] = "slide_box"), ...slideArr]);
-      const nextIndex = slideIndex === length - 1 ? 0 : slideIndex + 1;
-      setSlideArr([(slideArr[nextIndex] = "slide_box next"), ...slideArr]);
-    }, 3000);
-  }
-}, []);
+  "slide_box active",
+  "slide_box next",
+  "slide_box",
+  "slide_box",
+  "slide_box pre",
+]);
+const [slideIndex, setSlideIndex] = useState<number>(0);
+const SlideRef = useRef(slideIndex);
+SlideRef.current = slideIndex;
+
+const length: number = 5;  
+useEffect(() => { 
+  const timer = setInterval(() => {
+    setSlideIndex(slideIndex => slideIndex + 1); 
+    if(SlideRef.current === length - 1){
+      setSlideIndex(0);
+    }
+    setSlideArr([(slideArr[SlideRef.current] = "slide_box active"), ...slideArr]);
+    const preIndex = SlideRef.current === 0 ? length - 1 : SlideRef.current - 1;
+    setSlideArr([(slideArr[preIndex] = "slide_box pre"), ...slideArr]);
+    const preIndex2 = preIndex === 0 ? length - 1 : preIndex - 1;
+    setSlideArr([(slideArr[preIndex2] = "slide_box"), ...slideArr]);
+    const nextIndex = SlideRef.current === length - 1 ? 0 : SlideRef.current + 1;
+    setSlideArr([(slideArr[nextIndex] = "slide_box next"), ...slideArr]);
+  }, 1000);  
+  return () => clearInterval(timer)     
+},[]) 
   `,
 	};
 
@@ -255,28 +256,28 @@ useEffect(() => {
 		"slide_box",
 		"slide_box pre",
 	]);
-
-	const length: number = slideArr.length;
-	let slideIndex: number = 4;
-	let timer: NodeJS.Timer;
-	useEffect(() => {
-		if (timer) {
-			return;
-		} else {
-			timer = setInterval(() => {
-				slideIndex++;
-				slideIndex = slideIndex === length ? 0 : slideIndex;
-				setSlideArr([(slideArr[slideIndex] = "slide_box active"), ...slideArr]);
-				const preIndex = slideIndex === 0 ? length - 1 : slideIndex - 1;
-				setSlideArr([(slideArr[preIndex] = "slide_box pre"), ...slideArr]);
-				const preIndex2 = preIndex === 0 ? length - 1 : preIndex - 1;
-				setSlideArr([(slideArr[preIndex2] = "slide_box"), ...slideArr]);
-				const nextIndex = slideIndex === length - 1 ? 0 : slideIndex + 1;
-				setSlideArr([(slideArr[nextIndex] = "slide_box next"), ...slideArr]);
-			}, 3000);
-		}
-	}, []);
-
+  const [slideIndex, setSlideIndex] = useState<number>(0);
+  const SlideRef = useRef(slideIndex);
+  SlideRef.current = slideIndex;
+  
+	const length: number = 5;  
+  useEffect(() => { 
+    const timer = setInterval(() => {
+			setSlideIndex(slideIndex => slideIndex + 1); 
+      if(SlideRef.current === length - 1){
+			  setSlideIndex(0);
+      }
+			setSlideArr([(slideArr[SlideRef.current] = "slide_box active"), ...slideArr]);
+			const preIndex = SlideRef.current === 0 ? length - 1 : SlideRef.current - 1;
+			setSlideArr([(slideArr[preIndex] = "slide_box pre"), ...slideArr]);
+			const preIndex2 = preIndex === 0 ? length - 1 : preIndex - 1;
+			setSlideArr([(slideArr[preIndex2] = "slide_box"), ...slideArr]);
+			const nextIndex = SlideRef.current === length - 1 ? 0 : SlideRef.current + 1;
+			setSlideArr([(slideArr[nextIndex] = "slide_box next"), ...slideArr]);
+		}, 3000);  
+    return () => clearInterval(timer)     
+  },[]) 
+ 
 	return (
 		<>
 			<div className="compontent_title" id="slide-anchor3">
@@ -303,35 +304,36 @@ useEffect(() => {
 	);
 };
 
-const Component = () => {
-	const [slideArr, setSlideArr] = useState<Array<string>>([
-		"slide_box active",
-		"slide_box next",
-		"slide_box",
-		"slide_box",
-		"slide_box pre",
-	]);
+  const Component = () => {
 
-	const length: number = slideArr.length;
-	let slideIndex: number = 4;
-	let timer: NodeJS.Timer;
-	useEffect(() => {
-		if (timer) {
-			return;
-		} else {
-			timer = setInterval(() => {
-				slideIndex++;
-				slideIndex = slideIndex === length ? 0 : slideIndex;
-				setSlideArr([(slideArr[slideIndex] = "slide_box active"), ...slideArr]);
-				const preIndex = slideIndex === 0 ? length - 1 : slideIndex - 1;
-				setSlideArr([(slideArr[preIndex] = "slide_box pre"), ...slideArr]);
-				const preIndex2 = preIndex === 0 ? length - 1 : preIndex - 1;
-				setSlideArr([(slideArr[preIndex2] = "slide_box"), ...slideArr]);
-				const nextIndex = slideIndex === length - 1 ? 0 : slideIndex + 1;
-				setSlideArr([(slideArr[nextIndex] = "slide_box next"), ...slideArr]);
-			}, 3000);
-		}
-	}, []);
+  const [slideArr, setSlideArr] = useState<Array<string>>([
+    "slide_box active",
+    "slide_box next",
+    "slide_box",
+    "slide_box",
+    "slide_box pre",
+  ]);
+  const [slideIndex, setSlideIndex] = useState<number>(0);
+  const SlideRef = useRef(slideIndex);
+  SlideRef.current = slideIndex;
+
+  const length: number = 5;  
+  useEffect(() => { 
+    const timer = setInterval(() => {
+      setSlideIndex(slideIndex => slideIndex + 1); 
+      if(SlideRef.current === length - 1){
+        setSlideIndex(0);
+      }
+      setSlideArr([(slideArr[SlideRef.current] = "slide_box active"), ...slideArr]);
+      const preIndex = SlideRef.current === 0 ? length - 1 : SlideRef.current - 1;
+      setSlideArr([(slideArr[preIndex] = "slide_box pre"), ...slideArr]);
+      const preIndex2 = preIndex === 0 ? length - 1 : preIndex - 1;
+      setSlideArr([(slideArr[preIndex2] = "slide_box"), ...slideArr]);
+      const nextIndex = SlideRef.current === length - 1 ? 0 : SlideRef.current + 1;
+      setSlideArr([(slideArr[nextIndex] = "slide_box next"), ...slideArr]);
+    }, 3000);  
+    return () => clearInterval(timer)     
+  },[]) 
 
 	return (
 		<>
