@@ -106,6 +106,6 @@ input.color_input::-webkit-color-swatch-wrapper {
   transition: all 0.5s;
 }
 
-.left_content_input_delete img:hover {
+.left_content_input_delete_hover img:hover {
   transform: scale(1.4) rotate(90deg);
 }

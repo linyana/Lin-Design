@@ -105,7 +105,7 @@ const Left = () => {
 							}
 						}}
 					/>
-					<div className="left_content_input_delete">
+					<div className={`left_content_input_delete${setting.class?' left_content_input_delete_hover':''}`}>
 						<img
 							src={img}
 							alt=""
