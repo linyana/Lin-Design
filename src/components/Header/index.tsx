@@ -25,7 +25,7 @@ const Header = () => {
               <HeaderNavLink to={"/home"}>首页</HeaderNavLink>
             </li>
             <li>
-              <HeaderNavLink to={"/components"}> 组件</HeaderNavLink>
+              <HeaderNavLink to={"/components/overview"}> 组件</HeaderNavLink>
             </li>
           </ul>
         </div>

@@ -1,8 +1,8 @@
 const leftMenu = [
   {
     name: "综述",
-    smallName: "Summary",
-    to: "summary",
+    smallName: "OverView",
+    to: "overview",
   },
   {
     name: "布局",

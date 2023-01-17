@@ -1,7 +1,5 @@
 .summary_cards {
-  margin: 30px 0;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -15,7 +13,7 @@
   transition: all 0.3s;
   cursor: pointer;
   overflow: hidden;
-  margin-right: calc(33.33% - 200px);
+  margin-right: 40px;
 }
 
 .summary_card:hover {

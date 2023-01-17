@@ -6,7 +6,7 @@ const Home = lazy(() => import("@/pages/Home"));
 const Main = lazy(() => import("@/pages/Main"));
 
 // 二级菜单
-const Summary = lazy(() => import("@/components/Components/module/Summary"));
+const Overview = lazy(() => import("@/components/Components/module/Overview"));
 const Input = lazy(() => import("@/components/Components/module/Input"));
 const Button = lazy(() => import("@/components/Components/module/Button"));
 const Card = lazy(() => import("@/components/Components/module/Card"));
@@ -27,12 +27,12 @@ const routes: RouteObject[] = [
     element: <Main />,
     children: [
       {
-        path: "summary",
-        element: <Summary/>
+        path: "overview",
+        element: <Overview />
       },
       {
        path: "input",
-       element: <Input/>, 
+       element: <Input />, 
       },
       {
         path: "button",
@@ -40,7 +40,7 @@ const routes: RouteObject[] = [
       },
       {
         path: "plate",
-        element: <Plate/>,
+        element: <Plate />,
       },
       {
         path: "card",

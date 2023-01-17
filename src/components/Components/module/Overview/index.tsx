@@ -11,7 +11,7 @@ const Button = () => {
 	return (
 		<div>
 			<div className="component_big_title">
-				综述 <span>Summary</span>
+				综述 <span>Overview</span>
 			</div>
 			<div className="compontent_title" id="summary-anchor">
 				通用
