@@ -1,14 +1,14 @@
 const leftMenu = [
   {
+    name: "综述",
+    smallName: "Summary",
+    to: "summary",
+  },
+  {
     name: "布局",
     smallName: "Layout",
     to: "layout",
   },
-/*   {
-    name: "板块",
-    smallName: "Plate",
-    to: "plate",
-  }, */
   {
     name: "内容",
     smallName: "Content",
