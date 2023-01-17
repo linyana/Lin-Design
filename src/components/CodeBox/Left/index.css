@@ -1,4 +1,5 @@
 .code_box_left {
+  position: relative;
   width: 220px;
 }
 
@@ -67,21 +68,21 @@ input.color_input::-webkit-color-swatch-wrapper {
 }
 
 .left_content_input {
+  position: relative;
   margin-bottom: 30px;
+  border-radius: 5px;
+  width: 100%;
+  box-shadow: 0 0 3px rgba(0,0,0,0.1);
+  background-color: rgb(255, 255, 255);
 }
 
 .left_content_input input {
   border: none;
   outline: none;
   padding: 8px 0;
-  text-align: center;
   border-radius: 5px;
-  box-shadow: 0 0 3px rgba(0,0,0,0.1);
-}
-
-.left_content_input input:focus {
-  box-shadow: 0 0 3px #2f79ce;
-  background-color:transparent;
+  width: 75%;
+  padding-left: 10px;
 }
 
 .left_content_title {
@@ -89,4 +90,22 @@ input.color_input::-webkit-color-swatch-wrapper {
   margin-bottom: 20px;
   color: rgb(100, 98, 98);
   font-size: 20px;
+}
+
+.left_content_input_delete {
+  z-index: 10;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 8px;
+}
+
+.left_content_input_delete img {
+  width: 15px;
+  height: 15px;
+  transition: all 0.5s;
+}
+
+.left_content_input_delete img:hover {
+  transform: scale(1.4) rotate(90deg);
 }

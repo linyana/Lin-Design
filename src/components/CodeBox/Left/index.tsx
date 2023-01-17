@@ -3,6 +3,8 @@ import { setBgColor, setColor, setHoverColor, setClass } from "@/store/Setting";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/store";
 
+import img from "@/assets/images/normal/delete.png";
+
 import "./index.css";
 
 const colorList = [
@@ -103,6 +105,15 @@ const Left = () => {
 							}
 						}}
 					/>
+					<div className="left_content_input_delete">
+						<img
+							src={img}
+							alt=""
+							onClick={() => {
+								dispatch(setClass(""));
+							}}
+						/>
+					</div>
 				</div>
 				<div className="left_content_title">颜色</div>
 				<div className="color_nav">
