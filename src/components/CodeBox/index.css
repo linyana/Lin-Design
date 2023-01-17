@@ -1,24 +1,52 @@
 .code_page {
-  position: fixed;
-  z-index: 99;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(6px);
+	position: fixed;
+	z-index: 99;
+	width: 100%;
+	height: 100%;
+	backdrop-filter: blur(6px);
+	transition: all 0.5s;
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
 .code_box {
-  position: absolute;
-  left: 5%;
-  top: 5%;
-  width: 90%;
-  height: 90%;
-  background-color: rgb(243, 242, 242);
-  border-radius: 15px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	background-color: rgb(243, 242, 242);
+	border-radius: 15px;
+	transition: all 0.3s;
+	overflow: hidden;
 }
 
 .code_box_content {
-  padding: 30px;
-  height: calc(100% - 114px);
-  white-space: pre-line;
+	padding: 30px;
+	height: calc(100% - 114px);
+	white-space: pre-line;
+}
+
+.show_page {
+	display: block;
+}
+
+.no_show_page {
+	display: none;
+}
+
+.open_code_page {
+	opacity: 1;
+}
+
+.close_code_page {
+	opacity: 0;
+}
+
+.close_code_box {
+	width: 0;
+	height: 0;
+}
+
+.open_code_box {
+	width: 90%;
+	height: 90%;
 }
