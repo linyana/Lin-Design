@@ -10,13 +10,13 @@ export interface settingState {
 }
 
 const initialState: settingState = {
-  color: (localStorage.getItem("color") as string) || "white",
-  bgColor: (localStorage.getItem("bgColor") as string) || "rgb(47, 121, 206)",
+  color: (localStorage.getItem("lin-color") as string) || "white",
+  bgColor: (localStorage.getItem("lin-bgColor") as string) || "rgb(47, 121, 206)",
   hoverColor:
-    (localStorage.getItem("hoverColor") as string) || "rgb(56, 137, 230)",
+    (localStorage.getItem("lin-hoverColor") as string) || "rgb(56, 137, 230)",
   kind: "HTML",
   format: "JavaScript",
-  class:  (localStorage.getItem("class") as string) || "",
+  class:  (localStorage.getItem("lin-class") as string) || "",
 };
 
 export const settingSlice = createSlice({
@@ -25,27 +25,27 @@ export const settingSlice = createSlice({
   reducers: {
     setColor: (state, payload) => {
       state.color = payload.payload;
-      localStorage.setItem("color", state.color);
+      localStorage.setItem("lin-color", state.color);
     },
     setBgColor: (state, payload) => {
       state.bgColor = payload.payload;
-      localStorage.setItem("bgColor", state.bgColor);
+      localStorage.setItem("lin-bgColor", state.bgColor);
     },
     setHoverColor: (state, payload) => {
       state.hoverColor = payload.payload;
-      localStorage.setItem("hoverColor", state.hoverColor);
+      localStorage.setItem("lin-hoverColor", state.hoverColor);
     },
     setKind: (state, payload) => {
       state.kind = payload.payload;
-      localStorage.setItem("kind", state.kind);
+      localStorage.setItem("lin-kind", state.kind);
     },
     setFormat: (state, payload) => {
       state.format = payload.payload;
-      localStorage.setItem("kind", state.kind);
+      localStorage.setItem("lin-kind", state.kind);
     },
     setClass: (state, payload) => {
       state.class = payload.payload;
-      localStorage.setItem("class", state.class);
+      localStorage.setItem("lin-class", state.class);
     },
   },
 });
