@@ -44,9 +44,11 @@
 .close_code_box {
 	width: 0;
 	height: 0;
+  opacity: 0;
 }
 
 .open_code_box {
 	width: 90%;
 	height: 90%;
+  opacity: 1;
 }
