@@ -353,7 +353,7 @@ class Component extends React.Component {
   componentDidMount()= {
     this.timer = setInterval(() => {
       this.slideIncrement();
-    }, 1000);
+    }, 3000);
   }
 
   componentWillUnmount()= {
@@ -365,7 +365,7 @@ class Component extends React.Component {
     this.slideDecrement()
     this.timer = setInterval(() => {
       this.slideIncrement();
-    }, 1000);
+    }, 3000);
   }
 
   handleClickRight(): void {
@@ -373,7 +373,7 @@ class Component extends React.Component {
     this.slideIncrement()
     this.timer = setInterval(() => {
       this.slideIncrement();
-    }, 1000);
+    }, 3000);
   }
 
   render() {
@@ -587,7 +587,7 @@ class Component extends React.Component {
   componentDidMount(): void {
     this.timer = setInterval(() => {
       this.slideIncrement();
-    }, 1000);
+    }, 3000);
   }
 
   componentWillUnmount(): void {
@@ -599,7 +599,7 @@ class Component extends React.Component {
     this.slideDecrement()
     this.timer = setInterval(() => {
       this.slideIncrement();
-    }, 1000);
+    }, 3000);
   }
 
   handleClickRight(): void {
@@ -607,7 +607,7 @@ class Component extends React.Component {
     this.slideIncrement()
     this.timer = setInterval(() => {
       this.slideIncrement();
-    }, 1000);
+    }, 3000);
   }
 
   render() {
@@ -715,7 +715,7 @@ class Component extends React.Component {
 	componentDidMount(): void {
 		this.timer = setInterval(() => {
 			this.slideIncrement();
-		}, 1000);
+		}, 3000);
 	}
 
 	componentWillUnmount(): void {
@@ -727,7 +727,7 @@ class Component extends React.Component {
     this.slideDecrement()
     this.timer = setInterval(() => {
 			this.slideIncrement();
-		}, 1000);
+		}, 3000);
   }
 
   handleClickRight(): void {
@@ -735,7 +735,7 @@ class Component extends React.Component {
     this.slideIncrement()
     this.timer = setInterval(() => {
 			this.slideIncrement();
-		}, 1000);
+		}, 3000);
   }
 
 	render() {
