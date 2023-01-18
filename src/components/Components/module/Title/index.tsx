@@ -10,7 +10,7 @@ const Button = () => {
 	return (
 		<div>
 			<div className="component_big_title">
-				内容 <span>Layout</span>
+				标题 <span>Title</span>
 			</div>
 			<Component1 />
 			<Component2 />

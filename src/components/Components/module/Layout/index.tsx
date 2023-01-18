@@ -9,7 +9,7 @@ const Button = () => {
   return (
     <div>
       <div className="component_big_title">
-        内容 <span>Layout</span>
+        布局 <span>Layout</span>
       </div>
       <Component1 />
       <Component2 />
