@@ -51,3 +51,9 @@ ul.nav_ul li a {
 a.nav_on {
   border-bottom: 4px solid rgb(32, 105, 189);
 }
+
+@media screen and (max-width: 900px) {
+  .header_left {
+    display: none;
+  }
+}

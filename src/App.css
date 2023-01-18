@@ -65,3 +65,13 @@ img.icon {
   width: 20px;
   margin: 0 10px;
 }
+
+@media screen and (max-width: 1200px) {
+  .middle_padding {
+    padding: 0 10px;
+  }
+
+  .right_content {
+    display: none;
+  }
+}

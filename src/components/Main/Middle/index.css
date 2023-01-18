@@ -3,3 +3,11 @@
   margin-right: 260px;
   margin-left: 300px;
 }
+
+@media screen and (max-width: 1200px) {
+  .middle_content {
+    width: calc(100% - 220px);
+    margin-right: 0;
+    margin-left: 220px;
+  }
+}
