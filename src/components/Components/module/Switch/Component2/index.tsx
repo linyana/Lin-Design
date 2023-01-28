@@ -13,7 +13,11 @@ const Switch2 = () => {
 		HTMLCode: (className: string) => `<div${
 			className.trim() ? ` class="${className.replace(".", "")}"` : ""
 		}>
-  content
+  <div class="switch_text is_switch_text">男</div>
+  <div class="switch_box">
+    <div class="switch_circle"></div>
+  </div>
+  <div class="switch_text">女</div>
 </div>`,
 		CSSCode: (
 			className: string,
@@ -57,27 +61,91 @@ ${className === "" ? "div" : className}  .is_switch_box .switch_circle {
   left: 20px;
 }
 
+${className === "" ? "div" : className} .switch_text {
+  transition: all 0.3s;
+}
+
 ${className === "" ? "div" : className}  .is_switch_text {
   color: ${hoverColor}
 }
         `;
 		},
-		JSCode: () => `暂无`,
+		JSCode: () => `	const switchBox = document.querySelector(".switch_box");
+const switchText = document.querySelectorAll(".switch_text");
+let isSwitch = false;
+switchBox.addEventListener("click", () => {
+  if (isSwitch) {
+    switchBox.className = "switch_box";
+    switchText[0].className = "switch_text is_switch_text"
+    switchText[1].className = "switch_text"
+    isSwitch = !isSwitch;
+  } else {
+    switchBox.className = "is_switch_box switch_box";
+    switchText[1].className = "switch_text is_switch_text"
+    switchText[0].className = "switch_text"
+    isSwitch = !isSwitch;
+  }
+});`,
 		VueHTMLCode: (className: string) => `<div${
 			className.trim() ? ` class="${className.replace(".", "")}"` : ""
 		}>
-  content
+  <div :class="isSwitch? 'switch_text' : 'is_switch_text switch_text'">男</div>
+  <div
+    :class="isSwitch ? 'is_switch_box switch_box' : 'switch_box'"
+    @click="changeSwitch"
+  >
+    <div class="switch_circle"></div>
+  </div>
+  <div :class="isSwitch? 'is_switch_text switch_text' : 'switch_text'">女</div>
 </div>`,
-		VueJSCode: () => `暂无`,
+		VueJSCode: () => `import { ref } from "vue";
+const isSwitch = ref(false);
+
+const changeSwitch = () => {
+  isSwitch.value = !isSwitch.value;
+};`,
 		ReactHTMLCode: (className: string) => `<div${
 			className.trim() ? ` className="${className.replace(".", "")}"` : ""
 		}>
-  content
+  <div className={isSwitch ? "switch_text" : "is_switch_text switch_text"}>
+    男
+  </div>
+  <div
+    className={isSwitch ? "is_switch_box switch_box" : "switch_box"}
+    onClick={() => {
+      setIsSwitch(!isSwitch);
+    }}
+  >
+    <div className="switch_circle"></div>
+  </div>
+  <div className={isSwitch ? "is_switch_text switch_text" : "switch_text"}>
+    女
+  </div>
 </div>`,
-		ReactJSCode: () => `暂无`,
-		TSCode: () => `暂无`,
-		VueTSCode: () => `暂无`,
-		ReactTSCode: () => `暂无`,
+		ReactJSCode: () => `const [isSwitch, setIsSwitch] = useState(false);`,
+		TSCode: () => `	const switchBox = document.querySelector(".switch_box");
+const switchText = document.querySelectorAll(".switch_text");
+let isSwitch: boolean = false;
+switchBox.addEventListener("click", (): void => {
+  if (isSwitch) {
+    switchBox.className = "switch_box";
+    switchText[0].className = "switch_text is_switch_text"
+    switchText[1].className = "switch_text"
+    isSwitch = !isSwitch;
+  } else {
+    switchBox.className = "is_switch_box switch_box";
+    switchText[1].className = "switch_text is_switch_text"
+    switchText[0].className = "switch_text"
+    isSwitch = !isSwitch;
+  }
+});`,
+		VueTSCode: () => `import { ref } from "vue";
+const isSwitch = ref<boolean>(false);
+
+const changeSwitch = (): void => {
+  isSwitch.value = !isSwitch.value;
+};`,
+		ReactTSCode: () => `const [isSwitch, setIsSwitch] = useState<boolean>(false);`,
 	};
 
 	const [isSwitch, setIsSwitch] = useState<boolean>(false);

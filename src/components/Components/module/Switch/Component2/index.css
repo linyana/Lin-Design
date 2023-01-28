@@ -33,6 +33,10 @@
   left: 20px;
 }
 
+.switch_component2_content .switch_text {
+  transition: all 0.3s;
+}
+
 .switch_component2_content .is_switch_text {
-  color: var(--hoverColor)
+  color: var(--hoverColor);
 }
