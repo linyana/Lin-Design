@@ -19,7 +19,11 @@ const CodeBox = () => {
 		(state: RootState) => state.isCodeBoxShow.isCodeBoxShow
 	);
 
-	if (isPage && localStorage.getItem("lin-tip") !== "true" && document.body.clientWidth > 900) {
+	if (
+		isPage &&
+		localStorage.getItem("lin-tip") !== "true" &&
+		document.body.clientWidth > 900
+	) {
 		const tip = new HelpTips(CodeBoxTipConfig);
 		tip.begin();
 		localStorage.setItem("lin-tip", "true");

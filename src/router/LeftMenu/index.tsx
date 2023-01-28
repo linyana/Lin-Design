@@ -10,9 +10,19 @@ const leftMenu = [
     to: "layout",
   },
   {
+    name: "标题",
+    smallName: "Title",
+    to: "title",
+  },
+  {
     name: "内容",
     smallName: "Content",
     to: "content",
+  },
+  {
+    name: "卡片",
+    smallName: "Card",
+    to: "card",
   },
   {
     name: "按钮",
@@ -25,14 +35,9 @@ const leftMenu = [
     to: "input",
   },
   {
-    name: "卡片",
-    smallName: "Card",
-    to: "card",
-  },
-  {
-    name: "标题",
-    smallName: "Title",
-    to: "title",
+    name: "开关",
+    smallName: "Switch",
+    to: "switch",
   },
   {
     name: '轮播图',

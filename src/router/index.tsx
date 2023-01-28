@@ -15,6 +15,7 @@ const Layout = lazy(() => import("@/components/Components/module/Layout"));
 const Content = lazy(() => import("@/components/Components/module/Content"));
 const Title = lazy(() => import("@/components/Components/module/Title"));
 const Slide = lazy(() => import("@/components/Components/module/Slide"));
+const Switch = lazy(() => import("@/components/Components/module/Switch"));
 
 
 const routes: RouteObject[] = [
@@ -61,6 +62,10 @@ const routes: RouteObject[] = [
       {
         path: "slide",
         element: <Slide />
+      },
+      {
+        path: "switch",
+        element: <Switch />
       }
     ]
   },
