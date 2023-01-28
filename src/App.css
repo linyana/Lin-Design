@@ -72,7 +72,7 @@ img.icon {
   top: 0;
   width: 34px;
   top: 34px;
-  z-index: 9999999;
+  z-index: 999999;
   display: none;
   transform: translateY(-34px);
 }
