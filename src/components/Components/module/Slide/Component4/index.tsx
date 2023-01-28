@@ -2,9 +2,10 @@ import React from "react";
 import ShowCode from "@/components/Components/ShowCode";
 import { codeState } from "@/store/Code";
 
-import "./index.css";
-
+import wrongSrc from "@/assets/svg/normal/wrong.svg";
 import img from "@/assets/images/normal/left.png";
+
+import "./index.css";
 
 const Component1 = () => {
 	const code: codeState = {
@@ -655,6 +656,18 @@ class Component extends React.Component {
 			<p className="compontent_p">
 				在首尾切换时无缝滚动,可以用左箭头和右箭头进行调整，可以把里面的数字替换为图片，本组件不支持自定义颜色。
 			</p>
+			<p className="function_p">
+				背景颜色：
+				<img src={wrongSrc} alt="" />
+			</p>
+			<p className="function_p">
+				字体颜色：
+				<img src={wrongSrc} alt="" />
+			</p>
+			<p className="function_p">
+				悬浮颜色：
+				<img src={wrongSrc} alt="" />
+			</p>
 			<div className="component_box">
 				<div className="compontent_box_content">
 					<Component />
@@ -692,12 +705,12 @@ class Component extends React.Component {
 		this.updateSlide();
 	}
 
-  slideDecrement(): void {
+	slideDecrement(): void {
 		const slideDelete =
 			this.slideIndex === this.slideArr.length - 1 ? 0 : this.slideIndex + 1;
 		this.slideArr[slideDelete] = "slide_box";
 		this.slideIndex =
-      this.slideIndex === 0 ? this.slideArr.length - 1 : this.slideIndex - 1;
+			this.slideIndex === 0 ? this.slideArr.length - 1 : this.slideIndex - 1;
 		this.updateSlide();
 	}
 
@@ -722,21 +735,21 @@ class Component extends React.Component {
 		clearInterval(this.timer);
 	}
 
-  handleClickLeft(): void {
-    clearInterval(this.timer)
-    this.slideDecrement()
-    this.timer = setInterval(() => {
+	handleClickLeft(): void {
+		clearInterval(this.timer);
+		this.slideDecrement();
+		this.timer = setInterval(() => {
 			this.slideIncrement();
 		}, 3000);
-  }
+	}
 
-  handleClickRight(): void {
-    clearInterval(this.timer)
-    this.slideIncrement()
-    this.timer = setInterval(() => {
+	handleClickRight(): void {
+		clearInterval(this.timer);
+		this.slideIncrement();
+		this.timer = setInterval(() => {
 			this.slideIncrement();
 		}, 3000);
-  }
+	}
 
 	render() {
 		return (
@@ -761,12 +774,22 @@ class Component extends React.Component {
 							);
 						})}
 					</div>
-          <div className="slide_left" onClick={() => {this.handleClickLeft()}}>
-            <img src={img} alt="" />
-          </div>
-          <div className="slide_right" onClick={() => {this.handleClickRight()}}>
-            <img src={img} alt="" />
-          </div>
+					<div
+						className="slide_left"
+						onClick={() => {
+							this.handleClickLeft();
+						}}
+					>
+						<img src={img} alt="" />
+					</div>
+					<div
+						className="slide_right"
+						onClick={() => {
+							this.handleClickRight();
+						}}
+					>
+						<img src={img} alt="" />
+					</div>
 				</div>
 			</>
 		);

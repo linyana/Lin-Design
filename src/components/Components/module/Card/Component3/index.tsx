@@ -2,6 +2,7 @@ import React from "react";
 import ShowCode from "@/components/Components/ShowCode";
 import { codeState } from "@/store/Code";
 
+import wrongSrc from "@/assets/svg/normal/wrong.svg";
 import img from "@/assets/images/normal/img.jpg";
 
 import "./index.css";
@@ -13,9 +14,7 @@ const Component1 = () => {
 				<div className="img">
 					<img src={img} alt="" />
 				</div>
-				<div className="title">
-					标题
-				</div>
+				<div className="title">标题</div>
 				<div className="text">
 					我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容
 				</div>
@@ -46,29 +45,29 @@ const Component1 = () => {
 			color: string,
 			hoverColor: string
 		) => {
-			return `${className === ''?'div':className} {
+			return `${className === "" ? "div" : className} {
 	width: 300px;
 	padding: 30px;
 	transition: all 0.5s;
 	background-color: ${bgColor};
 }
 
-${className === ''?'div':className}:hover {
+${className === "" ? "div" : className}:hover {
 	background-color: rgb(248, 248, 248);
 }
 
-${className === ''?'div':className} .img {
+${className === "" ? "div" : className} .img {
 	margin-bottom: 15px;
 	text-align: center;
 }
 
-${className === ''?'div':className} .img img {
+${className === "" ? "div" : className} .img img {
 	width: 120px;
 	height: 120px;
 	border-radius: 50%;
 }
 
-${className === ''?'div':className} .title {
+${className === "" ? "div" : className} .title {
 	text-align: center;
 	font-size: 26px;
 	font-weight: 700;
@@ -76,18 +75,18 @@ ${className === ''?'div':className} .title {
 	margin-bottom: 10px;
 }
 
-${className === ''?'div':className} .text {
+${className === "" ? "div" : className} .text {
 	text-align: center;
 	margin: 15px 0;
 	color: ${color};
 }
 
-${className === ''?'div':className} .button {
+${className === "" ? "div" : className} .button {
 	text-align: center;
 	margin-top: 25px;
 }
 
-${className === ''?'div':className} .button button {
+${className === "" ? "div" : className} .button button {
 	cursor: pointer;
 	padding: 8px 40px;
 	background-color: #73a0d3;
@@ -127,7 +126,18 @@ div${className} .button button:hover {
 			<div className="compontent_title" id="card-anchor3">
 				图片+按钮
 			</div>
-			<p className="compontent_p"></p>
+			<p className="function_p">
+				背景颜色：
+				<img src={wrongSrc} alt="" />
+			</p>
+			<p className="function_p">
+				字体颜色：
+				<img src={wrongSrc} alt="" />
+			</p>
+			<p className="function_p">
+				悬浮颜色：
+				<img src={wrongSrc} alt="" />
+			</p>
 			<div className="component_box">
 				<div className="compontent_box_content">
 					<div
@@ -137,8 +147,10 @@ div${className} .button button:hover {
 						<div className="img">
 							<img src={img} alt="" />
 						</div>
-						<div className="title" style={{color: '#495057'}}>标题</div>
-						<div className="text" style={{color: '#495057'}}>
+						<div className="title" style={{ color: "#495057" }}>
+							标题
+						</div>
+						<div className="text" style={{ color: "#495057" }}>
 							我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容
 						</div>
 						<div className="button">

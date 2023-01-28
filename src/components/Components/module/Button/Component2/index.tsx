@@ -4,6 +4,9 @@ import { useSelector } from "react-redux";
 import { codeState } from "@/store/Code";
 import { RootState } from "@/store";
 
+import rightSrc from "@/assets/svg/normal/right.svg";
+import wrongSrc from "@/assets/svg/normal/wrong.svg";
+
 import "./index.css";
 
 const Component2 = () => {
@@ -73,7 +76,19 @@ button${className}:hover {
 			<div className="compontent_title" id="button-anchor2">
 				简洁按钮
 			</div>
-			<p className="compontent_p">颜色更简洁的按钮,只适合浅色背景。</p>
+			<p className="compontent_p">颜色更简洁的按钮,只适合浅色背景,本组件的字体颜色和悬浮颜色是根据背景颜色变化的。</p>
+			<p className="function_p">
+				背景颜色：
+				<img src={rightSrc} alt="" />
+			</p>
+			<p className="function_p">
+				字体颜色：
+				<img src={wrongSrc} alt="" />
+			</p>
+			<p className="function_p">
+				悬浮颜色：
+				<img src={wrongSrc} alt="" />
+			</p>
 			<div className="component_box">
 				<div className="compontent_box_content">
 					<button

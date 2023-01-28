@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import ShowCode from "@/components/Components/ShowCode";
 import { codeState } from "@/store/Code";
 
+import wrongSrc from "@/assets/svg/normal/wrong.svg";
+
 import "./index.css";
 
 const Component1 = () => {
@@ -255,6 +257,18 @@ const restore = (): void => {
 				鼠标经过变宽2
 			</div>
 			<p className="compontent_p">跟上一个组件相比，增加了默认打开的状态。</p>
+			<p className="function_p">
+				背景颜色：
+				<img src={wrongSrc} alt="" />
+			</p>
+			<p className="function_p">
+				字体颜色：
+				<img src={wrongSrc} alt="" />
+			</p>
+			<p className="function_p">
+				悬浮颜色：
+				<img src={wrongSrc} alt="" />
+			</p>
 			<div className="component_box">
 				<div className="compontent_box_content">
 					<div className="content_component4_content" style={{ width: 700 }}>

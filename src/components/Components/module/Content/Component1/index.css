@@ -1,7 +1,8 @@
 div.component_content_content1 {
   overflow: hidden;
   margin: 20px 0;
-  padding: 0 30px;
+  padding: 30px;
+  background-color: var(--bgColor);
 }
 
 div.component_content_content1 img {

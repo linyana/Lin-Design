@@ -2,6 +2,9 @@ import React from "react";
 import ShowCode from "@/components/Components/ShowCode";
 import { codeState } from "@/store/Code";
 
+import wrongSrc from "@/assets/svg/normal/wrong.svg";
+import rightSrc from "@/assets/svg/normal/right.svg";
+
 import "./index.css";
 
 const Component1 = () => {
@@ -58,7 +61,21 @@ input${className}:focus {
 			<div className="compontent_title" id="input-anchor2">
 				长度变化
 			</div>
-			<p className="compontent_p">选中时变化长度，如果能让他水平居中的话会有意想不到的效果。</p>
+			<p className="compontent_p">
+				选中时变化长度，如果能让他水平居中的话会有意想不到的效果。
+			</p>
+			<p className="function_p">
+				背景颜色：
+				<img src={wrongSrc} alt="" />
+			</p>
+			<p className="function_p">
+				字体颜色：
+				<img src={wrongSrc} alt="" />
+			</p>
+			<p className="function_p">
+				悬浮颜色：
+				<img src={rightSrc} alt="" />
+			</p>
 			<div className="component_box">
 				<div className="compontent_box_content">
 					<input className="input_component2_content1" />

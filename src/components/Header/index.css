@@ -52,8 +52,12 @@ a.nav_on {
   border-bottom: 4px solid rgb(32, 105, 189);
 }
 
-@media screen and (max-width: 900px) {
-  .header_left {
+@media screen and (max-width: 800px) {
+  .header_middle,.header_right {
     display: none;
+  }
+
+  .header {
+    justify-content: center;
   }
 }

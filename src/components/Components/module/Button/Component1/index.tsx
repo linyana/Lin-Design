@@ -2,6 +2,8 @@ import React from "react";
 import ShowCode from "@/components/Components/ShowCode";
 import { codeState } from "@/store/Code";
 
+import rightSrc from "@/assets/svg/normal/right.svg";
+
 import "./index.css";
 
 const Component1 = () => {
@@ -37,7 +39,7 @@ button${className}:hover {
 	background-color:${hoverColor};
 }
 	`;
-},
+		},
 		JSCode: () => `暂无`,
 		VueHTMLCode: (className: string) => `<button${
 			className.trim() ? ` class="${className.replace(".", "")}"` : ""
@@ -62,6 +64,18 @@ button${className}:hover {
 				基本按钮
 			</div>
 			<p className="compontent_p">最基本的按钮样式</p>
+			<p className="function_p">
+				背景颜色：
+				<img src={rightSrc} alt="" />
+			</p>
+			<p className="function_p">
+				字体颜色：
+				<img src={rightSrc} alt="" />
+			</p>
+			<p className="function_p">
+				悬浮颜色：
+				<img src={rightSrc} alt="" />
+			</p>
 			<div className="component_box">
 				<div className="compontent_box_content">
 					<button

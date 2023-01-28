@@ -2,6 +2,9 @@ import React from "react";
 import ShowCode from "@/components/Components/ShowCode";
 import { codeState } from "@/store/Code";
 
+import wrongSrc from "@/assets/svg/normal/wrong.svg";
+import rightSrc from "@/assets/svg/normal/right.svg";
+
 import "./index.css";
 
 const Component1 = () => {
@@ -28,7 +31,7 @@ const Component1 = () => {
 			color: string,
 			hoverColor: string
 		) => {
-			return `${className === ''?'div':className} {
+			return `${className === "" ? "div" : className} {
   cursor: pointer;
   width: 260px;
   padding-bottom: 30px;
@@ -39,11 +42,11 @@ const Component1 = () => {
   transition: all 0.1s;
 }
 
-${className === ''?'div':className}:hover {
+${className === "" ? "div" : className}:hover {
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
 
-${className === ''?'div':className} .card_title {
+${className === "" ? "div" : className} .card_title {
   padding: 15px 30px;
   font-size: 28px;
   font-weight: 500;
@@ -51,7 +54,7 @@ ${className === ''?'div':className} .card_title {
   color: ${color};
 }
 
-${className === ''?'div':className} .card_text {
+${className === "" ? "div" : className} .card_text {
   padding: 30px 30px 0;
   font-size: 18px;
   line-height: 30px;
@@ -88,6 +91,18 @@ ${className === ''?'div':className} .card_text {
 				文字卡片
 			</div>
 			<p className="compontent_p">用于设置标题和文字</p>
+			<p className="function_p">
+				背景颜色：
+				<img src={rightSrc} alt="" />
+			</p>
+			<p className="function_p">
+				字体颜色：
+				<img src={rightSrc} alt="" />
+			</p>
+			<p className="function_p">
+				悬浮颜色：
+				<img src={wrongSrc} alt="" />
+			</p>
 			<div className="component_box">
 				<div className="compontent_box_content">
 					<div

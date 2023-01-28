@@ -2,6 +2,8 @@ import React from "react";
 import ShowCode from "@/components/Components/ShowCode";
 import { codeState } from "@/store/Code";
 
+import wrongSrc from "@/assets/svg/normal/wrong.svg";
+
 import "./index.css";
 
 const Component1 = () => {
@@ -158,7 +160,19 @@ ${className === "" ? "div" : className} .move_card .move_card_text {
 				鼠标经过变宽
 			</div>
 			<p className="compontent_p">
-				为了高度不会随着宽度而改变，请根据需要设置高度为确定的值,本组件不支持自定义颜色。
+				为了高度不会随着宽度而改变，请根据需要设置高度为确定的值。
+			</p>
+			<p className="function_p">
+				背景颜色：
+				<img src={wrongSrc} alt="" />
+			</p>
+			<p className="function_p">
+				字体颜色：
+				<img src={wrongSrc} alt="" />
+			</p>
+			<p className="function_p">
+				悬浮颜色：
+				<img src={wrongSrc} alt="" />
 			</p>
 			<div className="component_box">
 				<div className="compontent_box_content">

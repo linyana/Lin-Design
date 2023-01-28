@@ -2,6 +2,8 @@ import React from "react";
 import ShowCode from "@/components/Components/ShowCode";
 import { codeState } from "@/store/Code";
 
+import rightSrc from "@/assets/svg/normal/right.svg";
+
 import "./index.css";
 
 const Component1 = () => {
@@ -129,6 +131,18 @@ ${className === ''?'div':className} .title:hover .small_title {
 			<p className="compontent_p">
 				可以选择大小标题之一，不会影响位置，标题的背景颜色是继承的父元素的，所以需要保证父元素有颜色才能正常显示，如果觉得不够有特色，可以给title_line加上border-radius:
 				50%;。
+			</p>
+			<p className="function_p">
+				背景颜色：
+				<img src={rightSrc} alt="" />
+			</p>
+			<p className="function_p">
+				字体颜色：
+				<img src={rightSrc} alt="" />
+			</p>
+			<p className="function_p">
+				悬浮颜色：
+				<img src={rightSrc} alt="" />
 			</p>
 			<div className="component_box">
 				<div

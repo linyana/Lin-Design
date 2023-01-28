@@ -2,6 +2,8 @@ import React from "react";
 import ShowCode from "@/components/Components/ShowCode";
 import { codeState } from "@/store/Code";
 
+import wrongSrc from "@/assets/svg/normal/wrong.svg";
+
 import "./index.css";
 
 const Component1 = () => {
@@ -22,7 +24,6 @@ const Component1 = () => {
   margin: auto;
   min-height: 200px;
   background-color: rgb(225, 227, 238);
-  padding: 10px;
 }
         `;
     },
@@ -50,6 +51,18 @@ const Component1 = () => {
         基本布局
       </div>
       <p className="compontent_p">利用margin来进行居中,建议自行设置宽度。</p>
+      <p className="function_p">
+        背景颜色： 
+        <img src={wrongSrc} alt="" />
+      </p>
+      <p className="function_p">
+        字体颜色：
+        <img src={wrongSrc} alt="" />
+      </p>
+      <p className="function_p">
+        悬浮颜色：
+        <img src={wrongSrc} alt="" />
+      </p>
       <div className="component_box">
         <div className="compontent_box_content">
           <div className="layout_component1_content1">content</div>

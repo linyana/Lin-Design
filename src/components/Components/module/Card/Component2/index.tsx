@@ -2,9 +2,11 @@ import React from "react";
 import ShowCode from "@/components/Components/ShowCode";
 import { codeState } from "@/store/Code";
 
-import "./index.css";
-
+import wrongSrc from "@/assets/svg/normal/wrong.svg";
+import rightSrc from "@/assets/svg/normal/right.svg";
 import img from "@/assets/images/normal/img.jpg";
+
+import "./index.css";
 
 const Component1 = () => {
 	const code: codeState = {
@@ -30,7 +32,7 @@ const Component1 = () => {
 			color: string,
 			hoverColor: string
 		) => {
-			return `${className === ''?'div':className} {
+			return `${className === "" ? "div" : className} {
   cursor: pointer;
   width: 260px;
   background-color: ${bgColor};
@@ -38,11 +40,11 @@ const Component1 = () => {
   border-radius: 10px;
 }
 
-${className === ''?'div':className}:hover {
+${className === "" ? "div" : className}:hover {
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
 
-${className === ''?'div':className} .card_title {
+${className === "" ? "div" : className} .card_title {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border: 1px solid rgba(148, 146, 146, 0.3);
@@ -53,7 +55,7 @@ ${className === ''?'div':className} .card_title {
   color: ${color}
 }
 
-${className === ''?'div':className} .card_img img {
+${className === "" ? "div" : className} .card_img img {
   width: 100%;
   vertical-align: bottom;
   border-bottom-left-radius: 10px;
@@ -90,7 +92,21 @@ ${className === ''?'div':className} .card_img img {
 			<div className="compontent_title" id="card-anchor2">
 				带图片的卡片
 			</div>
-			<p className="compontent_p">用于有图片的情况，如有多个尺度不一的图片会导致高度不一致，请在css中统一图片的高度。</p>
+			<p className="compontent_p">
+				用于有图片的情况，如有多个尺度不一的图片会导致高度不一致，请在css中统一图片的高度。
+			</p>
+			<p className="function_p">
+				背景颜色：
+				<img src={rightSrc} alt="" />
+			</p>
+			<p className="function_p">
+				字体颜色：
+				<img src={rightSrc} alt="" />
+			</p>
+			<p className="function_p">
+				悬浮颜色：
+				<img src={wrongSrc} alt="" />
+			</p>
 			<div className="component_box">
 				<div className="compontent_box_content">
 					<div

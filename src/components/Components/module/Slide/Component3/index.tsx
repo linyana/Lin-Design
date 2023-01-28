@@ -1,6 +1,8 @@
-import React, { useState,useEffect,useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import ShowCode from "@/components/Components/ShowCode";
 import { codeState } from "@/store/Code";
+
+import wrongSrc from "@/assets/svg/normal/wrong.svg";
 
 import "./index.css";
 
@@ -256,28 +258,33 @@ useEffect(() => {
 		"slide_box",
 		"slide_box pre",
 	]);
-  const [slideIndex, setSlideIndex] = useState<number>(0);
-  const SlideRef = useRef(slideIndex);
-  SlideRef.current = slideIndex;
-  
-	const length: number = 5;  
-  useEffect(() => { 
-    const timer = setInterval(() => {
-			setSlideIndex(slideIndex => slideIndex + 1); 
-      if(SlideRef.current === length - 1){
-			  setSlideIndex(0);
-      }
-			setSlideArr([(slideArr[SlideRef.current] = "slide_box active"), ...slideArr]);
-			const preIndex = SlideRef.current === 0 ? length - 1 : SlideRef.current - 1;
+	const [slideIndex, setSlideIndex] = useState<number>(0);
+	const SlideRef = useRef(slideIndex);
+	SlideRef.current = slideIndex;
+
+	const length: number = 5;
+	useEffect(() => {
+		const timer = setInterval(() => {
+			setSlideIndex((slideIndex) => slideIndex + 1);
+			if (SlideRef.current === length - 1) {
+				setSlideIndex(0);
+			}
+			setSlideArr([
+				(slideArr[SlideRef.current] = "slide_box active"),
+				...slideArr,
+			]);
+			const preIndex =
+				SlideRef.current === 0 ? length - 1 : SlideRef.current - 1;
 			setSlideArr([(slideArr[preIndex] = "slide_box pre"), ...slideArr]);
 			const preIndex2 = preIndex === 0 ? length - 1 : preIndex - 1;
 			setSlideArr([(slideArr[preIndex2] = "slide_box"), ...slideArr]);
-			const nextIndex = SlideRef.current === length - 1 ? 0 : SlideRef.current + 1;
+			const nextIndex =
+				SlideRef.current === length - 1 ? 0 : SlideRef.current + 1;
 			setSlideArr([(slideArr[nextIndex] = "slide_box next"), ...slideArr]);
-		}, 3000);  
-    return () => clearInterval(timer)     
-  },[]) 
- 
+		}, 3000);
+		return () => clearInterval(timer);
+	}, []);
+
 	return (
 		<>
 			<div className="compontent_title" id="slide-anchor3">
@@ -285,6 +292,18 @@ useEffect(() => {
 			</div>
 			<p className="compontent_p">
 				在首尾切换时无缝滚动,可以把里面的数字替换为图片，本组件不支持自定义颜色。
+			</p>
+			<p className="function_p">
+				背景颜色：
+				<img src={wrongSrc} alt="" />
+			</p>
+			<p className="function_p">
+				字体颜色：
+				<img src={wrongSrc} alt="" />
+			</p>
+			<p className="function_p">
+				悬浮颜色：
+				<img src={wrongSrc} alt="" />
 			</p>
 			<div className="component_box">
 				<div className="compontent_box_content">
@@ -304,36 +323,40 @@ useEffect(() => {
 	);
 };
 
-  const Component = () => {
+const Component = () => {
+	const [slideArr, setSlideArr] = useState<Array<string>>([
+		"slide_box active",
+		"slide_box next",
+		"slide_box",
+		"slide_box",
+		"slide_box pre",
+	]);
+	const [slideIndex, setSlideIndex] = useState<number>(0);
+	const SlideRef = useRef(slideIndex);
+	SlideRef.current = slideIndex;
 
-  const [slideArr, setSlideArr] = useState<Array<string>>([
-    "slide_box active",
-    "slide_box next",
-    "slide_box",
-    "slide_box",
-    "slide_box pre",
-  ]);
-  const [slideIndex, setSlideIndex] = useState<number>(0);
-  const SlideRef = useRef(slideIndex);
-  SlideRef.current = slideIndex;
-
-  const length: number = 5;  
-  useEffect(() => { 
-    const timer = setInterval(() => {
-      setSlideIndex(slideIndex => slideIndex + 1); 
-      if(SlideRef.current === length - 1){
-        setSlideIndex(0);
-      }
-      setSlideArr([(slideArr[SlideRef.current] = "slide_box active"), ...slideArr]);
-      const preIndex = SlideRef.current === 0 ? length - 1 : SlideRef.current - 1;
-      setSlideArr([(slideArr[preIndex] = "slide_box pre"), ...slideArr]);
-      const preIndex2 = preIndex === 0 ? length - 1 : preIndex - 1;
-      setSlideArr([(slideArr[preIndex2] = "slide_box"), ...slideArr]);
-      const nextIndex = SlideRef.current === length - 1 ? 0 : SlideRef.current + 1;
-      setSlideArr([(slideArr[nextIndex] = "slide_box next"), ...slideArr]);
-    }, 3000);  
-    return () => clearInterval(timer)     
-  },[]) 
+	const length: number = 5;
+	useEffect(() => {
+		const timer = setInterval(() => {
+			setSlideIndex((slideIndex) => slideIndex + 1);
+			if (SlideRef.current === length - 1) {
+				setSlideIndex(0);
+			}
+			setSlideArr([
+				(slideArr[SlideRef.current] = "slide_box active"),
+				...slideArr,
+			]);
+			const preIndex =
+				SlideRef.current === 0 ? length - 1 : SlideRef.current - 1;
+			setSlideArr([(slideArr[preIndex] = "slide_box pre"), ...slideArr]);
+			const preIndex2 = preIndex === 0 ? length - 1 : preIndex - 1;
+			setSlideArr([(slideArr[preIndex2] = "slide_box"), ...slideArr]);
+			const nextIndex =
+				SlideRef.current === length - 1 ? 0 : SlideRef.current + 1;
+			setSlideArr([(slideArr[nextIndex] = "slide_box next"), ...slideArr]);
+		}, 3000);
+		return () => clearInterval(timer);
+	}, []);
 
 	return (
 		<>

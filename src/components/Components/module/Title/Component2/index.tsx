@@ -2,6 +2,8 @@ import React from "react";
 import ShowCode from "@/components/Components/ShowCode";
 import { codeState } from "@/store/Code";
 
+import rightSrc from "@/assets/svg/normal/right.svg";
+
 import "./index.css";
 
 const Component1 = () => {
@@ -72,6 +74,18 @@ ${className === "" ? "div" : className} .title_line {
 				居中下划线
 			</div>
 			<p className="compontent_p">下划线的颜色根据背景颜色变化。</p>
+			<p className="function_p">
+				背景颜色：
+				<img src={rightSrc} alt="" />
+			</p>
+			<p className="function_p">
+				字体颜色：
+				<img src={rightSrc} alt="" />
+			</p>
+			<p className="function_p">
+				悬浮颜色：
+				<img src={rightSrc} alt="" />
+			</p>
 			<div className="component_box">
 				<div className="compontent_box_content">
 					<div

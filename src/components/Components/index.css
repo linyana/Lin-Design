@@ -15,7 +15,7 @@
 
 .component_box {
   border: 1px solid #ebebeb;
-  margin-bottom: 30px;
+  margin: 30px 0;
 }
 
 .compontent_box_content {
@@ -36,7 +36,17 @@
 }
 
 p.compontent_p {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   line-height: 26px;
   color: rgb(100, 99, 99);
+}
+
+p.function_p {
+  line-height: 26px;
+  color: rgb(100, 99, 99);
+}
+
+p.function_p img {
+  width: 15px;
+  transform: translateY(2.8px);
 }

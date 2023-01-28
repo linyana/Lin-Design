@@ -2,6 +2,8 @@ import React from "react";
 import ShowCode from "@/components/Components/ShowCode";
 import { codeState } from "@/store/Code";
 
+import wrongSrc from "@/assets/svg/normal/wrong.svg";
+
 import "./index.css";
 
 const Component1 = () => {
@@ -76,6 +78,18 @@ ${className === ''?'div':className} .layout_component2_content3 {
       </div>
       <p className="compontent_p">
         利用margin来进行居中,添加了header和footer,建议自行设置宽度和高度。
+      </p>
+      <p className="function_p">
+        背景颜色： 
+        <img src={wrongSrc} alt="" />
+      </p>
+      <p className="function_p">
+        字体颜色：
+        <img src={wrongSrc} alt="" />
+      </p>
+      <p className="function_p">
+        悬浮颜色：
+        <img src={wrongSrc} alt="" />
       </p>
       <div className="component_box">
         <div className="compontent_box_content">
