@@ -6,6 +6,7 @@
   border-radius: 10px;
   border: 1px solid rgb(187, 183, 183);
   background-color: #bfbfbf;
+  transition: all 0.3s;
 }
 
 .switch_component1_content .switch_circle {

@@ -32,6 +32,7 @@ ${className === "" ? "div" : className} .switch_box {
   border-radius: 10px;
   border: 1px solid rgb(187, 183, 183);
   background-color: #bfbfbf;
+  transition: all 0.3s;
 }
 
 ${className === "" ? "div" : className} .switch_circle {
