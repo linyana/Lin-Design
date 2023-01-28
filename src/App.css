@@ -75,3 +75,18 @@ img.icon {
     display: none;
   }
 }
+
+@media screen and (max-width: 900px) {
+  .middle_padding {
+    padding: 0 20px;
+  }
+
+  .right_content {
+    display: none;
+  }
+
+  .left_menu {
+    display: none;
+  }
+}
+

@@ -11,3 +11,10 @@
     margin-left: 220px;
   }
 }
+
+@media screen and (max-width: 900px) { 
+  .middle_content {
+    width: calc(100% - 40px);
+    margin-left: 0;
+  }
+}

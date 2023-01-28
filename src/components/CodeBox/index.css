@@ -52,3 +52,26 @@
 	height: 90%;
   opacity: 1;
 }
+
+@media screen and (max-width: 900px) {  
+	.code_box_left,
+	.code_box_middle {
+		display: none;
+	}
+
+	.code_box_right {
+		width: 100%;
+	}
+
+	.code_box_header_selects {
+		width: 100%;
+	}
+
+	.code_box_content {
+		padding: 15px;
+	}
+
+	img.close {
+		margin-left: 0;
+	}
+}
