@@ -1,0 +1,38 @@
+.switch_component2_content {
+  display: flex;
+}
+
+.switch_component2_content .switch_box {
+  cursor: pointer;
+  position: relative;
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  border: 1px solid rgb(187, 183, 183);
+  background-color: #bfbfbf;
+  transition: all 0.3s;
+  margin: 0 16px;
+}
+
+.switch_component2_content .switch_circle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  transition: all 0.3s;
+}
+
+.switch_component2_content .is_switch_box {
+  background-color: var(--bgColor)
+}
+
+.switch_component2_content .is_switch_box .switch_circle {
+  left: 20px;
+}
+
+.switch_component2_content .is_switch_text {
+  color: var(--hoverColor)
+}

@@ -21,7 +21,7 @@
 }
 
 .switch_component1_content .is_switch_box {
-  background-color: #3e5bf2;
+  background-color: var(--bgColor)
 }
 
 .switch_component1_content .is_switch_box .switch_circle {

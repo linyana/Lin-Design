@@ -115,7 +115,8 @@ const changeSwitch = (): void => {
     switchClass.value = "switch_box"
   }
 }`,
-		ReactTSCode: () => `const [isSwitch, setIsSwitch] = useState<boolean>(false);`,
+		ReactTSCode: () =>
+			`const [isSwitch, setIsSwitch] = useState<boolean>(false);`,
 	};
 
 	const [isSwitch, setIsSwitch] = useState<boolean>(false);

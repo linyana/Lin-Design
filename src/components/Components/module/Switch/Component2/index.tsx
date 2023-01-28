@@ -7,9 +7,9 @@ import rightSrc from "@/assets/svg/normal/right.svg";
 
 import "./index.css";
 
-const Component1 = () => {
+const Switch2 = () => {
 	const code: codeState = {
-		element: () => <div className="layout_component1_content1">content</div>,
+		element: () => <Component></Component>,
 		HTMLCode: (className: string) => `<div${
 			className.trim() ? ` class="${className.replace(".", "")}"` : ""
 		}>
@@ -21,11 +21,44 @@ const Component1 = () => {
 			color: string,
 			hoverColor: string
 		) => {
-			return `${className === "" ? "div" : className} {
-  margin: auto;
-  min-height: 200px;
-  background-color: rgb(225, 227, 238);
-  padding: 10px;
+			return `
+${className === "" ? "div" : className}  {
+  display: flex;
+}
+
+${className === "" ? "div" : className}  {
+  cursor: pointer;
+  position: relative;
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  border: 1px solid rgb(187, 183, 183);
+  background-color: #bfbfbf;
+  transition: all 0.3s;
+  margin: 0 16px;
+}
+
+${className === "" ? "div" : className}  .switch_circle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  transition: all 0.3s;
+}
+
+${className === "" ? "div" : className}  .is_switch_box {
+  background-color: ${bgColor}
+}
+
+${className === "" ? "div" : className}  .is_switch_box .switch_circle {
+  left: 20px;
+}
+
+${className === "" ? "div" : className}  .is_switch_text {
+  color: ${hoverColor}
 }
         `;
 		},
@@ -47,12 +80,12 @@ const Component1 = () => {
 		ReactTSCode: () => `暂无`,
 	};
 
-  const [isSwitch,setIsSwitch] = useState<boolean>(false);
+	const [isSwitch, setIsSwitch] = useState<boolean>(false);
 
 	return (
 		<>
 			<div className="compontent_title" id="switch-anchor1">
-				开关
+				文字开关
 			</div>
 			<p className="function_p">
 				背景颜色：
@@ -64,15 +97,32 @@ const Component1 = () => {
 			</p>
 			<p className="function_p">
 				悬浮颜色：
-				<img src={wrongSrc} alt="" />
+				<img src={rightSrc} alt="" />
 			</p>
 			<div className="component_box">
 				<div className="compontent_box_content">
-					<div className="switch_component1_content1">
-						<div className={isSwitch?"is_switch_box switch_box": "switch_box"} onClick={() => {
-              setIsSwitch(!isSwitch);
-            }}>
+					<div className="switch_component2_content">
+						<div
+							className={
+								isSwitch ? "switch_text" : "is_switch_text switch_text"
+							}
+						>
+							男
+						</div>
+						<div
+							className={isSwitch ? "is_switch_box switch_box" : "switch_box"}
+							onClick={() => {
+								setIsSwitch(!isSwitch);
+							}}
+						>
 							<div className="switch_circle"></div>
+						</div>
+						<div
+							className={
+								isSwitch ? "is_switch_text switch_text" : "switch_text"
+							}
+						>
+							女
 						</div>
 					</div>
 				</div>
@@ -82,4 +132,26 @@ const Component1 = () => {
 	);
 };
 
-export default Component1;
+const Component = () => {
+	const [isSwitch, setIsSwitch] = useState<boolean>(false);
+	return (
+		<div className="switch_component2_content">
+			<div className={isSwitch ? "switch_text" : "is_switch_text switch_text"}>
+				男
+			</div>
+			<div
+				className={isSwitch ? "is_switch_box switch_box" : "switch_box"}
+				onClick={() => {
+					setIsSwitch(!isSwitch);
+				}}
+			>
+				<div className="switch_circle"></div>
+			</div>
+			<div className={isSwitch ? "is_switch_text switch_text" : "switch_text"}>
+				女
+			</div>
+		</div>
+	);
+};
+
+export default Switch2;
