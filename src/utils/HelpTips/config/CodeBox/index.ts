@@ -1,0 +1,38 @@
+export const CodeBoxTipConfig = [
+  {
+    element: '.left_content_input',
+    left: '40px',
+    top: '-23px',
+    title: '类名',
+    content: '可以在这里输入你希望输出的类名，最好填上，以避免一些因为没有类名而产生的错误。',
+    mark: 'left_top',
+    width: '250px',
+  },
+  {
+    element: '.color_nav',
+    left: '70px',
+    top: '-23px',
+    title: '颜色选择',
+    content: '可以根据需要更换组件的背景颜色，字体颜色和鼠标经过时的颜色，部分组件不能替换颜色。',
+    mark: 'left_top',
+    width: '250px',
+  },
+  {
+    element: '#code_box_left_color_all_boxes',
+    left: '40px',
+    top: '-23px',
+    title: '推荐颜色',
+    content: '点击方块即可快速选择颜色。',
+    mark: 'left_top',
+    width: '250px',
+  },
+  {
+    element: '.code_box_header_selects',
+    left: '-400px',
+    top: '60px',
+    title: '输出代码',
+    content: '这里会根据你对类名和颜色的更改输出相应的代码。',
+    mark: 'top_right',
+    width: '250px',
+  },
+]

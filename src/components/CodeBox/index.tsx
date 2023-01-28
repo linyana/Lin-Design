@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "@/store";
+import HelpTips from "@/utils/HelpTips";
+import { CodeBoxTipConfig } from "@/utils/HelpTips/config";
 
 import Header from "./Header";
 import Left from "./Left";
@@ -16,6 +18,12 @@ const CodeBox = () => {
 	const isCodeBoxShow = useSelector(
 		(state: RootState) => state.isCodeBoxShow.isCodeBoxShow
 	);
+
+	if (isPage && localStorage.getItem("lin-tip") !== "true") {
+		const tip = new HelpTips(CodeBoxTipConfig);
+		tip.begin();
+		localStorage.setItem("lin-tip", "true");
+	}
 
 	useEffect(() => {
 		if (isCodeBoxShow) {

@@ -105,7 +105,11 @@ const Left = () => {
 							}
 						}}
 					/>
-					<div className={`left_content_input_delete${setting.class?' left_content_input_delete_hover':''}`}>
+					<div
+						className={`left_content_input_delete${
+							setting.class ? " left_content_input_delete_hover" : ""
+						}`}
+					>
 						<img
 							src={img}
 							alt=""
@@ -206,29 +210,31 @@ const Left = () => {
 						ref={hoverColorInput}
 					/>
 				)}
-				<div className="flex_between code_box_left_color_boxes">
-					{colorList.map((item) => {
-						return (
-							<div
-								key={item}
-								className="code_box_left_color_box"
-								style={{ background: item }}
-								onClick={(event) => handleClickColorBox(event)}
-							></div>
-						);
-					})}
-				</div>
-				<div className="flex_between">
-					{colorList2.map((item) => {
-						return (
-							<div
-								key={item}
-								className="code_box_left_color_box"
-								style={{ background: item }}
-								onClick={(event) => handleClickColorBox(event)}
-							></div>
-						);
-					})}
+				<div id="code_box_left_color_all_boxes">
+					<div className="flex_between code_box_left_color_boxes">
+						{colorList.map((item) => {
+							return (
+								<div
+									key={item}
+									className="code_box_left_color_box"
+									style={{ background: item }}
+									onClick={(event) => handleClickColorBox(event)}
+								></div>
+							);
+						})}
+					</div>
+					<div className="flex_between">
+						{colorList2.map((item) => {
+							return (
+								<div
+									key={item}
+									className="code_box_left_color_box"
+									style={{ background: item }}
+									onClick={(event) => handleClickColorBox(event)}
+								></div>
+							);
+						})}
+					</div>
 				</div>
 			</div>
 		</div>
