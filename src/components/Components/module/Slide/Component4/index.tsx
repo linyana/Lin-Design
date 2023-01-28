@@ -30,7 +30,7 @@ ${className === "" ? "div" : className} {
   position: relative;
   width: 100%;
   height: 400px;
-  min-width: 500px; 
+  min-width: 100px; 
   overflow: hidden;
 }
 

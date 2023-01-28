@@ -66,6 +66,17 @@ img.icon {
   margin: 0 10px;
 }
 
+.mobile_page {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 34px;
+  top: 34px;
+  z-index: 9999999;
+  display: none;
+  transform: translateY(-34px);
+}
+
 @media screen and (max-width: 1200px) {
   .middle_padding {
     padding: 0 10px;
@@ -87,6 +98,10 @@ img.icon {
 
   .left_menu {
     display: none;
+  }
+
+  .mobile_page {
+    display: block;
   }
 }
 

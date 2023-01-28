@@ -271,7 +271,7 @@ const restore = (): void => {
 			</p>
 			<div className="component_box">
 				<div className="compontent_box_content">
-					<div className="content_component4_content" style={{ width: 700 }}>
+					<div className="content_component4_content">
 						<div
 							className="move_card move_card1"
 							style={{ width: width1 ? "36%" : "22%" }}
