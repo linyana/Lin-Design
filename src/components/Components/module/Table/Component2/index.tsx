@@ -412,7 +412,7 @@ ${className === "" ? "div" : className} table tbody td button.edit_button {
 
 	return (
 		<>
-			<div className="compontent_title" id="button-anchor3">
+			<div className="compontent_title" id="table-anchor2">
 				系统表格
 			</div>
 			<p className="compontent_p">基础的适合系统的表格。</p>

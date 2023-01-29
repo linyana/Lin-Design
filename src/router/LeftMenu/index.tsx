@@ -53,6 +53,11 @@ const leftMenu = [
     name: '滚动条',
     smallName: 'ScrollBar',
     to: 'scrollBar',
+  },
+  {
+    name: '导航栏',
+    smallName: 'Nav',
+    to: 'Nav',
   }
 ]
 

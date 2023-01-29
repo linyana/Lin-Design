@@ -152,7 +152,7 @@ const changeSwitch = (): void => {
 
 	return (
 		<>
-			<div className="compontent_title" id="switch-anchor1">
+			<div className="compontent_title" id="switch-anchor2">
 				文字开关
 			</div>
 			<p className="function_p">

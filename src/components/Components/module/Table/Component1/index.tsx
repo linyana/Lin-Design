@@ -239,7 +239,7 @@ ${className === "" ? "div" : className} table tbody td {
 
 	return (
 		<>
-			<div className="compontent_title" id="button-anchor3">
+			<div className="compontent_title" id="table-anchor1">
 				基本表格
 			</div>
 			<p className="compontent_p">

@@ -18,6 +18,7 @@ const Slide = lazy(() => import("@/components/Components/module/Slide"));
 const Switch = lazy(() => import("@/components/Components/module/Switch"));
 const Table = lazy(() => import("@/components/Components/module/Table"));
 const ScrollBar = lazy(() => import("@/components/Components/module/ScrollBar"));
+const Nav = lazy(() => import("@/components/Components/module/Nav"));
 
 const routes: RouteObject[] = [
 	{
@@ -75,6 +76,10 @@ const routes: RouteObject[] = [
       {
 				path: "scrollBar",
 				element: <ScrollBar />,
+			},
+      {
+				path: "Nav",
+				element: <Nav />,
 			},
 		],
 	},

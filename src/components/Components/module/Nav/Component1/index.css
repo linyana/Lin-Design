@@ -1,0 +1,38 @@
+.nav_component1_content ul {
+	display: flex;
+}
+
+.nav_component1_content ul li {
+	cursor: pointer;
+	list-style: none;
+	background-color: var(--bgColor);
+	transition: all 0.3s;
+}
+
+.nav_component1_content ul li:hover {
+	background-color: var(--hoverColor);
+}
+
+.nav_component1_content ul li a {
+  padding: 0 30px;
+  line-height: 50px;
+  display: inline-block;
+  height: 50px;
+	text-decoration: none;
+	color: var(--color);
+	transition: all 0.3s;
+}
+
+/* more */
+
+.nav_component1_content_hover ul li {
+	background-color: rgb(132, 153, 212);
+}
+
+.nav_component1_content_hover ul li:hover {
+	background-color: rgb(157, 181, 233);
+}
+
+.nav_component1_content_hover ul li a {
+	color: #f0f0f0;
+}

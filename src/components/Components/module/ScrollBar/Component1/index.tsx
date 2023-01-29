@@ -136,7 +136,7 @@ ${className === "" ? "div" : className}::-webkit-scrollbar-thumb:hover {
 
 	return (
 		<>
-			<div className="compontent_title" id="button-anchor3">
+			<div className="compontent_title" id="scrollbar-anchor1">
 				基本优化
 			</div>
 			<p className="compontent_p">对滚动条的样式进行优化，可以将css中的类选择器删除以作用于全局。</p>
