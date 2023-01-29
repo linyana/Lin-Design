@@ -1,0 +1,67 @@
+.scrollBar_component1_content {
+  width: 100%;
+  overflow-y: scroll;
+  height: 260px;
+}
+
+.scrollBar_component1_content::-webkit-scrollbar-thumb:horizontal {
+  width: 4px;
+  background-color: #CCCCCC;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.scrollBar_component1_content::-webkit-scrollbar-track-piece {
+  background-color: #fff;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+.scrollBar_component1_content::-webkit-scrollbar {
+  width: 10px;
+  height: 8px;
+}
+
+.scrollBar_component1_content::-webkit-scrollbar-thumb:vertical {
+  height: 50px;
+  background-color: var(--bgColor);
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  outline: 2px solid #fff;
+  outline-offset: -2px;
+  border: 2px solid #fff;
+}
+
+.scrollBar_component1_content::-webkit-scrollbar-thumb:hover {
+  height: 50px;
+  background-color: var(--bgColor);
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.scrollBar_content {
+  background-color: rgb(162, 171, 209);
+  text-align: center;
+  line-height: 60px;
+  color:rgb(248, 247, 247);
+  margin-bottom: 10px;
+}
+
+/* more */
+
+.scrollBar_component1_content_color::-webkit-scrollbar-thumb:vertical {
+  height: 50px;
+  background-color: rgb(162, 171, 209)!important;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  outline: 2px solid #fff;
+  outline-offset: -2px;
+  border: 2px solid #fff;
+}
+
+.scrollBar_component1_content_color::-webkit-scrollbar-thumb:hover {
+  height: 50px;
+  background-color: rgb(162, 171, 209);
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}

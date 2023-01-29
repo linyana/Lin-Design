@@ -48,6 +48,11 @@ const leftMenu = [
     name: '轮播图',
     smallName: 'Slide',
     to: 'slide',
+  },
+  {
+    name: '滚动条',
+    smallName: 'ScrollBar',
+    to: 'scrollBar',
   }
 ]
 
