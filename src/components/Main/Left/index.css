@@ -4,6 +4,42 @@
   border-right: 1px solid #e9ecef;
   width: 300px;
   height: calc(100vh - 100px);
+  overflow: scroll;
+}
+
+.left_menu::-webkit-scrollbar-thumb:horizontal {
+  width: 4px;
+  background-color: #CCCCCC;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.left_menu::-webkit-scrollbar-track-piece {
+  background-color: #fff;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+.left_menu::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.left_menu::-webkit-scrollbar-thumb:vertical {
+  height: 50px;
+  background-color: rgb(220, 221, 221);
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  outline: 2px solid #fff;
+  outline-offset: -2px;
+  border: 2px solid #fff;
+}
+
+.left_menu::-webkit-scrollbar-thumb:hover {
+  height: 50px;
+  background-color: rgb(220, 221, 221);
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
 }
 
 .left_menu_line {

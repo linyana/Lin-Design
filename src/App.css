@@ -77,6 +77,41 @@ img.icon {
   transform: translateY(-34px);
 }
 
+::-webkit-scrollbar-thumb:horizontal {
+  width: 4px;
+  background-color: #CCCCCC;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #fff;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 50px;
+  background-color: rgb(90, 145, 196);
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  outline: 2px solid #fff;
+  outline-offset: -2px;
+  border: 2px solid #fff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  height: 50px;
+  background-color: rgb(90, 145, 196);
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
 @media screen and (max-width: 1200px) {
   .middle_padding {
     padding: 0 10px;
