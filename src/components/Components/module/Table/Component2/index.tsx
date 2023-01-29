@@ -13,7 +13,48 @@ const Component2 = () => {
 		HTMLCode: (className: string) => `<div${
 			className.trim() ? ` class="${className.replace(".", "")}"` : ""
 		}>
-  content
+  <table cellSpacing={0}>
+    <thead>
+      <tr>
+        <td>序号</td>
+        <td>姓名</td>
+        <td>性别</td>
+        <td>
+          描述
+        </td>
+        <td>日期</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>小李</td>
+        <td>男</td>
+        <td>
+          这是一段很长的描述
+        </td>
+        <td>2022/12/3</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>小李</td>
+        <td>男</td>
+        <td>
+          这是一段很长的描述
+        </td>
+        <td>2022/12/3</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>小李</td>
+        <td>男</td>
+        <td>
+          这是一段很长的描述
+        </td>
+        <td>2022/12/3</td>
+      </tr>
+    </tbody>
+  </table>
 </div>`,
 		CSSCode: (
 			className: string,
@@ -21,11 +62,30 @@ const Component2 = () => {
 			color: string,
 			hoverColor: string
 		) => {
-			return `${className === "" ? "div" : className} {
-  margin: auto;
-  min-height: 200px;
-  background-color: rgb(225, 227, 238);
-  padding: 10px;
+			return `
+${className === "" ? "div" : className} {
+  width: 100%;
+}
+
+${className === "" ? "div" : className} table td {
+  border-bottom: 1px solid rgb(168, 167, 167);
+  color: #495057;
+  padding: 8px 20px;
+  text-align: center;
+}
+
+${className === "" ? "div" : className} table tbody tr:hover {
+  background-color: rgb(243, 243, 243);
+  transition: all 0.3s;
+}
+
+${className === "" ? "div" : className} table thead td {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+${className === "" ? "div" : className} table tbody td {
+  font-size: 14px;
 }
         `;
 		},
@@ -33,13 +93,95 @@ const Component2 = () => {
 		VueHTMLCode: (className: string) => `<div${
 			className.trim() ? ` class="${className.replace(".", "")}"` : ""
 		}>
-  content
+  <table cellSpacing={0}>
+    <thead>
+      <tr>
+        <td>序号</td>
+        <td>姓名</td>
+        <td>性别</td>
+        <td>
+          描述
+        </td>
+        <td>日期</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>小李</td>
+        <td>男</td>
+        <td>
+          这是一段很长的描述
+        </td>
+        <td>2022/12/3</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>小李</td>
+        <td>男</td>
+        <td>
+          这是一段很长的描述
+        </td>
+        <td>2022/12/3</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>小李</td>
+        <td>男</td>
+        <td>
+          这是一段很长的描述
+        </td>
+        <td>2022/12/3</td>
+      </tr>
+    </tbody>
+  </table>
 </div>`,
 		VueJSCode: () => `暂无`,
 		ReactHTMLCode: (className: string) => `<div${
 			className.trim() ? ` className="${className.replace(".", "")}"` : ""
 		}>
-  content
+  <table cellSpacing={0}>
+    <thead>
+      <tr>
+        <td>序号</td>
+        <td>姓名</td>
+        <td>性别</td>
+        <td>
+          描述
+        </td>
+        <td>日期</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>小李</td>
+        <td>男</td>
+        <td>
+          这是一段很长的描述
+        </td>
+        <td>2022/12/3</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>小李</td>
+        <td>男</td>
+        <td>
+          这是一段很长的描述
+        </td>
+        <td>2022/12/3</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>小李</td>
+        <td>男</td>
+        <td>
+          这是一段很长的描述
+        </td>
+        <td>2022/12/3</td>
+      </tr>
+    </tbody>
+  </table>
 </div>`,
 		ReactJSCode: () => `暂无`,
 		TSCode: () => `暂无`,
