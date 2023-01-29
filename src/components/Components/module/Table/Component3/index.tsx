@@ -6,7 +6,7 @@ import wrongSrc from "@/assets/svg/normal/wrong.svg";
 
 import "./index.css";
 
-const Component2 = () => {
+const Component3 = () => {
 	const code: codeState = {
 		element: () => <div className="layout_component1_content1">content</div>,
 		HTMLCode: (className: string) => `<div${
@@ -104,15 +104,15 @@ ${className === "" ? "div" : className} {
   width: 100%;
 }
 
+${className === "" ? "div" : className} table {
+  width: 100%;
+}
+
 ${className === "" ? "div" : className} table td {
   border-bottom: 1px solid rgb(168, 167, 167);
   color: #495057;
   padding: 8px 20px;
   text-align: center;
-}
-
-${className === "" ? "div" : className} table {
-  width: 100%;
 }
 
 ${className === "" ? "div" : className} table tbody tr:hover {
@@ -330,9 +330,9 @@ ${className === "" ? "div" : className} table tbody td button.edit_button {
 	return (
 		<>
 			<div className="compontent_title" id="button-anchor3">
-				系统表格
+				斑马纹表格
 			</div>
-      <p className="compontent_p">基础的适合系统的表格。</p>
+			<p className="compontent_p">使用带斑马纹的表格，可以更容易区分出不同行的数据。</p>
 			<p className="function_p">
 				背景颜色：
 				<img src={wrongSrc} alt="" />
@@ -347,7 +347,7 @@ ${className === "" ? "div" : className} table tbody td button.edit_button {
 			</p>
 			<div className="component_box">
 				<div className="compontent_box_content">
-					<div className="table_component2_content">
+					<div className="table_component3_content">
 						<table cellSpacing={0}>
 							<thead>
 								<tr>
@@ -436,4 +436,4 @@ ${className === "" ? "div" : className} table tbody td button.edit_button {
 	);
 };
 
-export default Component2;
+export default Component3;

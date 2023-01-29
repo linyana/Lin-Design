@@ -66,6 +66,10 @@ ${className === "" ? "div" : className} {
   width: 100%;
 }
 
+${className === "" ? "div" : className} table {
+  width: 100%;
+}
+
 ${className === "" ? "div" : className} table td{
   border: 1px solid rgb(132, 160, 173);
   border-right: none;

@@ -1,0 +1,48 @@
+.table_component3_content {
+  width: 100%;
+}
+
+.table_component3_content table {
+  width: 100%;
+}
+
+.table_component3_content table td {
+  color: #495057;
+  padding: 8px 20px;
+  text-align: center;
+}
+
+.table_component3_content table thead td {
+  font-weight: 700;
+  font-size: 15px;
+  background-color: #e8ebf0;
+}
+
+.table_component3_content table tbody td {
+  font-size: 14px;
+}
+
+.table_component3_content table tbody tr:nth-child(2n) td{
+  background-color: #f5f5f5;
+}
+
+.table_component3_content table tbody td button {
+  width: 50px;
+  height: 24px;
+  margin: 3px 6px;
+  font-size: 13px;
+  padding: 0;
+  border-radius: 3px;
+}
+
+.table_component3_content table tbody td button.delete_button {
+  background-color: rgb(212, 101, 101);
+  box-shadow: 0 0 3px rgba(202, 139, 139, 0.3);
+}
+
+.table_component3_content table tbody td button.edit_button {
+  border:1px solid rgb(179, 189, 212);
+  background-color: rgb(248, 248, 248);
+  color: rgb(140, 146, 160);
+  box-shadow: 0 0 3px rgba(139, 174, 202, 0.3);
+}
