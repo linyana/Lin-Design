@@ -260,7 +260,7 @@ const showNoticeMessage = (): void => {
 	return (
 		<>
 			<div className="compontent_title" id="message-anchor2">
-				成功提示
+				警告提示
 			</div>
 			<p className="function_p">
 				背景颜色：

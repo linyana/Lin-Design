@@ -260,7 +260,7 @@ const showErrorMessage = (): void => {
 	return (
 		<>
 			<div className="compontent_title" id="message-anchor3">
-				成功提示
+				错误提示
 			</div>
 			<p className="function_p">
 				背景颜色：
