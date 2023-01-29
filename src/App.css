@@ -112,6 +112,18 @@ img.icon {
   border-radius: 4px;
 }
 
+::selection {
+  background: #3952c467;
+}
+
+::-moz-selection {
+  background: #3952c467;
+}
+
+::-webkit-selection {
+  background: #3952c467;
+}
+
 @media screen and (max-width: 1200px) {
   .middle_padding {
     padding: 0 10px;
