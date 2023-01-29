@@ -40,6 +40,11 @@ const leftMenu = [
     to: "switch",
   },
   {
+    name: "表格",
+    smallName: "Table",
+    to: "table",
+  },
+  {
     name: '轮播图',
     smallName: 'Slide',
     to: 'slide',

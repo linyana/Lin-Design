@@ -16,63 +16,67 @@ const Content = lazy(() => import("@/components/Components/module/Content"));
 const Title = lazy(() => import("@/components/Components/module/Title"));
 const Slide = lazy(() => import("@/components/Components/module/Slide"));
 const Switch = lazy(() => import("@/components/Components/module/Switch"));
-
+const Table = lazy(() => import("@/components/Components/module/Table"));
 
 const routes: RouteObject[] = [
-  {
-    path: "/home",
-    element: <Home />,
-  },
-  {
-    path: "/components",
-    element: <Main />,
-    children: [
-      {
-        path: "overview",
-        element: <Overview />
-      },
-      {
-       path: "input",
-       element: <Input />, 
-      },
-      {
-        path: "button",
-        element: <Button />,
-      },
-      {
-        path: "plate",
-        element: <Plate />,
-      },
-      {
-        path: "card",
-        element: <Card />,
-      },
-      {
-        path: "layout",
-        element: <Layout />,
-      },
-      {
-        path: "content",
-        element: <Content />
-      },
-      {
-        path: "title",
-        element: <Title />
-      },
-      {
-        path: "slide",
-        element: <Slide />
-      },
-      {
-        path: "switch",
-        element: <Switch />
-      }
-    ]
-  },
-  {
-    path: "/",
-    element: <Navigate to={"/home"} />,
-  },
+	{
+		path: "/home",
+		element: <Home />,
+	},
+	{
+		path: "/components",
+		element: <Main />,
+		children: [
+			{
+				path: "overview",
+				element: <Overview />,
+			},
+			{
+				path: "input",
+				element: <Input />,
+			},
+			{
+				path: "button",
+				element: <Button />,
+			},
+			{
+				path: "plate",
+				element: <Plate />,
+			},
+			{
+				path: "card",
+				element: <Card />,
+			},
+			{
+				path: "layout",
+				element: <Layout />,
+			},
+			{
+				path: "content",
+				element: <Content />,
+			},
+			{
+				path: "title",
+				element: <Title />,
+			},
+			{
+				path: "slide",
+				element: <Slide />,
+			},
+			{
+				path: "switch",
+				element: <Switch />,
+			},
+			{
+				path: "table",
+				element: <Table />,
+			},
+		],
+	},
+	{
+		path: "/",
+		element: <Navigate to={"/home"} />,
+	},
 ];
 
 export default routes;

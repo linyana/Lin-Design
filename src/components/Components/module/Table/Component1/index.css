@@ -1,0 +1,32 @@
+.table_component1_content {
+  width: 100%;
+}
+
+.table_component1_content table td{
+  border: 1px solid rgb(132, 160, 173);
+  border-right: none;
+  border-bottom: none;
+  text-align: center;
+  padding: 4px 20px;
+}
+
+.table_component1_content table td:last-child {
+  border-right: 1px solid rgb(132, 160, 173);
+}
+
+.table_component1_content table tr:last-child td {
+  border-bottom: 1px solid rgb(132, 160, 173);
+}
+
+.table_component1_content table thead td {
+  background-color: rgb(87, 153, 214);
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.table_component1_content table tbody td {
+  background-color: rgb(187, 212, 235);
+  color: #495057;
+  font-size: 14px;
+}
