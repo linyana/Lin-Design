@@ -58,6 +58,11 @@ const leftMenu = [
     name: '导航栏',
     smallName: 'Nav',
     to: 'Nav',
+  },
+  {
+    name: '消息提示',
+    smallName: 'Message',
+    to: 'message',
   }
 ]
 
