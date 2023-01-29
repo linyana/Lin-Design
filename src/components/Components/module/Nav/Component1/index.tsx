@@ -2,7 +2,6 @@ import React from "react";
 import ShowCode from "@/components/Components/ShowCode";
 import { codeState } from "@/store/Code";
 
-import wrongSrc from "@/assets/svg/normal/wrong.svg";
 import rightSrc from "@/assets/svg/normal/right.svg";
 
 import "./index.css";
@@ -126,15 +125,15 @@ ${className === "" ? "div" : className} ul li a {
 			<p className="compontent_p">较为基本的导航栏。</p>
 			<p className="function_p">
 				背景颜色：
-				<img src={wrongSrc} alt="" />
+				<img src={rightSrc} alt="" />
 			</p>
 			<p className="function_p">
 				字体颜色：
-				<img src={wrongSrc} alt="" />
+				<img src={rightSrc} alt="" />
 			</p>
 			<p className="function_p">
 				悬浮颜色：
-				<img src={wrongSrc} alt="" />
+				<img src={rightSrc} alt="" />
 			</p>
 			<div className="component_box">
 				<div className="compontent_box_content">

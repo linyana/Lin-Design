@@ -1,0 +1,130 @@
+.nav_component2_content ul {
+	display: flex;
+}
+
+.nav_component2_content ul li {
+	position: relative;
+	cursor: pointer;
+	list-style: none;
+	background-color: var(--bgColor);
+	transition: all 0.3s;
+}
+
+.nav_component2_content ul li:hover {
+	background-color: var(--hoverColor);
+}
+
+.nav_component2_content ul li a {
+	padding: 0 30px;
+	line-height: 50px;
+	display: inline-block;
+	height: 50px;
+	text-decoration: none;
+	color: var(--color);
+	transition: all 0.3s;
+}
+
+.nav_component2_content ul li.second_li a {
+	display: flex;
+}
+
+.nav_component2_content ul li.second_li .nav_bottom {
+	width: 16px;
+	height: 16px;
+	transform: translateY(-3px);
+	margin-left: 10px;
+	transition: all 0.3s;
+}
+
+.nav_component2_content ul li.second_li:hover .nav_bottom {
+	transform: translateY(37px) translateX(-2px) rotate(-180deg);
+}
+
+.nav_component2_content ul li.second_li:hover .second_nav {
+	display: block;
+	animation: showSecondNav 0.3s;
+}
+
+.nav_component2_content .second_nav {
+	z-index: 999;
+	display: none;
+	position: absolute;
+	padding: 10px 0;
+	top: 50px;
+	left: 0;
+	overflow: hidden;
+	transition: all 0.3s;
+}
+
+.nav_component2_content .second_nav {
+	width: 100%;
+}
+
+.nav_component2_content .second_nav ul {
+	width: 100%;
+}
+
+.nav_component2_content .second_nav ul li {
+	text-align: center;
+	width: 100%;
+}
+
+.nav_component2_content .second_nav ul li a {
+	display: inline-block;
+	width: 100%;
+	padding: 0;
+	text-align: center;
+}
+
+.nav_component2_content .second_nav ul {
+	flex-wrap: wrap;
+}
+
+@keyframes showSecondNav {
+	from {
+		transform: scale(0.1) translateY(-60px);
+		opacity: 0.2;
+	}
+	to {
+		transform: scale(1) translateY(0);
+		opacity: 1;
+	}
+}
+
+.nav_component2_content span.nav_bottom_span1 {
+	display: inline-block;
+	width: 8px;
+	height: 2px;
+	background-color: var(--color);
+	transform: rotate(45deg) translateY(-1.5px);
+}
+
+.nav_component2_content span.nav_bottom_span2 {
+	display: inline-block;
+	width: 8px;
+	height: 2px;
+	background-color: var(--color);
+	transform: rotate(135deg) translateY(1.5px);
+}
+
+/* more */
+
+.nav_component2_content_hover ul li {
+	background-color: rgb(132, 153, 212);
+}
+
+.nav_component2_content_hover ul li:hover {
+	background-color: rgb(157, 181, 233);
+}
+
+.nav_component2_content_hover ul li a {
+	color: #f0f0f0;
+}
+
+.nav_component2_content_hover {
+	padding-bottom: 160px;
+}
+
+.nav_component2_content_hover span.nav_bottom_span_color {
+	background-color: #f0f0f0 !important;
+}
