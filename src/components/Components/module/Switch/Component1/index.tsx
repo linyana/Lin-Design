@@ -55,32 +55,33 @@ ${className === "" ? "div" : className} .is_switch_box .switch_circle {
 }
         `;
 		},
-		JSCode: () => `const SwitchBox = document.querySelector(".switch_box");
+		JSCode: () => `const switchBox = document.querySelector(".switch_box");
 let isSwitch = false;
-SwitchBox.addEventListener("click", () => {
+switchBox.addEventListener("click", () => {
   if (isSwitch) {
-    SwitchBox.className = "switch_box";
+    switchBox.className = "switch_box";
     isSwitch = !isSwitch;
   } else {
-    SwitchBox.className = "is_switch_box switch_box";
+    switchBox.className = "is_switch_box switch_box";
     isSwitch = !isSwitch;
   }
 });`,
 		VueHTMLCode: (className: string) => `<div${
 			className.trim() ? ` class="${className.replace(".", "")}"` : ""
 		}>
-  content
+	<div
+		:class="isSwitch ? 'is_switch_box switch_box' : 'switch_box'"
+		@click="changeSwitch"
+	>
+		<div class="switch_circle"></div>
+	</div>
 </div>`,
 		VueJSCode: () => `import { ref } from "vue";
-const switchClass = ref("switch_box");
+const isSwitch = ref(false);
 
 const changeSwitch = () => {
-  if(switchClass.value === "switch_box"){
-    switchClass.value = "switch_box is_switch_box"
-  }else {
-    switchClass.value = "switch_box"
-  }
-}`,
+	isSwitch.value = !isSwitch.value;
+};`,
 		ReactHTMLCode: (className: string) => `<div${
 			className.trim() ? ` className="${className.replace(".", "")}"` : ""
 		}>
@@ -94,27 +95,23 @@ const changeSwitch = () => {
   </div>
 </div>`,
 		ReactJSCode: () => `const [isSwitch, setIsSwitch] = useState(false);`,
-		TSCode: () => `const SwitchBox = document.querySelector(".switch_box");
+		TSCode: () => `const switchBox = document.querySelector(".switch_box");
 let isSwitch: boolean = false;
-SwitchBox.addEventListener("click", ():void => {
+switchBox.addEventListener("click", ():void => {
   if (isSwitch) {
-    SwitchBox.className = "switch_box";
+    switchBox.className = "switch_box";
     isSwitch = !isSwitch;
   } else {
-    SwitchBox.className = "is_switch_box switch_box";
+    switchBox.className = "is_switch_box switch_box";
     isSwitch = !isSwitch;
   }
 });`,
 		VueTSCode: () => `import { ref } from "vue";
-const switchClass = ref<string>("switch_box");
+const isSwitch = ref<boolean>(false);
 
 const changeSwitch = (): void => {
-  if(switchClass.value === "switch_box"){
-    switchClass.value = "switch_box is_switch_box"
-  }else {
-    switchClass.value = "switch_box"
-  }
-}`,
+	isSwitch.value = !isSwitch.value;
+};`,
 		ReactTSCode: () =>
 			`const [isSwitch, setIsSwitch] = useState<boolean>(false);`,
 	};
