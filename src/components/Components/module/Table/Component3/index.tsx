@@ -8,7 +8,90 @@ import "./index.css";
 
 const Component3 = () => {
 	const code: codeState = {
-		element: () => <div className="layout_component1_content1">content</div>,
+		element: () => (
+			<div className="table_component3_content">
+				<table cellSpacing={0}>
+					<thead>
+						<tr>
+							<td>序号</td>
+							<td>姓名</td>
+							<td>性别</td>
+							<td>描述</td>
+							<td>日期</td>
+							<td>操作</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>小李</td>
+							<td>男</td>
+							<td>这是一段很长的描述</td>
+							<td>2022/12/3</td>
+							<td>
+								<button className="edit_button">修改</button>
+								<button className="delete_button">删除</button>
+							</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>小李</td>
+							<td>男</td>
+							<td>这是一段很长的描述</td>
+							<td>2022/12/3</td>
+							<td>
+								<button className="edit_button">修改</button>
+								<button className="delete_button">删除</button>
+							</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>小李</td>
+							<td>男</td>
+							<td>这是一段很长的描述</td>
+							<td>2022/12/3</td>
+							<td>
+								<button className="edit_button">修改</button>
+								<button className="delete_button">删除</button>
+							</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>小李</td>
+							<td>男</td>
+							<td>这是一段很长的描述</td>
+							<td>2022/12/3</td>
+							<td>
+								<button className="edit_button">修改</button>
+								<button className="delete_button">删除</button>
+							</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>小李</td>
+							<td>男</td>
+							<td>这是一段很长的描述</td>
+							<td>2022/12/3</td>
+							<td>
+								<button className="edit_button">修改</button>
+								<button className="delete_button">删除</button>
+							</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>小李</td>
+							<td>男</td>
+							<td>这是一段很长的描述</td>
+							<td>2022/12/3</td>
+							<td>
+								<button className="edit_button">修改</button>
+								<button className="delete_button">删除</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		),
 		HTMLCode: (className: string) => `<div${
 			className.trim() ? ` class="${className.replace(".", "")}"` : ""
 		}>
@@ -332,7 +415,9 @@ ${className === "" ? "div" : className} table tbody td button.edit_button {
 			<div className="compontent_title" id="button-anchor3">
 				斑马纹表格
 			</div>
-			<p className="compontent_p">使用带斑马纹的表格，可以更容易区分出不同行的数据。</p>
+			<p className="compontent_p">
+				使用带斑马纹的表格，可以更容易区分出不同行的数据。
+			</p>
 			<p className="function_p">
 				背景颜色：
 				<img src={wrongSrc} alt="" />

@@ -8,7 +8,44 @@ import "./index.css";
 
 const Component1 = () => {
 	const code: codeState = {
-		element: () => <div className="layout_component1_content1">content</div>,
+		element: () => (
+			<div className="table_component1_content">
+				<table cellSpacing={0}>
+					<thead>
+						<tr>
+							<td>序号</td>
+							<td>姓名</td>
+							<td>性别</td>
+							<td>描述</td>
+							<td>日期</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>小李</td>
+							<td>男</td>
+							<td>这是一段很长的描述</td>
+							<td>2022/12/3</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>小李</td>
+							<td>男</td>
+							<td>这是一段很长的描述</td>
+							<td>2022/12/3</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>小李</td>
+							<td>男</td>
+							<td>这是一段很长的描述</td>
+							<td>2022/12/3</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		),
 		HTMLCode: (className: string) => `<div${
 			className.trim() ? ` class="${className.replace(".", "")}"` : ""
 		}>
@@ -205,7 +242,9 @@ ${className === "" ? "div" : className} table tbody td {
 			<div className="compontent_title" id="button-anchor3">
 				基本表格
 			</div>
-			<p className="compontent_p">对表格的颜色进行基本的封装,如果表格内容过多，可以给最外层的盒子设置overflow:scroll，然后参考滚动条进行修饰。</p>
+			<p className="compontent_p">
+				对表格的颜色进行基本的封装,如果表格内容过多，可以给最外层的盒子设置overflow:scroll，然后参考滚动条进行修饰。
+			</p>
 			<p className="function_p">
 				背景颜色：
 				<img src={wrongSrc} alt="" />
@@ -221,15 +260,13 @@ ${className === "" ? "div" : className} table tbody td {
 			<div className="component_box">
 				<div className="compontent_box_content">
 					<div className="table_component1_content">
-          <table cellSpacing={0}>
+						<table cellSpacing={0}>
 							<thead>
 								<tr>
 									<td>序号</td>
 									<td>姓名</td>
 									<td>性别</td>
-                  <td>
-                    描述
-                  </td>
+									<td>描述</td>
 									<td>日期</td>
 								</tr>
 							</thead>
@@ -238,32 +275,26 @@ ${className === "" ? "div" : className} table tbody td {
 									<td>1</td>
 									<td>小李</td>
 									<td>男</td>
-                  <td>
-                    这是一段很长的描述
-                  </td>
+									<td>这是一段很长的描述</td>
 									<td>2022/12/3</td>
 								</tr>
 								<tr>
 									<td>2</td>
 									<td>小李</td>
 									<td>男</td>
-                  <td>
-                    这是一段很长的描述
-                  </td>
+									<td>这是一段很长的描述</td>
 									<td>2022/12/3</td>
 								</tr>
 								<tr>
 									<td>3</td>
 									<td>小李</td>
 									<td>男</td>
-                  <td>
-                    这是一段很长的描述
-                  </td>
+									<td>这是一段很长的描述</td>
 									<td>2022/12/3</td>
 								</tr>
 							</tbody>
 						</table>
-          </div>
+					</div>
 				</div>
 				<ShowCode code={code} />
 			</div>
