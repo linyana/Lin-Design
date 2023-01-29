@@ -11,6 +11,9 @@ import titleSrc from "@/assets/images/overview/title.png";
 import slideSrc from "@/assets/images/overview/slide.png";
 import cardSrc from "@/assets/images/overview/card.png";
 import contentSrc from "@/assets/images/overview/content.png";
+import scrollBarSrc from "@/assets/images/overview/scrollBar.png";
+import switchSrc from "@/assets/images/overview/switch.png";
+import tableSrc from "@/assets/images/overview/table.png";
 
 
 const Button = () => {
@@ -73,6 +76,28 @@ const Button = () => {
 						<div className="summary_text">Title</div>
 					</div>
 				</div>
+				<div className="summary_card" onClick={() => {toTarget('../scrollBar')}}>
+					<div className="summary_content">
+						<div className="summary_title">滚动条</div>
+						<div className="summary_img_content">
+							<div className="summary_img">
+								<img src={scrollBarSrc} alt="" />
+							</div>
+						</div>
+						<div className="summary_text">ScrollBar</div>
+					</div>
+				</div>
+				<div className="summary_card" onClick={() => {toTarget('../switch')}}>
+					<div className="summary_content">
+						<div className="summary_title">开关</div>
+						<div className="summary_img_content">
+							<div className="summary_img">
+								<img src={switchSrc} alt="" />
+							</div>
+						</div>
+						<div className="summary_text">Switch</div>
+					</div>
+				</div>
         <span></span>
         <span></span>
 			</div>
@@ -111,6 +136,17 @@ const Button = () => {
 							</div>
 						</div>
 						<div className="summary_text">Content</div>
+					</div>
+				</div>
+				<div className="summary_card" onClick={() => {toTarget('../table')}}>
+					<div className="summary_content">
+						<div className="summary_title">表格</div>
+						<div className="summary_img_content">
+							<div className="summary_img">
+								<img src={tableSrc} alt="" />
+							</div>
+						</div>
+						<div className="summary_text">Table</div>
 					</div>
 				</div>
         <span></span>
