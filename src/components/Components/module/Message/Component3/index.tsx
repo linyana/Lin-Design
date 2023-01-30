@@ -9,21 +9,7 @@ import "./index.css";
 
 const Component1 = () => {
 	const code: codeState = {
-		element: () => (
-			<div className="message_component3_content">
-				<div className={errorMessageClass}>
-					<img src={tipErrorSrc} alt="" />
-					密码输入错误
-				</div>
-				<button
-					onClick={() => {
-						showErrorMessage();
-					}}
-				>
-					错误
-				</button>
-			</div>
-		),
+		element: () => <Component />,
 		HTMLCode: (className: string) => `<div${
 			className.trim() ? ` class="${className.replace(".", "")}"` : ""
 		}>
@@ -183,7 +169,8 @@ const showErrorMessage = (): void => {
   }
 };
     `,
-		TSCode: () => `const errorMessage = document.querySelector(".error_message");
+		TSCode:
+			() => `const errorMessage = document.querySelector(".error_message");
 
 const showErrorMessage = (): void => {
   if (
@@ -292,6 +279,44 @@ const showErrorMessage = (): void => {
 					</div>
 				</div>
 				<ShowCode code={code} />
+			</div>
+		</>
+	);
+};
+
+const Component = () => {
+	const [errorMessageClass2, setErrorMessageClass2] = useState<string>(
+		"popup_message success_message"
+	);
+
+	const showErrorMessage2 = (): void => {
+		if (
+			document.querySelector(".show_message") === null &&
+			document.querySelector(".hidden_message") === null
+		) {
+			setErrorMessageClass2("popup_message error_message show_message");
+			setTimeout(() => {
+				setErrorMessageClass2("popup_message error_message hidden_message");
+				setTimeout(() => {
+					setErrorMessageClass2("popup_message error_message");
+				}, 280);
+			}, 1200);
+		}
+	};
+	return (
+		<>
+			<div className="message_component3_content">
+				<div className={errorMessageClass2}>
+					<img src={tipErrorSrc} alt="" />
+					密码输入错误
+				</div>
+				<button
+					onClick={() => {
+						showErrorMessage2();
+					}}
+				>
+					错误
+				</button>
 			</div>
 		</>
 	);

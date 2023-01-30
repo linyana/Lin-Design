@@ -9,21 +9,7 @@ import "./index.css";
 
 const Component1 = () => {
 	const code: codeState = {
-		element: () => (
-			<div className="message_component1_content">
-				<div className={noticeMessageClass}>
-					<img src={tipNoticeSrc} alt="" />
-					密码安全性较低
-				</div>
-				<button
-					onClick={() => {
-						showNoticeMessage();
-					}}
-				>
-					警告
-				</button>
-			</div>
-		),
+		element: () => <Component />,
 		HTMLCode: (className: string) => `<div${
 			className.trim() ? ` class="${className.replace(".", "")}"` : ""
 		}>
@@ -183,7 +169,8 @@ const showNoticeMessage = (): void => {
   }
 };
     `,
-		TSCode: () => `const noticeMessage = document.querySelector(".notice_message");
+		TSCode:
+			() => `const noticeMessage = document.querySelector(".notice_message");
 
 const showNoticeMessage = (): void => {
   if (
@@ -292,6 +279,44 @@ const showNoticeMessage = (): void => {
 					</div>
 				</div>
 				<ShowCode code={code} />
+			</div>
+		</>
+	);
+};
+
+const Component = () => {
+	const [noticeMessageClass2, setNoticeMessageClass2] = useState<string>(
+		"popup_message success_message"
+	);
+
+	const showNoticeMessage2 = (): void => {
+		if (
+			document.querySelector(".show_message") === null &&
+			document.querySelector(".hidden_message") === null
+		) {
+			setNoticeMessageClass2("popup_message notice_message show_message");
+			setTimeout(() => {
+				setNoticeMessageClass2("popup_message notice_message hidden_message");
+				setTimeout(() => {
+					setNoticeMessageClass2("popup_message notice_message");
+				}, 280);
+			}, 1200);
+		}
+	};
+	return (
+		<>
+			<div className="message_component2_content">
+				<div className={noticeMessageClass2}>
+					<img src={tipNoticeSrc} alt="" />
+					密码安全性较低
+				</div>
+				<button
+					onClick={() => {
+						showNoticeMessage2();
+					}}
+				>
+					警告
+				</button>
 			</div>
 		</>
 	);

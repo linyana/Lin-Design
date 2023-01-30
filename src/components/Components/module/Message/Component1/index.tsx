@@ -9,21 +9,7 @@ import "./index.css";
 
 const Component1 = () => {
 	const code: codeState = {
-		element: () => (
-			<div className="message_component1_content">
-				<div className={successMessageClass}>
-					<img src={tipRightSrc} alt="" />
-					登录成功
-				</div>
-				<button
-					onClick={() => {
-						showSuccessMessage();
-					}}
-				>
-					成功
-				</button>
-			</div>
-		),
+		element: () => <Component />,
 		HTMLCode: (className: string) => `<div${
 			className.trim() ? ` class="${className.replace(".", "")}"` : ""
 		}>
@@ -183,7 +169,8 @@ const showSuccessMessage = (): void => {
   }
 };
     `,
-		TSCode: () => `const successMessage = document.querySelector(".success_message");
+		TSCode:
+			() => `const successMessage = document.querySelector(".success_message");
 
 const showSuccessMessage = (): void => {
   if (
@@ -294,6 +281,42 @@ const showSuccessMessage = (): void => {
 				<ShowCode code={code} />
 			</div>
 		</>
+	);
+};
+
+const Component = () => {
+	const [successMessageClass2, setSuccessMessageClass2] = useState<string>(
+		"popup_message success_message"
+	);
+
+	const showSuccessMessage2 = (): void => {
+		if (
+			document.querySelector(".show_message") === null &&
+			document.querySelector(".hidden_message") === null
+		) {
+			setSuccessMessageClass2("popup_message success_message show_message");
+			setTimeout(() => {
+				setSuccessMessageClass2("popup_message success_message hidden_message");
+				setTimeout(() => {
+					setSuccessMessageClass2("popup_message success_message");
+				}, 280);
+			}, 1200);
+		}
+	};
+	return (
+		<div className="message_component1_content">
+			<div className={successMessageClass2}>
+				<img src={tipRightSrc} alt="" />
+				登录成功
+			</div>
+			<button
+				onClick={() => {
+					showSuccessMessage2();
+				}}
+			>
+				成功
+			</button>
+		</div>
 	);
 };
 
