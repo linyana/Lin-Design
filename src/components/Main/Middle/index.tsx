@@ -11,12 +11,15 @@ const Middle = () => {
 		window.addEventListener("scroll", () => {
 			if (document.documentElement.scrollTop > 300) {
 				BackTop.style.opacity = "1";
+				BackTop.style.cursor = "pointer";
 			} else {
 				BackTop.style.opacity = "0";
+				BackTop.style.cursor = "auto";
 			}
 		});
 		BackTop.style.opacity = "0";
-	},[]);
+		BackTop.style.cursor = "auto";
+	}, []);
 
 	return (
 		<>
