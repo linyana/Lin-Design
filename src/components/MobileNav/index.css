@@ -80,6 +80,29 @@
 	overflow-y: scroll;
 }
 
+.mobile_nav_content::-webkit-scrollbar-thumb:vertical {
+  height: 50px;
+  background-color: rgb(190, 190, 190);
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  outline: 2px solid rgb(124, 122, 122);
+  outline-offset: -2px;
+  border: 2px solid rgb(124, 122, 122);
+}
+
+.mobile_nav_content::-webkit-scrollbar-thumb:horizontal {
+  width: 4px;
+  background-color: rgb(124, 122, 122);
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.mobile_nav_content::-webkit-scrollbar-track-piece {
+  background-color: rgb(124, 122, 122);
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
 .mobile_nav_content .left_menu_line {
 	color: rgb(219, 219, 219);
 }
