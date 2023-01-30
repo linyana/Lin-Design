@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "@/store";
 import HelpTips from "@/utils/HelpTips";
 import { CodeBoxTipConfig } from "@/utils/HelpTips/config";
+import { changeShowCodeBox } from "@/store/IsCodeBoxShow";
 
 import Header from "./Header";
 import Left from "./Left";
@@ -18,6 +19,8 @@ const CodeBox = () => {
 	const isCodeBoxShow = useSelector(
 		(state: RootState) => state.isCodeBoxShow.isCodeBoxShow
 	);
+
+	const dispatch = useDispatch();
 
 	if (
 		isPage &&
@@ -61,7 +64,16 @@ const CodeBox = () => {
 	}, [isCodeBoxShow]);
 
 	return (
-		<div className={pageClass}>
+		<div
+			className={pageClass}
+			id="code_page"
+			onClick={(e) => {
+				const target = e.target as HTMLElement;
+				if (target.id === "code_page") {
+					dispatch(changeShowCodeBox());
+				}
+			}}
+		>
 			<div className={codeBoxClass}>
 				<div className="code_box_content">
 					<Header></Header>
