@@ -97,7 +97,7 @@ img.icon {
 
 ::-webkit-scrollbar-thumb:vertical {
   height: 50px;
-  background-color: rgb(90, 145, 196);
+  background-color: rgb(190, 190, 190);
   -webkit-border-radius: 4px;
   border-radius: 4px;
   outline: 2px solid #fff;
@@ -107,7 +107,7 @@ img.icon {
 
 ::-webkit-scrollbar-thumb:hover {
   height: 50px;
-  background-color: rgb(90, 145, 196);
+  background-color: rgb(190, 190, 190);
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
