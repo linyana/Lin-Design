@@ -20,6 +20,7 @@ const Table = lazy(() => import("@/components/Components/module/Table"));
 const ScrollBar = lazy(() => import("@/components/Components/module/ScrollBar"));
 const Nav = lazy(() => import("@/components/Components/module/Nav"));
 const Message = lazy(() => import("@/components/Components/module/Message"));
+const Backtop = lazy(() => import("@/components/Components/module/Backtop"));
 
 const routes: RouteObject[] = [
 	{
@@ -86,6 +87,10 @@ const routes: RouteObject[] = [
 				path: "Message",
 				element: <Message />,
 			},
+			{
+				path: "Backtop",
+				element: <Backtop />
+			}
 		],
 	},
 	{

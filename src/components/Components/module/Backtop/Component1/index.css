@@ -1,0 +1,44 @@
+.backtop_component1_content .to_top {
+  cursor: pointer;
+  position: relative;
+  margin-left: 50px;
+  margin-top: 70px;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid rgb(221, 219, 219);
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  background-color: #fff;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.backtop_component1_content .to_top:hover {
+  animation: hoverToTop 0.8s;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.backtop_component1_content .to_top:hover img {
+  width: 60%;
+  margin-top: 20%;
+}
+
+@keyframes hoverToTop {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.backtop_component1_content .to_top img {
+  transition: all 0.3s;
+  width: 50%;
+  margin-top: 25%;
+}

@@ -63,6 +63,11 @@ const leftMenu = [
     name: '消息提示',
     smallName: 'Message',
     to: 'message',
+  },
+  {
+    name: '回到顶部',
+    smallName: 'BackTop',
+    to: 'backtop'
   }
 ]
 
