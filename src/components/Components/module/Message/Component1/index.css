@@ -20,6 +20,7 @@
 	width: 16px;
 	height: 16px;
 	margin-right: 10px;
+	transform: translateY(3px);
 }
 
 .message_component1_content .success_message {

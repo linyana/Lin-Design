@@ -62,6 +62,7 @@ ${className === "" ? "div" : className} .popup_message img {
 	width: 16px;
 	height: 16px;
 	margin-right: 10px;
+	transform: translateY(3px);
 }
 
 ${className === "" ? "div" : className} .notice_message {

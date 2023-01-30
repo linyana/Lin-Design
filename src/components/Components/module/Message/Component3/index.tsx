@@ -68,6 +68,7 @@ ${className === "" ? "div" : className} .error_message {
 	background-color: rgba(186, 233, 180, 0.6);
 	box-shadow: 0 0 10px rgba(132, 207, 122, 0.3);
 	color: rgb(113, 182, 127);
+	transform: translateY(3px);
 }
 
 ${className === "" ? "div" : className} .show_message {
