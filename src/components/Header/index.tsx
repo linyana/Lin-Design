@@ -16,7 +16,7 @@ const Header = () => {
 			<div className="header_left left_padding">
 				<div className="logo flex_between">
 					<img src={logo} alt="logo" className="header_logo" />{" "}
-					<span>LinUI</span>
+					<span>Lin&nbsp;Design</span>
 				</div>
 			</div>
 			{/* 导航栏中部--搜索框+导航栏 */}
