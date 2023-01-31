@@ -31,7 +31,7 @@
   -webkit-background-clip: text;
 	background-clip: text;
   -webkit-text-fill-color: transparent;
-	animation: homeTitleColor linear 1.6s infinite;
+	animation: homeTitleColor linear 2.6s infinite;
 }
 
 .home_banner_title_box {
