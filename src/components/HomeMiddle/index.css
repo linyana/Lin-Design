@@ -22,12 +22,54 @@
 	line-height: 130px;
 	font-weight: 700;
 	transition: all 0.3s;
+	width: 530px;
+}
+
+.home_banner_title {
+	--home_banner_title_width: 530px;
+  background: linear-gradient(45deg, rgb(144, 182, 212),rgb(98, 154, 199),rgb(113, 129, 211),rgb(100, 144, 226),rgb(112, 142, 224));
+  -webkit-background-clip: text;
+	background-clip: text;
+  -webkit-text-fill-color: transparent;
+	animation: homeTitleColor linear 1.6s infinite;
+}
+
+.home_banner_title_box {
+	height: 130px;
+	overflow: hidden;
+	animation: homeTitle linear 1.6s;
+}
+
+@keyframes homeTitle {
+	0% {
+		width: 0;
+		border-right: 2px solid rgb(100, 144, 226);
+	}
+
+	86% {
+		width: 86%;
+		border-right: 2px solid rgb(100, 144, 226);
+	}
+
+	100% {
+		width: 95%;
+	}
+}
+
+@keyframes homeTitleColor {
+	0% {
+		background-position: 0;
+	}
+
+	100% {
+		background-position: var(--home_banner_title_width);
+	}
 }
 
 .home_banner_title2 {
 	font-size: 26px;
 	line-height: 80px;
-	color: rgb(122, 121, 121);
+	color: rgb(146, 183, 240);
 	margin-bottom: 50px;
 	transition: all 0.3s;
 }
@@ -46,6 +88,7 @@ button.home_button {
 	outline: transparent;
 	position: relative;
 }
+
 button.home_button::after {
 	--slice-0: inset(50% 50% 50% 50%);
 	--slice-1: inset(80% -6px 0 0);
@@ -125,8 +168,10 @@ button.home_button:hover::after {
 
 @media screen and (max-width: 1700px) {
 	.home_banner_title {
+		width: 383px;
 		font-size: 50px;
 		line-height: 100px;
+		--home_banner_title_width: 383px;
 	}
 
 	.home_banner_title2 {
@@ -137,12 +182,18 @@ button.home_button:hover::after {
 	.home_banner_text {
 		padding-top: 6vw;
 	}
+
+	.home_banner_title_box {
+		height: 100px;
+	}
 }
 
 @media screen and (max-width: 1350px) {
 	.home_banner_title {
+		width: 322px;
 		font-size: 40px;
 		line-height: 80px;
+		--home_banner_title_width: 322px;
 	}
 
 	.home_banner_title2 {
@@ -152,6 +203,10 @@ button.home_button:hover::after {
 
 	.home_banner_text {
 		padding-top: 4vw;
+	}
+
+	.home_banner_title_box {
+		height: 80px;
 	}
 }
 
@@ -167,4 +222,28 @@ button.home_button:hover::after {
   .home_banner_text {
     width: 100%;
   }
+
+	.home_banner_title {
+		width: 100%;
+		font-size: 40px;
+		line-height: 80px;
+		--home_banner_title_width: 1000px;
+	}
+
+	.home_banner_title_box {
+		height: 80px;
+		margin: auto;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.home_banner_title {
+		--home_banner_title_width: 600px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.home_banner_title {
+		--home_banner_title_width: 400px;
+	}
 }
