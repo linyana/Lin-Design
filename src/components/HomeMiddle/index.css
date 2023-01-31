@@ -56,7 +56,7 @@ button.home_button::after {
 	content: "快速上手";
 	display: block;
 	position: absolute;
-	top: 0;
+	top: -10px;
 	left: 0;
 	right: 0;
 	bottom: 0;
