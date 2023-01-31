@@ -18,3 +18,9 @@ button.button_compontent_button1:hover {
 button.button_compontent_button1_hover:hover {
   background-color: rgb(70, 145, 245)!important;
 }
+
+/* more */
+
+button.button_compontent_button1_hover {
+  box-shadow: 0 0 3px rgb(47, 121, 206, 0.3);
+}

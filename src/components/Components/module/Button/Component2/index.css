@@ -1,21 +1,28 @@
 button.button_compontent_button2 {
-  cursor: pointer;
-  padding: 0 30px;
-  height: 36px;
-  background-color: transparent;
-  border: 1px solid var(--bgColor01);
-  outline: none;
-  border-radius: 6px;
-  box-shadow: 0 0 3px var(--bgColor03);
-  transition: all 0.5s;
-  color: var(--bgColor);
-  background-color: var(--bgColor01);
+	cursor: pointer;
+	padding: 0 30px;
+	height: 36px;
+	background-color: transparent;
+	border: 1px solid var(--bgColor01);
+	outline: none;
+	border-radius: 6px;
+	box-shadow: 0 0 3px var(--bgColor03);
+	transition: all 0.5s;
+	color: var(--bgColor);
+	background-color: var(--bgColor01);
 }
 
 button.button_compontent_button2:hover {
-  border: 1px solid var(--bgColor05)!important;
+	border: 1px solid var(--bgColor05) !important;
 }
 
 button.button_compontent_button2_hover:hover {
-  border: 1px solid rgb(158, 192, 231)!important;
+	border: 1px solid rgb(158, 192, 231) !important;
+}
+
+/* more */
+
+button.button_compontent_button2_hover {
+	box-shadow: 0 0 3px rgba(47, 121, 206, 0.3);
+	border: 1px solid rgba(47, 121, 206, 0.1);
 }
