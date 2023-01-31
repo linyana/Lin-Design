@@ -19,6 +19,7 @@ const Middle = () => {
 						无需阅读文档也能快速上手的组件库
 					</div>
 					<button
+						className="home_button"
 						onClick={() => {
 							navigate("/components/overview", {
 								replace: false,

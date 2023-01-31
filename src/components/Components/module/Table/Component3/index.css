@@ -30,6 +30,8 @@
   width: 50px;
   height: 24px;
   margin: 3px 6px;
+  cursor: pointer;
+  outline: none;
   font-size: 13px;
   padding: 0;
   border-radius: 3px;
@@ -38,6 +40,8 @@
 .table_component3_content table tbody td button.delete_button {
   background-color: rgb(212, 101, 101);
   box-shadow: 0 0 3px rgba(202, 139, 139, 0.3);
+  border: none;
+  color:rgb(241, 241, 241);
 }
 
 .table_component3_content table tbody td button.edit_button {

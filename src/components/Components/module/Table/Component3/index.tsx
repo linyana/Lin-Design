@@ -213,6 +213,8 @@ ${className === "" ? "div" : className} table tbody td {
 }
 
 ${className === "" ? "div" : className} table tbody td button {
+  cursor: pointer;
+  outline: none;
   width: 50px;
   height: 24px;
   margin: 3px 6px;
@@ -224,6 +226,8 @@ ${className === "" ? "div" : className} table tbody td button {
 ${className === "" ? "div" : className} table tbody td button.delete_button {
   background-color: rgb(212, 101, 101);
   box-shadow: 0 0 3px rgba(202, 139, 139, 0.3);
+  border: none;
+  color:rgb(241, 241, 241);
 }
 
 ${className === "" ? "div" : className} table tbody td button.edit_button {

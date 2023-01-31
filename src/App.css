@@ -1,51 +1,51 @@
 * {
-  padding: 0;
-  margin: 0;
-  font-family: "PuHuiTiBold", Helvetica, Arial, sans-serif;
-  color: #495057;
+	padding: 0;
+	margin: 0;
+	font-family: "PuHuiTiBold", Helvetica, Arial, sans-serif;
+	color: #495057;
 }
 
 :root {
-  --bgColor: #2f79ce;
+	--bgColor: #2f79ce;
 }
 
 @font-face {
-  font-family: "PuHuiTiBold";
-  font-weight: 700;
-  src: url("//at.alicdn.com/wf/webfont/nHM1Jm5mEhGA/Yv_lG0CdWElHDaKWAl0KJ.woff2")
-      format("woff2"),
-    url("//at.alicdn.com/wf/webfont/nHM1Jm5mEhGA/iZLe7JxEGpCGmDeUIu2oo.woff")
-      format("woff");
-  font-display: swap;
+	font-family: "PuHuiTiBold";
+	font-weight: 700;
+	src: url("//at.alicdn.com/wf/webfont/nHM1Jm5mEhGA/Yv_lG0CdWElHDaKWAl0KJ.woff2")
+			format("woff2"),
+		url("//at.alicdn.com/wf/webfont/nHM1Jm5mEhGA/iZLe7JxEGpCGmDeUIu2oo.woff")
+			format("woff");
+	font-display: swap;
 }
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 .left_padding {
-  padding-left: 40px;
-  padding-right: 40px;
+	padding-left: 40px;
+	padding-right: 40px;
 }
 
 .middle_padding {
-  padding: 0 60px;
+	padding: 0 60px;
 }
 
 .right_padding {
-  padding: 0 30px;
+	padding: 0 30px;
 }
 
 .flex_between {
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
-button {
+/* button {
   cursor: pointer;
   padding: 8px 30px;
   background-color: rgb(47, 121, 206);
@@ -60,95 +60,95 @@ button {
 button:hover {
   background-color: rgb(56, 137, 230);
 }
+ */
 
 img.icon {
-  width: 20px;
-  margin: 0 10px;
+	width: 20px;
+	margin: 0 10px;
 }
 
 .mobile_page {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 34px;
-  top: 34px;
-  z-index: 999999;
-  display: none;
-  transform: translateY(-34px);
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 34px;
+	top: 34px;
+	z-index: 999999;
+	display: none;
+	transform: translateY(-34px);
 }
 
 ::-webkit-scrollbar-thumb:horizontal {
-  width: 4px;
-  background-color: #CCCCCC;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
+	width: 4px;
+	background-color: #cccccc;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
 }
 
 ::-webkit-scrollbar-track-piece {
-  background-color: #fff;
-  -webkit-border-radius: 0;
-  border-radius: 0;
+	background-color: #fff;
+	-webkit-border-radius: 0;
+	border-radius: 0;
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 8px;
+	width: 10px;
+	height: 8px;
 }
 
 ::-webkit-scrollbar-thumb:vertical {
-  height: 50px;
-  background-color: rgb(190, 190, 190);
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  outline: 2px solid #fff;
-  outline-offset: -2px;
-  border: 2px solid #fff;
+	height: 50px;
+	background-color: rgb(190, 190, 190);
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	outline: 2px solid #fff;
+	outline-offset: -2px;
+	border: 2px solid #fff;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  height: 50px;
-  background-color: rgb(190, 190, 190);
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
+	height: 50px;
+	background-color: rgb(190, 190, 190);
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
 }
 
 ::selection {
-  background: #3952c467;
+	background: #3952c467;
 }
 
 ::-moz-selection {
-  background: #3952c467;
+	background: #3952c467;
 }
 
 ::-webkit-selection {
-  background: #3952c467;
+	background: #3952c467;
 }
 
 @media screen and (max-width: 1200px) {
-  .middle_padding {
-    padding: 0 10px;
-  }
+	.middle_padding {
+		padding: 0 10px;
+	}
 
-  .right_content {
-    display: none;
-  }
+	.right_content {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 900px) {
-  .middle_padding {
-    padding: 0 20px;
-  }
+	.middle_padding {
+		padding: 0 20px;
+	}
 
-  .right_content {
-    display: none;
-  }
+	.right_content {
+		display: none;
+	}
 
-  .left_menu {
-    display: none;
-  }
+	.left_menu {
+		display: none;
+	}
 
-  .mobile_page {
-    display: block;
-  }
+	.mobile_page {
+		display: block;
+	}
 }
-
