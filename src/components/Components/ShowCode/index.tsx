@@ -20,7 +20,7 @@ const ShowCode = (props: propsTypes) => {
         dispatch(changeShowCodeBox());
       }}
     >
-      查看代码
+      <span>查看代码</span>
       <img src={showSrc} alt="查看代码" className="icon" />
     </div>
   );

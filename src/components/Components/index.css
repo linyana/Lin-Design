@@ -29,10 +29,48 @@
   display: flex;
   justify-content: center;
   transition: all 0.5s;
+  overflow: hidden;
 }
 
 .compontent_box_menu:hover {
   background-color: rgb(252, 251, 251);
+}
+
+.compontent_box_menu span {
+  transform: translateY(-50px);
+  transition: all 0.3s;
+}
+
+.compontent_box_menu img {
+  transform: translateX(-50px);
+  transition: all 0.3s;
+}
+
+.compontent_box_menu:hover img {
+  transform: translateX(0);
+}
+
+.compontent_box_menu:hover span {
+  transform: translateY(0);
+  animation: boxMenuSpan linear 0.6s;
+}
+
+@keyframes boxMenuSpan {
+  0% {
+    transform: translateY(-50px);
+  }
+
+  40% {
+    transform: translateY(8px);
+  }
+
+  60% {
+    transform: translateY(-6px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 p.compontent_p {
