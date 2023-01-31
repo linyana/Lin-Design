@@ -44,7 +44,7 @@ const Header = () => {
 					alt="github"
 					className="header_logo"
 					onClick={() => {
-						window.open("https://github.com/linyana/LinDesign-page");
+						window.open("https://github.com/linyana/Lin-Design");
 					}}
 				/>
 			</div>
