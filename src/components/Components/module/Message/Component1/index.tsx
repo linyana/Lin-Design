@@ -67,6 +67,24 @@ ${className === "" ? "div" : className} .hidden_message {
 	animation: hiddenMessage 0.3s;
 }
 
+${className === "" ? "div" : className} .message_component1_content button {
+	cursor: pointer;
+	padding: 0 30px;
+	height: 36px;
+	background-color: transparent;
+	border: 1px solid rgb(104, 185, 132, 0.1);
+	outline: none;
+	border-radius: 6px;
+	box-shadow: 0 0 3px rgb(104, 185, 132, 0.3);
+	transition: all 0.5s;
+	color: rgb(104, 185, 132);
+	background-color: rgb(104, 185, 132, 0.1);
+}
+  
+${className === "" ? "div" : className} .message_component1_content button:hover {
+	border: 1px solid rgb(170, 218, 138);
+}
+
 @keyframes showMessage {
 	from {
 		transform: translateY(-50px) translateX(-50%);
