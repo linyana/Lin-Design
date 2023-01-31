@@ -28,12 +28,12 @@ const code: codeState = {
   width: 130px;
   height: 40px;
   font-size: 16px;
-  background: linear-gradient(45deg, transparent 6%, var(--bgColor) 5%);
+  background: linear-gradient(45deg, transparent 6%, ${bgColor} 5%);
   border: 0;
-  color: var(--color);
+  color: ${color};
   letter-spacing: 3px;
   line-height: 40px;
-  box-shadow: 5px -4px 0px var(--bgColor05);
+  box-shadow: 5px -4px 0px ${bgColor.replace(")", ", 0.5)")};
   outline: transparent;
   position: relative;
 }
@@ -57,7 +57,7 @@ button${className}::after {
     transparent 3%,
     #00e6f6 3%,
     #00e6f6 5%,
-    var(--bgColor) 5%
+    ${bgColor} 5%
   );
   text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
   clip-path: var(--slice-0);

@@ -1,0 +1,47 @@
+button.button_compontent_button5 {
+  position: relative;
+	cursor: pointer;
+	padding: 0 30px;
+	height: 36px;
+	background-color: transparent;
+	border: 1px solid rgb(194, 196, 196);
+	outline: none;
+	border-radius: 6px;
+	box-shadow: 0 0 3px rgb(73, 80, 87, 0.3);
+	transition: all 0.5s;
+  overflow: hidden;
+}
+
+button.button_compontent_button5 span {
+  position: relative;
+  z-index: 3;
+  color: #464646;
+  transition: all 0.5s;
+}
+  
+button.button_compontent_button5::after {
+  z-index: 2;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 300px;
+  transform: rotate(45deg) translateX(-500px);
+  background-color:var(--hoverColor);
+  transition: all 0.5s;
+}
+
+button.button_compontent_button5:hover::after {
+  transform: rotate(45deg) translateX(-200px);
+}
+
+button.button_compontent_button5:hover span {
+  color: #f8f8f8;
+}
+
+/* more */
+
+button.button_compontent_button5_hover::after {
+  background-color: #2f79ce;
+}

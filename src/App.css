@@ -147,10 +147,7 @@ img.icon {
 	.left_menu {
 		display: none;
 	}
-}
 
-
-@media screen and (max-width: 800px) {
   .mobile_page {
 		display: block;
 	}
