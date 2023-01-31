@@ -147,8 +147,11 @@ img.icon {
 	.left_menu {
 		display: none;
 	}
+}
 
-	.mobile_page {
+
+@media screen and (max-width: 800px) {
+  .mobile_page {
 		display: block;
 	}
 }

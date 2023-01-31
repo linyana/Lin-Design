@@ -223,7 +223,7 @@ const Left = () => {
 							);
 						})}
 					</div>
-					<div className="flex_between">
+					<div className="flex_between code_box_left_color_boxes">
 						{colorList2.map((item) => {
 							return (
 								<div
