@@ -78,7 +78,7 @@ button.home_button {
   cursor: pointer;
 	width: 130px;
 	height: 40px;
-	font-size: 18px;
+	font-size: 16px;
 	background: linear-gradient(45deg, transparent 6%, rgb(77, 99, 211) 5%);
 	border: 0;
 	color: #fff;
