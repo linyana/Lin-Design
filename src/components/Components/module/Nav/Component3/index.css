@@ -1,5 +1,5 @@
 .nav_component3_content {
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .nav_component3_content::-webkit-scrollbar-thumb:horizontal {

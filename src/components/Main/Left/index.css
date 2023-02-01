@@ -4,7 +4,7 @@
   border-right: 1px solid #e9ecef;
   width: 300px;
   height: calc(100vh - 100px);
-  overflow: scroll;
+  overflow: auto;
 }
 
 .left_menu::-webkit-scrollbar-thumb:horizontal {
