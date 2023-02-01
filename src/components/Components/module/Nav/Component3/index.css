@@ -1,0 +1,85 @@
+.nav_component3_content {
+  overflow-y: scroll;
+}
+
+.nav_component3_content::-webkit-scrollbar-thumb:horizontal {
+  width: 4px;
+  background-color: #CCCCCC;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.nav_component3_content::-webkit-scrollbar-track-piece {
+  background-color: var(--bgColor);
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+.nav_component3_content::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.nav_component3_content::-webkit-scrollbar-thumb:vertical {
+  height: 50px;
+  background-color: rgb(220, 221, 221);
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  outline: 2px solid #fff;
+  outline-offset: -2px;
+  border: 2px solid #fff;
+}
+
+.nav_component3_content::-webkit-scrollbar-thumb:hover {
+  height: 50px;
+  background-color: rgb(220, 221, 221);
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.nav_component3_content ul li {
+  list-style: none;
+}
+
+.nav_component3_content .left_menu_line {
+  padding: 0 20px;
+  cursor: pointer;
+  font-size: 21px;
+  line-height: 65px;
+  height: 65px;
+  transition: all 0.8s;
+  overflow: hidden;
+  background-color: var(--bgColor);
+}
+
+.nav_component3_content .left_menu_line a {
+  color: var(--color);
+}
+
+.nav_component3_content .left_menu_line:hover {
+  background-color: var(--hoverColor);
+}
+
+.nav_component3_content .left_menu_line span {
+  color: var(--color);
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+/* more */
+
+.nav_component3_content_hover .left_menu_line a {
+  color: white;
+}
+
+.nav_component3_content_hover .left_menu_line {
+	background-color: rgb(132, 153, 212);
+}
+
+.nav_component3_content_hover .left_menu_line:hover {
+	background-color: rgb(157, 181, 233);
+}
+
+.nav_component3_content_hover::-webkit-scrollbar-track-piece {
+  background-color: #fff;
+}
