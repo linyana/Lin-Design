@@ -7,7 +7,7 @@ import rightSrc from "@/assets/svg/normal/right.svg";
 
 import "./index.css";
 
-const Component2 = () => {
+const Component3 = () => {
 	const code: codeState = {
 		element: () => (
 			<div className="nav_component3_content">
@@ -222,7 +222,7 @@ ${className === "" ? "div" : className} .left_menu_line span {
 
 	return (
 		<>
-			<div className="compontent_title" id="nav-anchor1">
+			<div className="compontent_title" id="nav-anchor3">
 				侧边导航
 			</div>
 			<p className="compontent_p">基本的侧边导航栏。</p>
@@ -277,4 +277,4 @@ ${className === "" ? "div" : className} .left_menu_line span {
 	);
 };
 
-export default Component2;
+export default Component3;

@@ -137,7 +137,7 @@ const changeSwitch = (): void => {
 			</p>
 			<div className="component_box">
 				<div className="compontent_box_content">
-					<div className="switch_component1_content">
+					<div className="switch_component1_content switch_component1_content_hover">
 						<div
 							className={isSwitch ? "is_switch_box switch_box" : "switch_box"}
 							onClick={() => {

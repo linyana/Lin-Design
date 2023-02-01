@@ -40,3 +40,13 @@
 .switch_component2_content .is_switch_text {
   color: var(--hoverColor);
 }
+
+/* more */
+
+.switch_component2_content .is_switch_text {
+  color: rgb(86, 180, 67);
+}
+
+.switch_component2_content .is_switch_box {
+  background-color: rgb(86, 180, 67);
+}

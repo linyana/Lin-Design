@@ -27,3 +27,9 @@
 .switch_component1_content .is_switch_box .switch_circle {
   left: 20px;
 }
+
+/* more */
+
+.switch_component1_content_hover .is_switch_box {
+  background-color: rgb(86, 180, 67);
+}
