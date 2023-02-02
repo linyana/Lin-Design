@@ -18,7 +18,7 @@
 }
 
 .home_banner_title {
-	font-size: 70px;
+	font-size: 4vw;
 	line-height: 130px;
 	font-weight: 700;
 	transition: all 0.3s;
@@ -169,7 +169,6 @@ button.home_button:hover::after {
 @media screen and (max-width: 1700px) {
 	.home_banner_title {
 		width: 383px;
-		font-size: 50px;
 		line-height: 100px;
 		--home_banner_title_width: 383px;
 	}
@@ -191,7 +190,6 @@ button.home_button:hover::after {
 @media screen and (max-width: 1350px) {
 	.home_banner_title {
 		width: 322px;
-		font-size: 40px;
 		line-height: 80px;
 		--home_banner_title_width: 322px;
 	}
@@ -225,7 +223,7 @@ button.home_button:hover::after {
 
 	.home_banner_title {
 		width: 100%;
-		font-size: 40px;
+		font-size: 8vw;
 		line-height: 80px;
 		--home_banner_title_width: 1000px;
 	}

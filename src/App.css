@@ -45,23 +45,6 @@ a {
 	justify-content: space-between;
 }
 
-/* button {
-  cursor: pointer;
-  padding: 8px 30px;
-  background-color: rgb(47, 121, 206);
-  border: none;
-  outline: none;
-  border-radius: 6px;
-  color: white;
-  box-shadow: 0 0 5px rgba(32, 105, 189, 0.3);
-  transition: all 0.8s;
-}
-
-button:hover {
-  background-color: rgb(56, 137, 230);
-}
- */
-
 img.icon {
 	width: 20px;
 	margin: 0 10px;
