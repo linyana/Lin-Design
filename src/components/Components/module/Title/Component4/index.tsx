@@ -21,9 +21,10 @@ const Component4 = () => {
 			className.trim() ? ` class="${className.replace(".", "")}"` : ""
 		}>
   <div class="${className.replace(".", "")}_box">
-  <div class="${className.replace(".", "")}_left_box"></div>
-  关于我们
-  <div class="${className.replace(".", "")}_right_box"></div>
+    <div class="${className.replace(".", "")}_left_box"></div>
+    关于我们
+    <div class="${className.replace(".", "")}_right_box"></div>
+  </div>
 </div>`,
 		CSSCode: (
 			className: string,
@@ -76,19 +77,21 @@ ${className === "" ? "div" : className} .${className.replace(".", "")}_box:hover
 		VueHTMLCode: (className: string) => `<div${
 			className.trim() ? ` class="${className.replace(".", "")}"` : ""
 		}>
-    <div class="${className.replace(".", "")}_box">
+  <div class="${className.replace(".", "")}_box">
     <div class="${className.replace(".", "")}_left_box"></div>
     关于我们
     <div class="${className.replace(".", "")}_right_box"></div>
+  </div>
 </div>`,
 		VueJSCode: () => `暂无`,
 		ReactHTMLCode: (className: string) => `<div${
 			className.trim() ? ` className="${className.replace(".", "")}"` : ""
 		}>
-    <div className="${className.replace(".", "")}_box">
+  <div className="${className.replace(".", "")}_box">
     <div className="${className.replace(".", "")}_left_box"></div>
     关于我们
     <div className="${className.replace(".", "")}_right_box"></div>
+  </div>
 </div>`,
 		ReactJSCode: () => `暂无`,
 		TSCode: () => `暂无`,

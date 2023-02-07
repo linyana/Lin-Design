@@ -43,10 +43,10 @@
 
 /* more */
 
-.switch_component2_content .is_switch_text {
+.switch_component2_content_color .is_switch_text {
   color: rgb(86, 180, 67);
 }
 
-.switch_component2_content .is_switch_box {
+.switch_component2_content_color .is_switch_box {
   background-color: rgb(86, 180, 67);
 }

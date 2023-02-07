@@ -169,7 +169,7 @@ const changeSwitch = (): void => {
 			</p>
 			<div className="component_box">
 				<div className="compontent_box_content">
-					<div className="switch_component2_content">
+					<div className="switch_component2_content switch_component2_content_color">
 						<div
 							className={
 								isSwitch ? "switch_text" : "is_switch_text switch_text"
