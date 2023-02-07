@@ -24,7 +24,7 @@ const Component1 = () => {
 		HTMLCode: (className: string) => `<div${
 			className.trim() ? ` class="${className.replace(".", "")}"` : ""
 		} onclick="BackTop()">
-  <img src={topSrc} alt="" />
+  <img src="" alt="" />
 </div>`,
 		CSSCode: (
 			className: string,

@@ -125,7 +125,7 @@ ${className === ''?'div':className} .title:hover .small_title {
 
 	return (
 		<>
-			<div className="compontent_title" id="basic_button">
+			<div className="compontent_title" id="title-anchor3">
 				横线居中
 			</div>
 			<p className="compontent_p">

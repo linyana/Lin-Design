@@ -70,7 +70,7 @@ ${className === "" ? "div" : className} .title_line {
 
 	return (
 		<>
-			<div className="compontent_title" id="title-anchor1">
+			<div className="compontent_title" id="title-anchor2">
 				居中下划线
 			</div>
 			<p className="compontent_p">下划线的颜色根据背景颜色变化。</p>
