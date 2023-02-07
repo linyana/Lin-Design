@@ -21,6 +21,7 @@ const ScrollBar = lazy(() => import("@/components/Components/module/ScrollBar"))
 const Nav = lazy(() => import("@/components/Components/module/Nav"));
 const Message = lazy(() => import("@/components/Components/module/Message"));
 const Backtop = lazy(() => import("@/components/Components/module/Backtop"));
+const Badge = lazy(() => import("@/components/Components/module/Badge"));
 
 const routes: RouteObject[] = [
 	{
@@ -90,6 +91,10 @@ const routes: RouteObject[] = [
 			{
 				path: "Backtop",
 				element: <Backtop />
+			},
+			{
+				path: "Badge",
+				element: <Badge />
 			}
 		],
 	},

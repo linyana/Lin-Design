@@ -83,3 +83,7 @@
 .nav_component3_content_hover::-webkit-scrollbar-track-piece {
   background-color: #fff;
 }
+
+.nav_component3_content .left_menu_line span {
+  color: rgb(240, 236, 236);
+}

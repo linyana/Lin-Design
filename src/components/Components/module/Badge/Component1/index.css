@@ -1,0 +1,37 @@
+.badge_component1_content {
+  display: inline-block;
+  position: relative;
+}
+
+.badge_component1_content .badge{
+  position: absolute;
+  right: -3px;
+  top: -3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: rgb(233, 91, 91);
+}
+
+.badge_component1_content button {
+	cursor: pointer;
+	padding: 0 30px;
+	height: 36px;
+	background-color: transparent;
+	border: 1px solid rgba(30, 72, 121, 0.1);
+	outline: none;
+	box-shadow: 0 0 3px rgb(157,184,215, 0.3);
+	transition: all 0.5s;
+	color: rgb(157,184,215);
+	background-color: rgb(157,184,215, 0.1);
+}
+  
+.badge_component1_content button:hover {
+	border: 1px solid rgb(207, 221, 243);
+}
+
+/* more */
+
+.badge_component1_content_color .badge {
+  background-color: rgb(233, 91, 91);
+}
