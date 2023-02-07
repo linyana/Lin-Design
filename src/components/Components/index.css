@@ -42,7 +42,7 @@
 }
 
 .compontent_box_menu img {
-  transform: translateX(-50px);
+  transform: translateX(-160%);
   transition: all 0.3s;
 }
 
