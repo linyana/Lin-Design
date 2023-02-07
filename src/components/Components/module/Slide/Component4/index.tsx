@@ -19,11 +19,11 @@ const Component1 = () => {
   <div class="slide_box">4</div>
   <div class="slide_box pre">5</div>
   <div class="slide_buttons">
-    <div class="slice_button"></div>
-    <div class="slice_button"></div>
-    <div class="slice_button"></div>
-    <div class="slice_button"></div>
-    <div class="slice_button"></div>
+    <div class="slide_button slide_button_focus"></div>
+    <div class="slide_button"></div>
+    <div class="slide_button"></div>
+    <div class="slide_button"></div>
+    <div class="slide_button"></div>
   </div>
   <div class="slide_left">
     <img src="" alt="" />
