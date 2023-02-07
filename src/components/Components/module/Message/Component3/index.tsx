@@ -82,7 +82,7 @@ ${className === "" ? "div" : className} .message_component3_content button {
 }
   
 ${className === "" ? "div" : className} .message_component3_content button:hover {
-	border: 1px solid rgb(224,224,224);
+	border: 1px solid rgb(236, 177, 177);
 }
 
 

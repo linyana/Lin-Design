@@ -18,6 +18,19 @@ const Component1 = () => {
   <div class="slide_box">3</div>
   <div class="slide_box">4</div>
   <div class="slide_box pre">5</div>
+  <div class="slide_buttons">
+    <div class="slice_button"></div>
+    <div class="slice_button"></div>
+    <div class="slice_button"></div>
+    <div class="slice_button"></div>
+    <div class="slice_button"></div>
+  </div>
+  <div class="slide_left">
+    <img src="" alt="" />
+  </div>
+  <div class="slide_right">
+    <img src="" alt="" />
+  </div>
 </div>`,
 		CSSCode: (
 			className: string,
