@@ -81,7 +81,7 @@ ${className === ''?'div':className} .title .small_title {
 
 ${className === ''?'div':className} .title:hover .big_title,
 ${className === ''?'div':className} .title:hover .small_title {
-  color: var(--hoverColor)
+  color: ${hoverColor}
 }
         `;
 		},
