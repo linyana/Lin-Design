@@ -95,7 +95,7 @@ const Component3 = () => {
 		HTMLCode: (className: string) => `<div${
 			className.trim() ? ` class="${className.replace(".", "")}"` : ""
 		}>
-  <table cellSpacing={0}>
+  <table cellSpacing="0">
     <thead>
       <tr>
         <td>序号</td>
@@ -192,32 +192,31 @@ ${className === "" ? "div" : className} table {
 }
 
 ${className === "" ? "div" : className} table td {
-  border-bottom: 1px solid rgb(168, 167, 167);
   color: #495057;
   padding: 8px 20px;
   text-align: center;
 }
 
-${className === "" ? "div" : className} table tbody tr:hover {
-  background-color: rgb(243, 243, 243);
-  transition: all 0.3s;
-}
-
 ${className === "" ? "div" : className} table thead td {
   font-weight: 700;
-  font-size: 16px;
+  font-size: 15px;
+  background-color: #e8ebf0;
 }
 
 ${className === "" ? "div" : className} table tbody td {
   font-size: 14px;
 }
 
+${className === "" ? "div" : className} table tbody tr:nth-child(2n) td{
+  background-color: #f5f5f5;
+}
+
 ${className === "" ? "div" : className} table tbody td button {
-  cursor: pointer;
-  outline: none;
   width: 50px;
   height: 24px;
   margin: 3px 6px;
+  cursor: pointer;
+  outline: none;
   font-size: 13px;
   padding: 0;
   border-radius: 3px;
